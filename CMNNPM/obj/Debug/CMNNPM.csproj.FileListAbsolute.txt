@@ -89,3 +89,6 @@ D:\Project\CMNNPM\CMNNPM\bin\Debug\ru\DevExpress.Office.v15.1.Core.resources.dll
 D:\Project\CMNNPM\CMNNPM\obj\Debug\CMNNPM.ThemMonAn.resources
 D:\Project\CMNNPM\CMNNPM\obj\Debug\CMNNPM.exe.licenses
 D:\Project\CMNNPM\CMNNPM\obj\Debug\CMNNPM.DanhSachDichVu.resources
+D:\Project\QLTC\CMNNPM\bin\Debug\CMNNPM.exe.config
+D:\Project\QLTC\CMNNPM\obj\Debug\CMNNPM.exe
+D:\Project\QLTC\CMNNPM\obj\Debug\CMNNPM.pdb

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -35,6 +36,18 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.qLTCDataSet4 = new CMNNPM.QLTCDataSet4();
+            this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mONANTableAdapter = new CMNNPM.QLTCDataSet4TableAdapters.MONANTableAdapter();
+            this.colMAMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTENMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGIA = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -66,7 +79,7 @@
             this.listView1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(592, 288);
+            this.listView1.Size = new System.Drawing.Size(592, 34);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -91,16 +104,77 @@
             this.columnHeader4.Text = "Ghi chú";
             this.columnHeader4.Width = 287;
             // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.mONANBindingSource;
+            this.gridControl1.Location = new System.Drawing.Point(13, 53);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(591, 247);
+            this.gridControl1.TabIndex = 5;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMAMONAN,
+            this.colTENMONAN,
+            this.colGIA});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // qLTCDataSet4
+            // 
+            this.qLTCDataSet4.DataSetName = "QLTCDataSet4";
+            this.qLTCDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mONANBindingSource
+            // 
+            this.mONANBindingSource.DataMember = "MONAN";
+            this.mONANBindingSource.DataSource = this.qLTCDataSet4;
+            // 
+            // mONANTableAdapter
+            // 
+            this.mONANTableAdapter.ClearBeforeFill = true;
+            // 
+            // colMAMONAN
+            // 
+            this.colMAMONAN.FieldName = "MAMONAN";
+            this.colMAMONAN.Name = "colMAMONAN";
+            this.colMAMONAN.Visible = true;
+            this.colMAMONAN.VisibleIndex = 0;
+            // 
+            // colTENMONAN
+            // 
+            this.colTENMONAN.FieldName = "TENMONAN";
+            this.colTENMONAN.Name = "colTENMONAN";
+            this.colTENMONAN.Visible = true;
+            this.colTENMONAN.VisibleIndex = 1;
+            // 
+            // colGIA
+            // 
+            this.colGIA.FieldName = "GIA";
+            this.colGIA.Name = "colGIA";
+            this.colGIA.Visible = true;
+            this.colGIA.VisibleIndex = 2;
+            // 
             // DanhSachThucPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 353);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "DanhSachThucPham";
             this.Text = "Danh sách thực phẩm";
+            this.Load += new System.EventHandler(this.DanhSachThucPham_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,5 +187,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private QLTCDataSet4 qLTCDataSet4;
+        private System.Windows.Forms.BindingSource mONANBindingSource;
+        private QLTCDataSet4TableAdapters.MONANTableAdapter mONANTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colMAMONAN;
+        private DevExpress.XtraGrid.Columns.GridColumn colTENMONAN;
+        private DevExpress.XtraGrid.Columns.GridColumn colGIA;
     }
 }
