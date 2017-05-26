@@ -55,6 +55,13 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+            this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTCDataSet3 = new CMNNPM.QLTCDataSet3();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMAMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTENMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGIA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lvMA = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -64,6 +71,13 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.gridControlLoaiSanh = new DevExpress.XtraGrid.GridControl();
+            this.lOAISANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTCDataSet2 = new CMNNPM.QLTCDataSet2();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMALOAISANH1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTENLOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDONGIABANTOITHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -73,7 +87,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlSanh = new DevExpress.XtraGrid.GridControl();
             this.sANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLTCDataSet1 = new CMNNPM.QLTCDataSet1();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -94,43 +108,29 @@
             this.button1 = new System.Windows.Forms.Button();
             this.QTMonAn = new System.Windows.Forms.TabControl();
             this.sANHTableAdapter = new CMNNPM.QLTCDataSet1TableAdapters.SANHTableAdapter();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.qLTCDataSet2 = new CMNNPM.QLTCDataSet2();
-            this.lOAISANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOAISANHTableAdapter = new CMNNPM.QLTCDataSet2TableAdapters.LOAISANHTableAdapter();
-            this.colMALOAISANH1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTENLOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDONGIABANTOITHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.qLTCDataSet3 = new CMNNPM.QLTCDataSet3();
-            this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mONANTableAdapter = new CMNNPM.QLTCDataSet3TableAdapters.MONANTableAdapter();
-            this.colMAMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTENMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGIA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlLoaiSanh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOAISANHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlSanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.QTMonAn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOAISANHBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -368,6 +368,57 @@
             this.tabPage3.Text = "Món ăn";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // gridControl3
+            // 
+            this.gridControl3.DataSource = this.mONANBindingSource;
+            this.gridControl3.Location = new System.Drawing.Point(6, 118);
+            this.gridControl3.MainView = this.gridView4;
+            this.gridControl3.Name = "gridControl3";
+            this.gridControl3.Size = new System.Drawing.Size(638, 262);
+            this.gridControl3.TabIndex = 12;
+            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // mONANBindingSource
+            // 
+            this.mONANBindingSource.DataMember = "MONAN";
+            this.mONANBindingSource.DataSource = this.qLTCDataSet3;
+            // 
+            // qLTCDataSet3
+            // 
+            this.qLTCDataSet3.DataSetName = "QLTCDataSet3";
+            this.qLTCDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridView4
+            // 
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMAMONAN,
+            this.colTENMONAN,
+            this.colGIA});
+            this.gridView4.GridControl = this.gridControl3;
+            this.gridView4.Name = "gridView4";
+            // 
+            // colMAMONAN
+            // 
+            this.colMAMONAN.FieldName = "MAMONAN";
+            this.colMAMONAN.Name = "colMAMONAN";
+            this.colMAMONAN.Visible = true;
+            this.colMAMONAN.VisibleIndex = 0;
+            // 
+            // colTENMONAN
+            // 
+            this.colTENMONAN.FieldName = "TENMONAN";
+            this.colTENMONAN.Name = "colTENMONAN";
+            this.colTENMONAN.Visible = true;
+            this.colTENMONAN.VisibleIndex = 1;
+            // 
+            // colGIA
+            // 
+            this.colGIA.FieldName = "GIA";
+            this.colGIA.Name = "colGIA";
+            this.colGIA.Visible = true;
+            this.colGIA.VisibleIndex = 2;
+            // 
             // lvMA
             // 
             this.lvMA.Activation = System.Windows.Forms.ItemActivation.OneClick;
@@ -439,7 +490,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.gridControl2);
+            this.tabPage2.Controls.Add(this.gridControlLoaiSanh);
             this.tabPage2.Controls.Add(this.listView1);
             this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.button11);
@@ -451,6 +502,64 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Loại sảnh";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // gridControlLoaiSanh
+            // 
+            this.gridControlLoaiSanh.DataSource = this.lOAISANHBindingSource;
+            this.gridControlLoaiSanh.Location = new System.Drawing.Point(6, 145);
+            this.gridControlLoaiSanh.MainView = this.gridView3;
+            this.gridControlLoaiSanh.Name = "gridControlLoaiSanh";
+            this.gridControlLoaiSanh.Size = new System.Drawing.Size(638, 235);
+            this.gridControlLoaiSanh.TabIndex = 17;
+            this.gridControlLoaiSanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // lOAISANHBindingSource
+            // 
+            this.lOAISANHBindingSource.DataMember = "LOAISANH";
+            this.lOAISANHBindingSource.DataSource = this.qLTCDataSet2;
+            // 
+            // qLTCDataSet2
+            // 
+            this.qLTCDataSet2.DataSetName = "QLTCDataSet2";
+            this.qLTCDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridView3
+            // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMALOAISANH1,
+            this.colTENLOAISANH,
+            this.colDONGIABANTOITHIEU});
+            this.gridView3.GridControl = this.gridControlLoaiSanh;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsDetail.ShowDetailTabs = false;
+            this.gridView3.OptionsFind.AlwaysVisible = true;
+            this.gridView3.OptionsFind.FindDelay = 100;
+            this.gridView3.OptionsFind.FindNullPrompt = "Tìm kiếm...";
+            this.gridView3.OptionsFind.ShowClearButton = false;
+            this.gridView3.OptionsFind.ShowCloseButton = false;
+            this.gridView3.OptionsFind.ShowFindButton = false;
+            // 
+            // colMALOAISANH1
+            // 
+            this.colMALOAISANH1.FieldName = "MALOAISANH";
+            this.colMALOAISANH1.Name = "colMALOAISANH1";
+            this.colMALOAISANH1.Visible = true;
+            this.colMALOAISANH1.VisibleIndex = 0;
+            // 
+            // colTENLOAISANH
+            // 
+            this.colTENLOAISANH.FieldName = "TENLOAISANH";
+            this.colTENLOAISANH.Name = "colTENLOAISANH";
+            this.colTENLOAISANH.Visible = true;
+            this.colTENLOAISANH.VisibleIndex = 1;
+            // 
+            // colDONGIABANTOITHIEU
+            // 
+            this.colDONGIABANTOITHIEU.FieldName = "DONGIABANTOITHIEU";
+            this.colDONGIABANTOITHIEU.Name = "colDONGIABANTOITHIEU";
+            this.colDONGIABANTOITHIEU.Visible = true;
+            this.colDONGIABANTOITHIEU.VisibleIndex = 2;
             // 
             // listView1
             // 
@@ -518,7 +627,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.gridControl1);
+            this.tabPage1.Controls.Add(this.gridControlSanh);
             this.tabPage1.Controls.Add(this.listView2);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
@@ -531,15 +640,15 @@
             this.tabPage1.Text = "Danh sách sảnh";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // gridControl1
+            // gridControlSanh
             // 
-            this.gridControl1.DataSource = this.sANHBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(0, 124);
-            this.gridControl1.MainView = this.gridView2;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(650, 262);
-            this.gridControl1.TabIndex = 8;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControlSanh.DataSource = this.sANHBindingSource;
+            this.gridControlSanh.Location = new System.Drawing.Point(0, 124);
+            this.gridControlSanh.MainView = this.gridView2;
+            this.gridControlSanh.Name = "gridControlSanh";
+            this.gridControlSanh.Size = new System.Drawing.Size(650, 262);
+            this.gridControlSanh.TabIndex = 8;
+            this.gridControlSanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // sANHBindingSource
@@ -560,7 +669,7 @@
             this.colTENSANH,
             this.colSLBANTOIDA,
             this.colGHICHU});
-            this.gridView2.GridControl = this.gridControl1;
+            this.gridView2.GridControl = this.gridControlSanh;
             this.gridView2.Name = "gridView2";
             // 
             // colMASANH
@@ -692,115 +801,13 @@
             // 
             this.sANHTableAdapter.ClearBeforeFill = true;
             // 
-            // gridControl2
-            // 
-            this.gridControl2.DataSource = this.lOAISANHBindingSource;
-            this.gridControl2.Location = new System.Drawing.Point(6, 145);
-            this.gridControl2.MainView = this.gridView3;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(638, 235);
-            this.gridControl2.TabIndex = 17;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
-            // 
-            // gridView3
-            // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMALOAISANH1,
-            this.colTENLOAISANH,
-            this.colDONGIABANTOITHIEU});
-            this.gridView3.GridControl = this.gridControl2;
-            this.gridView3.Name = "gridView3";
-            // 
-            // qLTCDataSet2
-            // 
-            this.qLTCDataSet2.DataSetName = "QLTCDataSet2";
-            this.qLTCDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lOAISANHBindingSource
-            // 
-            this.lOAISANHBindingSource.DataMember = "LOAISANH";
-            this.lOAISANHBindingSource.DataSource = this.qLTCDataSet2;
-            // 
             // lOAISANHTableAdapter
             // 
             this.lOAISANHTableAdapter.ClearBeforeFill = true;
             // 
-            // colMALOAISANH1
-            // 
-            this.colMALOAISANH1.FieldName = "MALOAISANH";
-            this.colMALOAISANH1.Name = "colMALOAISANH1";
-            this.colMALOAISANH1.Visible = true;
-            this.colMALOAISANH1.VisibleIndex = 0;
-            // 
-            // colTENLOAISANH
-            // 
-            this.colTENLOAISANH.FieldName = "TENLOAISANH";
-            this.colTENLOAISANH.Name = "colTENLOAISANH";
-            this.colTENLOAISANH.Visible = true;
-            this.colTENLOAISANH.VisibleIndex = 1;
-            // 
-            // colDONGIABANTOITHIEU
-            // 
-            this.colDONGIABANTOITHIEU.FieldName = "DONGIABANTOITHIEU";
-            this.colDONGIABANTOITHIEU.Name = "colDONGIABANTOITHIEU";
-            this.colDONGIABANTOITHIEU.Visible = true;
-            this.colDONGIABANTOITHIEU.VisibleIndex = 2;
-            // 
-            // gridControl3
-            // 
-            this.gridControl3.DataSource = this.mONANBindingSource;
-            this.gridControl3.Location = new System.Drawing.Point(6, 118);
-            this.gridControl3.MainView = this.gridView4;
-            this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(638, 262);
-            this.gridControl3.TabIndex = 12;
-            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView4});
-            // 
-            // gridView4
-            // 
-            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMAMONAN,
-            this.colTENMONAN,
-            this.colGIA});
-            this.gridView4.GridControl = this.gridControl3;
-            this.gridView4.Name = "gridView4";
-            // 
-            // qLTCDataSet3
-            // 
-            this.qLTCDataSet3.DataSetName = "QLTCDataSet3";
-            this.qLTCDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mONANBindingSource
-            // 
-            this.mONANBindingSource.DataMember = "MONAN";
-            this.mONANBindingSource.DataSource = this.qLTCDataSet3;
-            // 
             // mONANTableAdapter
             // 
             this.mONANTableAdapter.ClearBeforeFill = true;
-            // 
-            // colMAMONAN
-            // 
-            this.colMAMONAN.FieldName = "MAMONAN";
-            this.colMAMONAN.Name = "colMAMONAN";
-            this.colMAMONAN.Visible = true;
-            this.colMAMONAN.VisibleIndex = 0;
-            // 
-            // colTENMONAN
-            // 
-            this.colTENMONAN.FieldName = "TENMONAN";
-            this.colTENMONAN.Name = "colTENMONAN";
-            this.colTENMONAN.Visible = true;
-            this.colTENMONAN.VisibleIndex = 1;
-            // 
-            // colGIA
-            // 
-            this.colGIA.FieldName = "GIA";
-            this.colGIA.Name = "colGIA";
-            this.colGIA.Visible = true;
-            this.colGIA.VisibleIndex = 2;
             // 
             // QuanTri
             // 
@@ -817,21 +824,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvDV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlLoaiSanh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOAISANHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlSanh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.QTMonAn.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOAISANHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -893,7 +900,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.Button button23;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gridControlSanh;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private QLTCDataSet1 qLTCDataSet1;
         private System.Windows.Forms.BindingSource sANHBindingSource;
@@ -903,8 +910,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTENSANH;
         private DevExpress.XtraGrid.Columns.GridColumn colSLBANTOIDA;
         private DevExpress.XtraGrid.Columns.GridColumn colGHICHU;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.GridControl gridControlLoaiSanh;
         private QLTCDataSet2 qLTCDataSet2;
         private System.Windows.Forms.BindingSource lOAISANHBindingSource;
         private QLTCDataSet2TableAdapters.LOAISANHTableAdapter lOAISANHTableAdapter;
@@ -919,5 +925,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMAMONAN;
         private DevExpress.XtraGrid.Columns.GridColumn colTENMONAN;
         private DevExpress.XtraGrid.Columns.GridColumn colGIA;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
     }
 }
