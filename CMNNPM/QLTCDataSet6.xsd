@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLTCDataSet6" targetNamespace="http://tempuri.org/QLTCDataSet6.xsd" xmlns:mstns="http://tempuri.org/QLTCDataSet6.xsd" xmlns="http://tempuri.org/QLTCDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLTCConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLTCConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CMNNPM.Properties.Settings.GlobalReference.Default.QLTCConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LOAISANHTableAdapter" GeneratorDataComponentClassName="LOAISANHTableAdapter" Name="LOAISANH" UserDataComponentName="LOAISANHTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLTCConnectionString (Settings)" DbObjectName="QLTC.dbo.LOAISANH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TENLOAISANH, DONGIABANTOITHIEU FROM dbo.LOAISANH</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TENLOAISANH" DataSetColumn="TENLOAISANH" />
+              <Mapping SourceColumn="DONGIABANTOITHIEU" DataSetColumn="DONGIABANTOITHIEU" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SANHTableAdapter" GeneratorDataComponentClassName="SANHTableAdapter" Name="SANH" UserDataComponentName="SANHTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLTCConnectionString (Settings)" DbObjectName="QLTC.dbo.SANH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TENSANH, SLBANTOIDA, GHICHU FROM dbo.SANH</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TENSANH" DataSetColumn="TENSANH" />
+              <Mapping SourceColumn="SLBANTOIDA" DataSetColumn="SLBANTOIDA" />
+              <Mapping SourceColumn="GHICHU" DataSetColumn="GHICHU" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLTCDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLTCDataSet6" msprop:Generator_UserDSName="QLTCDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LOAISANH" msprop:Generator_TableClassName="LOAISANHDataTable" msprop:Generator_TableVarName="tableLOAISANH" msprop:Generator_TablePropName="LOAISANH" msprop:Generator_RowDeletingName="LOAISANHRowDeleting" msprop:Generator_RowChangingName="LOAISANHRowChanging" msprop:Generator_RowEvHandlerName="LOAISANHRowChangeEventHandler" msprop:Generator_RowDeletedName="LOAISANHRowDeleted" msprop:Generator_UserTableName="LOAISANH" msprop:Generator_RowChangedName="LOAISANHRowChanged" msprop:Generator_RowEvArgName="LOAISANHRowChangeEvent" msprop:Generator_RowClassName="LOAISANHRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TENLOAISANH" msprop:Generator_ColumnVarNameInTable="columnTENLOAISANH" msprop:Generator_ColumnPropNameInRow="TENLOAISANH" msprop:Generator_ColumnPropNameInTable="TENLOAISANHColumn" msprop:Generator_UserColumnName="TENLOAISANH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DONGIABANTOITHIEU" msprop:Generator_ColumnVarNameInTable="columnDONGIABANTOITHIEU" msprop:Generator_ColumnPropNameInRow="DONGIABANTOITHIEU" msprop:Generator_ColumnPropNameInTable="DONGIABANTOITHIEUColumn" msprop:Generator_UserColumnName="DONGIABANTOITHIEU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SANH" msprop:Generator_TableClassName="SANHDataTable" msprop:Generator_TableVarName="tableSANH" msprop:Generator_TablePropName="SANH" msprop:Generator_RowDeletingName="SANHRowDeleting" msprop:Generator_RowChangingName="SANHRowChanging" msprop:Generator_RowEvHandlerName="SANHRowChangeEventHandler" msprop:Generator_RowDeletedName="SANHRowDeleted" msprop:Generator_UserTableName="SANH" msprop:Generator_RowChangedName="SANHRowChanged" msprop:Generator_RowEvArgName="SANHRowChangeEvent" msprop:Generator_RowClassName="SANHRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TENSANH" msprop:Generator_ColumnVarNameInTable="columnTENSANH" msprop:Generator_ColumnPropNameInRow="TENSANH" msprop:Generator_ColumnPropNameInTable="TENSANHColumn" msprop:Generator_UserColumnName="TENSANH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SLBANTOIDA" msprop:Generator_ColumnVarNameInTable="columnSLBANTOIDA" msprop:Generator_ColumnPropNameInRow="SLBANTOIDA" msprop:Generator_ColumnPropNameInTable="SLBANTOIDAColumn" msprop:Generator_UserColumnName="SLBANTOIDA" type="xs:int" minOccurs="0" />
+              <xs:element name="GHICHU" msprop:Generator_ColumnVarNameInTable="columnGHICHU" msprop:Generator_ColumnPropNameInRow="GHICHU" msprop:Generator_ColumnPropNameInTable="GHICHUColumn" msprop:Generator_UserColumnName="GHICHU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

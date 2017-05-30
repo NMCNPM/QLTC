@@ -36,18 +36,18 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.qLTCDataSet4 = new CMNNPM.QLTCDataSet4();
+            this.gridControlDSTP = new DevExpress.XtraGrid.GridControl();
             this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mONANTableAdapter = new CMNNPM.QLTCDataSet4TableAdapters.MONANTableAdapter();
+            this.qLTCDataSet4 = new CMNNPM.QLTCDataSet4();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGIA = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).BeginInit();
+            this.mONANTableAdapter = new CMNNPM.QLTCDataSet4TableAdapters.MONANTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlDSTP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -104,16 +104,26 @@
             this.columnHeader4.Text = "Ghi chú";
             this.columnHeader4.Width = 287;
             // 
-            // gridControl1
+            // gridControlDSTP
             // 
-            this.gridControl1.DataSource = this.mONANBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(13, 53);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(591, 247);
-            this.gridControl1.TabIndex = 5;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControlDSTP.DataSource = this.mONANBindingSource;
+            this.gridControlDSTP.Location = new System.Drawing.Point(13, 53);
+            this.gridControlDSTP.MainView = this.gridView1;
+            this.gridControlDSTP.Name = "gridControlDSTP";
+            this.gridControlDSTP.Size = new System.Drawing.Size(591, 247);
+            this.gridControlDSTP.TabIndex = 5;
+            this.gridControlDSTP.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // mONANBindingSource
+            // 
+            this.mONANBindingSource.DataMember = "MONAN";
+            this.mONANBindingSource.DataSource = this.qLTCDataSet4;
+            // 
+            // qLTCDataSet4
+            // 
+            this.qLTCDataSet4.DataSetName = "QLTCDataSet4";
+            this.qLTCDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -121,22 +131,8 @@
             this.colMAMONAN,
             this.colTENMONAN,
             this.colGIA});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.gridControlDSTP;
             this.gridView1.Name = "gridView1";
-            // 
-            // qLTCDataSet4
-            // 
-            this.qLTCDataSet4.DataSetName = "QLTCDataSet4";
-            this.qLTCDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mONANBindingSource
-            // 
-            this.mONANBindingSource.DataMember = "MONAN";
-            this.mONANBindingSource.DataSource = this.qLTCDataSet4;
-            // 
-            // mONANTableAdapter
-            // 
-            this.mONANTableAdapter.ClearBeforeFill = true;
             // 
             // colMAMONAN
             // 
@@ -159,22 +155,26 @@
             this.colGIA.Visible = true;
             this.colGIA.VisibleIndex = 2;
             // 
+            // mONANTableAdapter
+            // 
+            this.mONANTableAdapter.ClearBeforeFill = true;
+            // 
             // DanhSachThucPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 353);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gridControlDSTP);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "DanhSachThucPham";
             this.Text = "Danh sách thực phẩm";
             this.Load += new System.EventHandler(this.DanhSachThucPham_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlDSTP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,7 +187,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gridControlDSTP;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private QLTCDataSet4 qLTCDataSet4;
         private System.Windows.Forms.BindingSource mONANBindingSource;

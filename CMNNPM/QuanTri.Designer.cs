@@ -55,7 +55,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlMonAn = new DevExpress.XtraGrid.GridControl();
             this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLTCDataSet3 = new CMNNPM.QLTCDataSet3();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -91,8 +91,6 @@
             this.sANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLTCDataSet1 = new CMNNPM.QLTCDataSet1();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMASANH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMALOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENSANH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSLBANTOIDA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGHICHU = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -110,13 +108,14 @@
             this.sANHTableAdapter = new CMNNPM.QLTCDataSet1TableAdapters.SANHTableAdapter();
             this.lOAISANHTableAdapter = new CMNNPM.QLTCDataSet2TableAdapters.LOAISANHTableAdapter();
             this.mONANTableAdapter = new CMNNPM.QLTCDataSet3TableAdapters.MONANTableAdapter();
+            this.colLOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlMonAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
@@ -355,7 +354,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.gridControl3);
+            this.tabPage3.Controls.Add(this.gridControlMonAn);
             this.tabPage3.Controls.Add(this.lvMA);
             this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.button5);
@@ -368,15 +367,15 @@
             this.tabPage3.Text = "Món ăn";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // gridControl3
+            // gridControlMonAn
             // 
-            this.gridControl3.DataSource = this.mONANBindingSource;
-            this.gridControl3.Location = new System.Drawing.Point(6, 118);
-            this.gridControl3.MainView = this.gridView4;
-            this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(638, 262);
-            this.gridControl3.TabIndex = 12;
-            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControlMonAn.DataSource = this.mONANBindingSource;
+            this.gridControlMonAn.Location = new System.Drawing.Point(6, 118);
+            this.gridControlMonAn.MainView = this.gridView4;
+            this.gridControlMonAn.Name = "gridControlMonAn";
+            this.gridControlMonAn.Size = new System.Drawing.Size(638, 262);
+            this.gridControlMonAn.TabIndex = 12;
+            this.gridControlMonAn.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
             // 
             // mONANBindingSource
@@ -395,7 +394,7 @@
             this.colMAMONAN,
             this.colTENMONAN,
             this.colGIA});
-            this.gridView4.GridControl = this.gridControl3;
+            this.gridView4.GridControl = this.gridControlMonAn;
             this.gridView4.Name = "gridView4";
             // 
             // colMAMONAN
@@ -664,48 +663,36 @@
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMASANH,
-            this.colMALOAISANH,
             this.colTENSANH,
+            this.colLOAISANH,
             this.colSLBANTOIDA,
             this.colGHICHU});
             this.gridView2.GridControl = this.gridControlSanh;
             this.gridView2.Name = "gridView2";
             // 
-            // colMASANH
-            // 
-            this.colMASANH.FieldName = "MASANH";
-            this.colMASANH.Name = "colMASANH";
-            this.colMASANH.Visible = true;
-            this.colMASANH.VisibleIndex = 0;
-            // 
-            // colMALOAISANH
-            // 
-            this.colMALOAISANH.FieldName = "MALOAISANH";
-            this.colMALOAISANH.Name = "colMALOAISANH";
-            this.colMALOAISANH.Visible = true;
-            this.colMALOAISANH.VisibleIndex = 1;
-            // 
             // colTENSANH
             // 
+            this.colTENSANH.Caption = "Tên sảnh";
             this.colTENSANH.FieldName = "TENSANH";
             this.colTENSANH.Name = "colTENSANH";
             this.colTENSANH.Visible = true;
-            this.colTENSANH.VisibleIndex = 2;
+            this.colTENSANH.VisibleIndex = 0;
             // 
             // colSLBANTOIDA
             // 
+            this.colSLBANTOIDA.Caption = "SL bàn tối đa";
             this.colSLBANTOIDA.FieldName = "SLBANTOIDA";
             this.colSLBANTOIDA.Name = "colSLBANTOIDA";
             this.colSLBANTOIDA.Visible = true;
-            this.colSLBANTOIDA.VisibleIndex = 3;
+            this.colSLBANTOIDA.VisibleIndex = 2;
             // 
             // colGHICHU
             // 
+            this.colGHICHU.Caption = "Ghi chú";
             this.colGHICHU.FieldName = "GHICHU";
             this.colGHICHU.Name = "colGHICHU";
             this.colGHICHU.Visible = true;
-            this.colGHICHU.VisibleIndex = 4;
+            this.colGHICHU.VisibleIndex = 3;
             // 
             // listView2
             // 
@@ -809,6 +796,14 @@
             // 
             this.mONANTableAdapter.ClearBeforeFill = true;
             // 
+            // colLOAISANH
+            // 
+            this.colLOAISANH.Caption = "Loại sảnh";
+            this.colLOAISANH.FieldName = "TENLOAISANH";
+            this.colLOAISANH.Name = "colLOAISANH";
+            this.colLOAISANH.Visible = true;
+            this.colLOAISANH.VisibleIndex = 1;
+            // 
             // QuanTri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -824,7 +819,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvDV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlMonAn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
@@ -905,8 +900,6 @@
         private QLTCDataSet1 qLTCDataSet1;
         private System.Windows.Forms.BindingSource sANHBindingSource;
         private QLTCDataSet1TableAdapters.SANHTableAdapter sANHTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn colMASANH;
-        private DevExpress.XtraGrid.Columns.GridColumn colMALOAISANH;
         private DevExpress.XtraGrid.Columns.GridColumn colTENSANH;
         private DevExpress.XtraGrid.Columns.GridColumn colSLBANTOIDA;
         private DevExpress.XtraGrid.Columns.GridColumn colGHICHU;
@@ -914,7 +907,7 @@
         private QLTCDataSet2 qLTCDataSet2;
         private System.Windows.Forms.BindingSource lOAISANHBindingSource;
         private QLTCDataSet2TableAdapters.LOAISANHTableAdapter lOAISANHTableAdapter;
-        private DevExpress.XtraGrid.GridControl gridControl3;
+        private DevExpress.XtraGrid.GridControl gridControlMonAn;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private DevExpress.XtraGrid.Columns.GridColumn colMALOAISANH1;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOAISANH;
@@ -926,5 +919,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTENMONAN;
         private DevExpress.XtraGrid.Columns.GridColumn colGIA;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Columns.GridColumn colLOAISANH;
     }
 }

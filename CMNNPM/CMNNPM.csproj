@@ -102,6 +102,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTCDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLTCDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTCDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTCDataSet61.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTCDataSet61.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanTri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +267,28 @@
     </None>
     <None Include="QLTCDataSet4.xss">
       <DependentUpon>QLTCDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLTCDataSet5.xsc">
+      <DependentUpon>QLTCDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QLTCDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTCDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTCDataSet5.xss">
+      <DependentUpon>QLTCDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="QLTCDataSet61.xsc">
+      <DependentUpon>QLTCDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="QLTCDataSet61.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTCDataSet61.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTCDataSet61.xss">
+      <DependentUpon>QLTCDataSet61.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

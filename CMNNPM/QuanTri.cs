@@ -34,6 +34,8 @@ namespace CMNNPM
             var dsDichVu = db.DICHVUs.ToList();
             var dsLoaiSanh = db.LOAISANHs.ToList();
             var dsSanh = db.SANHs.ToList();
+            var dsMonAn = db.MONANs.ToList();
+            gridControlMonAn.DataSource = dsMonAn;
             gridControlSanh.DataSource = dsSanh;
             gridControlLoaiSanh.DataSource = dsLoaiSanh;
             gridControlDV.DataSource = dsDichVu;

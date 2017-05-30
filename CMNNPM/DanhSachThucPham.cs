@@ -24,9 +24,13 @@ namespace CMNNPM
 
         private void DanhSachThucPham_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLTCDataSet4.MONAN' table. You can move, or remove it, as needed.
-            this.mONANTableAdapter.Fill(this.qLTCDataSet4.MONAN);
-
+            LoadData();
+        }
+        private void LoadData()
+        {
+            DataDataContext db = new DataDataContext();
+            var dsMonAn = db.MONANs.ToList();
+            gridControlDSTP.DataSource = dsMonAn;
         }
     }
 }
