@@ -54,22 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCaoDoanhSo.cs">
+    <Compile Include="BM\BaoCaoDoanhSo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCaoDoanhSo.Designer.cs">
+    <Compile Include="BM\BaoCaoDoanhSo.Designer.cs">
       <DependentUpon>BaoCaoDoanhSo.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangNhap.cs">
+    <Compile Include="BM\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DangNhap.Designer.cs">
+    <Compile Include="BM\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhSachDichVu.cs">
+    <Compile Include="BM\DanhSachDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhSachDichVu.Designer.cs">
+    <Compile Include="BM\DanhSachDichVu.Designer.cs">
       <DependentUpon>DanhSachDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.designer.cs">
@@ -77,6 +77,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Data.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseData.cs" />
     <Compile Include="QLTCDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,82 +113,82 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTCDataSet61.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QuanTri.cs">
+    <Compile Include="BM\QuanTri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanTri.Designer.cs">
+    <Compile Include="BM\QuanTri.Designer.cs">
       <DependentUpon>QuanTri.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThemMonAn.cs">
+    <Compile Include="BM\ThemMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThemMonAn.Designer.cs">
+    <Compile Include="BM\ThemMonAn.Designer.cs">
       <DependentUpon>ThemMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThemSanh.cs">
+    <Compile Include="BM\ThemSanh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThemSanh.Designer.cs">
+    <Compile Include="BM\ThemSanh.Designer.cs">
       <DependentUpon>ThemSanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhSachThucPham.cs">
+    <Compile Include="BM\DanhSachThucPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhSachThucPham.Designer.cs">
+    <Compile Include="BM\DanhSachThucPham.Designer.cs">
       <DependentUpon>DanhSachThucPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLy.cs">
+    <Compile Include="BM\QuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLy.Designer.cs">
+    <Compile Include="BM\QuanLy.Designer.cs">
       <DependentUpon>QuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatTiec.cs">
+    <Compile Include="BM\DatTiec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatTiec.Designer.cs">
+    <Compile Include="BM\DatTiec.Designer.cs">
       <DependentUpon>DatTiec.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoaDon.cs">
+    <Compile Include="BM\HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HoaDon.Designer.cs">
+    <Compile Include="BM\HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BaoCaoDoanhSo.resx">
+    <EmbeddedResource Include="BM\BaoCaoDoanhSo.resx">
       <DependentUpon>BaoCaoDoanhSo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DangNhap.resx">
+    <EmbeddedResource Include="BM\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data.dbml.layout">
       <DependentUpon>Data.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="DanhSachDichVu.resx">
+    <EmbeddedResource Include="BM\DanhSachDichVu.resx">
       <DependentUpon>DanhSachDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="QuanTri.resx">
+    <EmbeddedResource Include="BM\QuanTri.resx">
       <DependentUpon>QuanTri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThemMonAn.resx">
+    <EmbeddedResource Include="BM\ThemMonAn.resx">
       <DependentUpon>ThemMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThemSanh.resx">
+    <EmbeddedResource Include="BM\ThemSanh.resx">
       <DependentUpon>ThemSanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhSachThucPham.resx">
+    <EmbeddedResource Include="BM\DanhSachThucPham.resx">
       <DependentUpon>DanhSachThucPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLy.resx">
+    <EmbeddedResource Include="BM\QuanLy.resx">
       <DependentUpon>QuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatTiec.resx">
+    <EmbeddedResource Include="BM\DatTiec.resx">
       <DependentUpon>DatTiec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HoaDon.resx">
+    <EmbeddedResource Include="BM\HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

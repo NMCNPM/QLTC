@@ -10,6 +10,9 @@
 
 #pragma warning disable 1591
 
+using System;
+using System.Data;
+
 namespace CMNNPM {
     
     
@@ -268,7 +271,12 @@ namespace CMNNPM {
             xs.Add(dsSchema);
             return type;
         }
-        
+
+        internal static DataSet GetDataSetSchema()
+        {
+            throw new NotImplementedException();
+        }
+
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void SANHRowChangeEventHandler(object sender, SANHRowChangeEvent e);
         
