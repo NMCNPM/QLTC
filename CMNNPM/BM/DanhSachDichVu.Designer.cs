@@ -37,17 +37,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.qLTCDataSet = new CMNNPM.QLTCDataSet();
             this.dICHVUBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dICHVUTableAdapter = new CMNNPM.QLTCDataSetTableAdapters.DICHVUTableAdapter();
+            this.qLTCDataSet = new CMNNPM.QLTCDataSet();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMADICHVU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENDICHVU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGIA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dICHVUTableAdapter = new CMNNPM.QLTCDataSetTableAdapters.DICHVUTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICHVUBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -93,6 +93,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Hoàn Thành";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -114,6 +115,16 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // dICHVUBindingSource
+            // 
+            this.dICHVUBindingSource.DataMember = "DICHVU";
+            this.dICHVUBindingSource.DataSource = this.qLTCDataSet;
+            // 
+            // qLTCDataSet
+            // 
+            this.qLTCDataSet.DataSetName = "QLTCDataSet";
+            this.qLTCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -125,20 +136,6 @@
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindNullPrompt = "Tìm kiếm...";
-            // 
-            // qLTCDataSet
-            // 
-            this.qLTCDataSet.DataSetName = "QLTCDataSet";
-            this.qLTCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dICHVUBindingSource
-            // 
-            this.dICHVUBindingSource.DataMember = "DICHVU";
-            this.dICHVUBindingSource.DataSource = this.qLTCDataSet;
-            // 
-            // dICHVUTableAdapter
-            // 
-            this.dICHVUTableAdapter.ClearBeforeFill = true;
             // 
             // colMADICHVU
             // 
@@ -161,6 +158,10 @@
             this.colGIA.Visible = true;
             this.colGIA.VisibleIndex = 2;
             // 
+            // dICHVUTableAdapter
+            // 
+            this.dICHVUTableAdapter.ClearBeforeFill = true;
+            // 
             // DanhSachDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,9 +175,9 @@
             this.Text = "Danh Sách Dịch Vụ";
             this.Load += new System.EventHandler(this.DanhSachDichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICHVUBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

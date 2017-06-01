@@ -46,5 +46,23 @@ namespace CMNNPM
             ThemMonAn form = new ThemMonAn();
             form.Show();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ThemLoaiSanh form = new ThemLoaiSanh();
+            form.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ThemDichVu form = new ThemDichVu();
+            form.Show();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            BaoCaoDoanhSo form = new BaoCaoDoanhSo();
+            form.Show();
+        }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CMNNPM
 {
-    public partial class ThemMonAn : Form
+    public partial class ThemDichVu : Form
     {
-        public ThemMonAn()
+        public ThemDichVu()
         {
             InitializeComponent();
         }

@@ -92,6 +92,7 @@
             this.qLTCDataSet1 = new CMNNPM.QLTCDataSet1();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTENSANH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSLBANTOIDA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGHICHU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.listView2 = new System.Windows.Forms.ListView();
@@ -108,7 +109,6 @@
             this.sANHTableAdapter = new CMNNPM.QLTCDataSet1TableAdapters.SANHTableAdapter();
             this.lOAISANHTableAdapter = new CMNNPM.QLTCDataSet2TableAdapters.LOAISANHTableAdapter();
             this.mONANTableAdapter = new CMNNPM.QLTCDataSet3TableAdapters.MONANTableAdapter();
-            this.colLOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDV)).BeginInit();
@@ -212,6 +212,7 @@
             this.button23.TabIndex = 11;
             this.button23.Text = "Báo cáo";
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // tabPage4
             // 
@@ -351,6 +352,7 @@
             this.button9.TabIndex = 10;
             this.button9.Text = "Thêm";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // tabPage3
             // 
@@ -623,6 +625,7 @@
             this.button12.TabIndex = 10;
             this.button12.Text = "Thêm";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // tabPage1
             // 
@@ -677,6 +680,14 @@
             this.colTENSANH.Name = "colTENSANH";
             this.colTENSANH.Visible = true;
             this.colTENSANH.VisibleIndex = 0;
+            // 
+            // colLOAISANH
+            // 
+            this.colLOAISANH.Caption = "Loại sảnh";
+            this.colLOAISANH.FieldName = "TENLOAISANH";
+            this.colLOAISANH.Name = "colLOAISANH";
+            this.colLOAISANH.Visible = true;
+            this.colLOAISANH.VisibleIndex = 1;
             // 
             // colSLBANTOIDA
             // 
@@ -796,14 +807,6 @@
             // 
             this.mONANTableAdapter.ClearBeforeFill = true;
             // 
-            // colLOAISANH
-            // 
-            this.colLOAISANH.Caption = "Loại sảnh";
-            this.colLOAISANH.FieldName = "TENLOAISANH";
-            this.colLOAISANH.Name = "colLOAISANH";
-            this.colLOAISANH.Visible = true;
-            this.colLOAISANH.VisibleIndex = 1;
-            // 
             // QuanTri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -811,7 +814,7 @@
             this.ClientSize = new System.Drawing.Size(683, 437);
             this.Controls.Add(this.QTMonAn);
             this.Name = "QuanTri";
-            this.Text = "Quản Trị";
+            this.Text = "Quản trị";
             this.Load += new System.EventHandler(this.QuanTri_Load);
             this.tabPage5.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);

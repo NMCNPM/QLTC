@@ -28,5 +28,12 @@ namespace CMNNPM
             mForm.Show();
             mForm.Location = new Point(this.Location.X + this.Width, this.Location.Y);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DanhSachDichVu mForm = new DanhSachDichVu();
+            mForm.Show();
+            mForm.Location = new Point(this.Location.X + this.Width, this.Location.Y);
+        }
     }
 }
