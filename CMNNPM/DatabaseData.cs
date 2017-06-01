@@ -40,7 +40,8 @@ namespace CMNNPM
         private static DataTable DichVu;
         private static DataTable LoaiSanh;
         private static DataTable DanhSachTiecCuoi;
-        private DataSet mSetDichVu;
+
+        public static DataRow rowTiecCuoi;
 
         public string generateID(string Header)
         {
@@ -272,11 +273,23 @@ namespace CMNNPM
             return true;
         }
 
-        public bool alterDatTiec(String tenChuRe, String tenCoDau, String SDT,
+        public DataRow getSelectedTiecCuoiRow(int index)
+        {
+            DataRow mRow = queryTable("SELECT * FROM TIECCUOI ORDER BY MATIECCUOI ASC")
+                .Rows[index];
+            rowTiecCuoi = mRow;
+            return mRow;
+        }
+
+        public bool updateDatTiec(String tenChuRe, String tenCoDau, String SDT,
             DateTime ngayThang, String loaiSanh, String sanh, String ca,
             String slBan, String slBanDuTru)
         {
 
+            DataTable mTable = queryTable("UPDATE KHACHHANG SET "
+                + "TENCODAU = '" + tenCoDau + "', "
+                + "TENCHURE = '" + tenChuRe + "', " 
+                + "SDT = '" + SDT + "' WHERE");
             return true;
         }
 
