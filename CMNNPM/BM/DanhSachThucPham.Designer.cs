@@ -44,10 +44,12 @@
             this.colTENMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGIA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.mONANTableAdapter = new CMNNPM.QLTCDataSet4TableAdapters.MONANTableAdapter();
+            this.dataGridViewDSThucPham = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDSTP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSThucPham)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -159,11 +161,20 @@
             // 
             this.mONANTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridViewDSThucPham
+            // 
+            this.dataGridViewDSThucPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDSThucPham.Location = new System.Drawing.Point(12, 78);
+            this.dataGridViewDSThucPham.Name = "dataGridViewDSThucPham";
+            this.dataGridViewDSThucPham.Size = new System.Drawing.Size(592, 47);
+            this.dataGridViewDSThucPham.TabIndex = 6;
+            // 
             // DanhSachThucPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 353);
+            this.Controls.Add(this.dataGridViewDSThucPham);
             this.Controls.Add(this.gridControlDSTP);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
@@ -175,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSThucPham)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,5 +207,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMAMONAN;
         private DevExpress.XtraGrid.Columns.GridColumn colTENMONAN;
         private DevExpress.XtraGrid.Columns.GridColumn colGIA;
+        private System.Windows.Forms.DataGridView dataGridViewDSThucPham;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMNNPM.SQL;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CMNNPM
 {
-    class DatabaseData
+    class DatTiecSQL
     {
         //private DataTable mTable;
 
@@ -19,56 +20,18 @@ namespace CMNNPM
         private OleDbConnection mConnLoaiSanh;
 
         private OleDbDataAdapter DichVuAdapter;
-        private OleDbDataAdapter LoaiSanhAdapter;
-
-        private static String CONNECTION_STRING = 
-            "Data Source=DESKTOP-DM3AGPH\\SQLEXPRESS;Initial Catalog=_QLTC;Integrated Security=True";
-
-        private String DichVuName = "DICHVU";
-        private String LoaiSanhName = "LOAISANH";
-        private String KhachHangName = "KHACHHANG";
-        private String CaName = "CA";
-        private String DanhSachDVName = "DANHSACHDV";
-        private String HoaDonName = "HOADON";
-        private String MonAnName = "MONAN";
-        private String SanhName = "SANH";
-        private String TaiKhoanName = "TAIKHOAN";
-        private String ThucDonName = "THUCDON";
-        private String TiecCuoiName = "TIECCUOI";
-        private String tableName = "qlnv2";
+        private OleDbDataAdapter LoaiSanhAdapter;        
 
         private static DataTable DichVu;
         private static DataTable LoaiSanh;
         private static DataTable DanhSachTiecCuoi;
 
-        public static DataRow rowTiecCuoi;
-
-        public string generateID(string Header)
-        {
-            string result = DateTime.Now.ToString("ddMMyyyyhhmmss");
-            result = Header + result;
-            return result;
-        }
-
-        public DataTable queryTable(String cmd)
-        {
-            DataTable mTable = new DataTable();
-
-            SqlConnection khConnection = new SqlConnection();
-            khConnection.ConnectionString = CONNECTION_STRING;
-            khConnection.Open();
-
-            SqlCommand khCommand = khConnection.CreateCommand();
-            khCommand.CommandText = cmd;
-
-            mTable.Load(khCommand.ExecuteReader());
-            khConnection.Close();
-            return mTable;
-        }
+        public static String MATIECCUOI = "";
+        public static DataRow rowTiecCuoi;              
 
         private void createConnection()
         {
-            mConn = new OleDbConnection(CONNECTION_STRING);
+            mConn = new OleDbConnection(DatabaseQuery.CONNECTION_STRING);
             mConn.Open();
             mComm = new OleDbCommand("select * from DICHVU", mConn);
             DichVu = new DataTable();
@@ -80,10 +43,10 @@ namespace CMNNPM
 
         }
 
-        public bool loadDatabaseDichVu(ListView lv)
+        public static bool loadDatabaseDichVu(ListView lv)
         {
             SqlConnection mConnection = new SqlConnection();
-            mConnection.ConnectionString = CONNECTION_STRING;
+            mConnection.ConnectionString = DatabaseQuery.CONNECTION_STRING;
             mConnection.Open();
 
             SqlCommand mCommand = mConnection.CreateCommand();
@@ -112,10 +75,10 @@ namespace CMNNPM
             return true;
         }
 
-        public void loadDatabaseLoaiSanh(ListView lv)
+        public static void loadDatabaseLoaiSanh(ListView lv)
         {
             SqlConnection mConnection = new SqlConnection();
-            mConnection.ConnectionString = CONNECTION_STRING;
+            mConnection.ConnectionString = DatabaseQuery.CONNECTION_STRING;
             mConnection.Open();
 
             SqlCommand mCommand = mConnection.CreateCommand();
@@ -143,10 +106,10 @@ namespace CMNNPM
             }
         }
 
-        public void loadDatabaseDanhSachTiecCuoi(ListView lv)
+        public static void loadDatabaseDanhSachTiecCuoi(ListView lv)
         {
             SqlConnection mConnection = new SqlConnection();
-            mConnection.ConnectionString = CONNECTION_STRING;
+            mConnection.ConnectionString = DatabaseQuery.CONNECTION_STRING;
             mConnection.Open();
 
             SqlCommand mCommand = mConnection.CreateCommand();
@@ -178,10 +141,10 @@ namespace CMNNPM
             }
         }
 
-        public bool insertKhachHang(String tenCoDau, String tenChuRe, String SDT)
+        public static bool insertKhachHang(String tenCoDau, String tenChuRe, String SDT)
         {
-            DataTable tablet = queryTable("INSERT INTO KHACHHANG VALUES('" + 
-                generateID("KH") + "','" +
+            DataTable tablet = DatabaseQuery.queryTable("INSERT INTO KHACHHANG VALUES('" + 
+                DatabaseQuery.generateID("KH") + "','" +
                 tenCoDau +"','" +
                 tenChuRe + "', '"+
                 SDT +"');");
@@ -189,39 +152,39 @@ namespace CMNNPM
             return true;
         }
 
-        public DataTable loadTenLoaiSanh()
+        public static DataTable loadTenLoaiSanh()
         {            
-            return queryTable("SELECT LOAISANH.TENLOAISANH FROM LOAISANH");
+            return DatabaseQuery.queryTable("SELECT LOAISANH.TENLOAISANH FROM LOAISANH");
         }
 
-        public DataTable loadCa()
+        public static DataTable loadCa()
         {
-            return queryTable("SELECT CA.TENCA FROM CA");
+            return DatabaseQuery.queryTable("SELECT CA.TENCA FROM CA");
         }
 
-        public DataTable loadLoaiSanh()
+        public static DataTable loadLoaiSanh()
         {
-            return queryTable("SELECT * FROM LOAISANH");
+            return DatabaseQuery.queryTable("SELECT * FROM LOAISANH");
         }
 
-        public DataTable loadSanh()
+        public static DataTable loadSanh()
         {
-            return queryTable("SELECT * FROM SANH");
+            return DatabaseQuery.queryTable("SELECT * FROM SANH");
         }
-        public DataTable loadTenSanh()
+        public static DataTable loadTenSanh()
         {
-            return queryTable("SELECT SANH.TENSANH FROM SANH");
-        }
-
-        public DataTable loadSLBanToiDa()
-        {
-            return queryTable("SELECT SANH.SLBANTOIDA FROM SANH");
+            return DatabaseQuery.queryTable("SELECT SANH.TENSANH FROM SANH");
         }
 
-        public String selectMaCaFromTenCa(String tenCa)
+        public static DataTable loadSLBanToiDa()
+        {
+            return DatabaseQuery.queryTable("SELECT SANH.SLBANTOIDA FROM SANH");
+        }
+
+        public static String selectMaCaFromTenCa(String tenCa)
         {
             String maCa = "";
-            DataTable caTable = queryTable("SELECT CA.MACA FROM CA "
+            DataTable caTable = DatabaseQuery.queryTable("SELECT CA.MACA FROM CA "
                 + "WHERE CA.TENCA = '" + tenCa
                 + "' ORDER BY CA.MACA DESC");
 
@@ -229,10 +192,10 @@ namespace CMNNPM
             return maCa;
         }
 
-        public String selectMaKhachHangFromCoDauChuRe(String tenCoDau, String tenChuRe)
+        public static String selectMaKhachHangFromCoDauChuRe(String tenCoDau, String tenChuRe)
         {
             String ma = "";
-            DataTable mTable = queryTable("SELECT KHACHHANG.MAKHACHHANG FROM KHACHHANG "
+            DataTable mTable = DatabaseQuery.queryTable("SELECT KHACHHANG.MAKHACHHANG FROM KHACHHANG "
                 + "WHERE KHACHHANG.TENCODAU = '" + tenCoDau
                 + "' AND KHACHHANG.TENCHURE = '" + tenChuRe
                 + "' ORDER BY KHACHHANG.MAKHACHHANG DESC");
@@ -241,10 +204,10 @@ namespace CMNNPM
             return ma;
         }
 
-        public String selectMaSanhFromTenSanh(String tenSanh)
+        public static String selectMaSanhFromTenSanh(String tenSanh)
         {
             String ma = "";
-            DataTable mTable = queryTable("SELECT SANH.MASANH FROM SANH "
+            DataTable mTable = DatabaseQuery.queryTable("SELECT SANH.MASANH FROM SANH "
                 + "WHERE SANH.TENSANH = '" + tenSanh
                 + "' ORDER BY SANH.MASANH DESC");
 
@@ -252,17 +215,17 @@ namespace CMNNPM
             return ma;
         }
 
-        public bool insertDatTiec(String tenChuRe, String tenCoDau, String SDT,
+        public static bool insertDatTiec(String tenChuRe, String tenCoDau, String SDT,
             DateTime ngayThang, String loaiSanh, String sanh, String ca,
-            String slBan, String slBanDuTru)
+            int slBan, int slBanDuTru)
         {
             insertKhachHang(tenCoDau, tenChuRe, SDT);
-            DataTable khachhangTable = queryTable("SELECT KHACHHANG.MAKHACHHANG FROM KHACHHANG WHERE "
+            DataTable khachhangTable = DatabaseQuery.queryTable("SELECT KHACHHANG.MAKHACHHANG FROM KHACHHANG WHERE "
                 + "TENCODAU = '" + tenCoDau + "'AND "
                 + "TENCHURE = '" + tenChuRe + "' ORDER BY KHACHHANG.MAKHACHHANG ASC;");
 
-            DataTable tablet = queryTable("INSERT INTO TIECCUOI VALUES('" +
-                generateID("TC") + "','" +
+            DataTable tablet = DatabaseQuery.queryTable("INSERT INTO TIECCUOI VALUES('" +
+                DatabaseQuery.generateID("TC") + "','" +
                 selectMaKhachHangFromCoDauChuRe(tenCoDau, tenChuRe).Trim() + "','" +
                 selectMaSanhFromTenSanh(sanh).Trim() + "', '" +
                 selectMaCaFromTenCa(ca).Trim() + "', '" +
@@ -273,24 +236,46 @@ namespace CMNNPM
             return true;
         }
 
-        public DataRow getSelectedTiecCuoiRow(int index)
+        public static DataRow getSelectedTiecCuoiRow(int index)
         {
-            DataRow mRow = queryTable("SELECT * FROM TIECCUOI ORDER BY MATIECCUOI ASC")
+            DataRow mRow = DatabaseQuery.queryTable(
+                "SELECT * FROM TIECCUOI ORDER BY MATIECCUOI ASC")
                 .Rows[index];
-            rowTiecCuoi = mRow;
-            return mRow;
+            if (!mRow.IsNull("MATIECCUOI"))
+            {
+                rowTiecCuoi = mRow;
+            }
+                return mRow;            
         }
 
-        public bool updateDatTiec(String tenChuRe, String tenCoDau, String SDT,
+        public static bool updateDatTiec(String tenChuRe, String tenCoDau, String SDT,
             DateTime ngayThang, String loaiSanh, String sanh, String ca,
-            String slBan, String slBanDuTru)
+            int slBan, int slBanDuTru)
         {
+            if (MATIECCUOI != null)
+            {
+                DataTable mTable = DatabaseQuery.queryTable("UPDATE KHACHHANG SET "
+                    + "TENCODAU = '" + tenCoDau + "', "
+                    + "TENCHURE = '" + tenChuRe + "', "
+                    + "SDT = '" + SDT
+                    + "' WHERE MAKHACHHANG = '" + rowTiecCuoi["MAKHACHHANG"]+ "'");
 
-            DataTable mTable = queryTable("UPDATE KHACHHANG SET "
-                + "TENCODAU = '" + tenCoDau + "', "
-                + "TENCHURE = '" + tenChuRe + "', " 
-                + "SDT = '" + SDT + "' WHERE");
+            }
             return true;
+        }
+
+        public static DataTable loadDichVu()
+        {
+            return DatabaseQuery.queryTable("SELECT TENMONAN, GIA FROM MONAN ");
+        }
+
+        public static DataTable loadThucDon()
+        {
+            DataTable table = DatabaseQuery.queryTable(
+                "SELECT TENMONAN, GIA, GHICHU FROM "
+                + "MONAN JOIN THUCDON ON MONAN.MAMONAN = THUCDON.MAMONAN "
+                + "ORDER BY TENMONAN ASC");
+            return table;
         }
 
         public void close()
