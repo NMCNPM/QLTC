@@ -252,14 +252,21 @@ namespace CMNNPM
             DateTime ngayThang, String loaiSanh, String sanh, String ca,
             int slBan, int slBanDuTru)
         {
-            if (MATIECCUOI != null)
+            if (rowTiecCuoi != null)
             {
-                DataTable mTable = DatabaseQuery.queryTable("UPDATE KHACHHANG SET "
+                DataTable khTable = DatabaseQuery.queryTable("UPDATE KHACHHANG SET "
                     + "TENCODAU = '" + tenCoDau + "', "
                     + "TENCHURE = '" + tenChuRe + "', "
                     + "SDT = '" + SDT
-                    + "' WHERE MAKHACHHANG = '" + rowTiecCuoi["MAKHACHHANG"]+ "'");
+                    + "' WHERE MAKHACHHANG = '" 
+                    + rowTiecCuoi["MAKHACHHANG"].ToString().Trim()+ "'");
 
+                DataTable tcTable = DatabaseQuery.queryTable("UPDATE TIECCUOI SET "
+                    + "NGAYDATTIEC = '" + ngayThang.ToString().TrimEnd() 
+                    +"', SOLUONGBAN = '" + slBan 
+                    + "', SLBANDUTRU = '" + slBanDuTru 
+                    + "' WHERE MATIECCUOI = '"
+                    + rowTiecCuoi["MATIECCUOI"].ToString().TrimEnd() +"';");
             }
             return true;
         }
