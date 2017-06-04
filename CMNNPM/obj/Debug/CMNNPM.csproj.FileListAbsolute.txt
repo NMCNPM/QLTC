@@ -266,3 +266,5 @@ C:\Users\phat4\OneDrive\Tài liệu\GitHub\QLTC\CMNNPM\obj\Debug\CMNNPM.csproj
 C:\Users\phat4\OneDrive\Tài liệu\GitHub\QLTC\CMNNPM\obj\Debug\CMNNPM.exe.licenses
 D:\Project\QLTC\CMNNPM\obj\Debug\CMNNPM.ThemLoaiSanh.resources
 D:\Project\QLTC\CMNNPM\obj\Debug\CMNNPM.ThemDichVu.resources
+C:\Users\phat4\OneDrive\Tài liệu\GitHub\QLTC\CMNNPM\obj\Debug\CMNNPM.ThemLoaiSanh.resources
+C:\Users\phat4\OneDrive\Tài liệu\GitHub\QLTC\CMNNPM\obj\Debug\CMNNPM.ThemDichVu.resources

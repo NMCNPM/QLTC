@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CMNNPM.SQL;
 
 namespace CMNNPM
 {
     public partial class DangNhap : Form
     {
-        string strConnection = @"Data Source = DESKTOP-KGDRVJL\SQLEXPRESS; Initial Catalog = QLTC; Integrated Security = True";
+        string strConnection =
+        //@"Data Source = DESKTOP-KGDRVJL\SQLEXPRESS; Initial Catalog = QLTC; Integrated Security = True";
+        DatabaseQuery.CONNECTION_STRING;
+
         SqlConnection connection;
         SqlCommand command;
         public DangNhap()

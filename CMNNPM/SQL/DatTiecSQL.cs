@@ -106,7 +106,8 @@ namespace CMNNPM
             }
         }
 
-        public static void loadDatabaseDanhSachTiecCuoi(ListView lv)
+        // LOAD danh sách tiệc cưới biểu mẫu
+        public static void loadDanhSachTiecCuoi(ListView lv)
         {
             SqlConnection mConnection = new SqlConnection();
             mConnection.ConnectionString = DatabaseQuery.CONNECTION_STRING;
@@ -261,28 +262,55 @@ namespace CMNNPM
                     + "' WHERE MAKHACHHANG = '" 
                     + rowTiecCuoi["MAKHACHHANG"].ToString().Trim()+ "'");
 
+                DataTable caTable = DatabaseQuery.queryTable("SELECT MACA FROM CA "
+                    + "WHERE TENCA = '" + ca.Trim() + "';");
+                String MACA = caTable.Rows[0][0].ToString().Trim();
+
                 DataTable tcTable = DatabaseQuery.queryTable("UPDATE TIECCUOI SET "
                     + "NGAYDATTIEC = '" + ngayThang.ToString().TrimEnd() 
                     +"', SOLUONGBAN = '" + slBan 
-                    + "', SLBANDUTRU = '" + slBanDuTru 
+                    + "', SLBANDUTRU = '" + slBanDuTru
+                    + "', MACA = '" + MACA
                     + "' WHERE MATIECCUOI = '"
                     + rowTiecCuoi["MATIECCUOI"].ToString().TrimEnd() +"';");
             }
             return true;
         }
-
-        public static DataTable loadDichVu()
-        {
-            return DatabaseQuery.queryTable("SELECT TENMONAN, GIA FROM MONAN ");
-        }
-
-        public static DataTable loadThucDon()
+        
+        public static DataTable loadDSThucPham()
         {
             DataTable table = DatabaseQuery.queryTable(
                 "SELECT TENMONAN, GIA, GHICHU FROM "
-                + "MONAN JOIN THUCDON ON MONAN.MAMONAN = THUCDON.MAMONAN "
+                + "MONAN LEFT JOIN THUCDON ON MONAN.MAMONAN = THUCDON.MAMONAN "
                 + "ORDER BY TENMONAN ASC");
             return table;
+        }        
+
+        public static DataTable loadTiecCuoiThucDon( String MATIECCUOI)
+        {
+            return DatabaseQuery.queryTable(
+                "SELECT MATHUCDON, MATIECCUOI, MAMONAN, TENMONAN, GIA, GHICHU FROM "
+                + "THUCDON LEFT JOIN MONAN ON MONAN.MAMONAN = THUCDON.MAMONAN " 
+                + "WHERE MATIECCUOI = '" + MATIECCUOI + "';");
+        }
+
+        public static bool updateThucDon(DataTable thucDon)
+        {
+            DataTable table = DatabaseQuery.queryTable(
+                "DELETE FROM THUCDON WHERE MATIECCUOI = '"
+                + thucDon.Rows[0]["MATIECCUOI"].ToString().Trim() 
+                + "';");
+
+            foreach (DataRow row in thucDon.Rows)
+            {
+                DataTable tdTable = DatabaseQuery.queryTable("INSERT INTO THUCDON VALUES ('"
+                    + DatabaseQuery.generateID("TD")
+                    + "', '" + row["MATIECCUOI"].ToString().Trim()
+                    + "', '" + row["MAMONAN"].ToString().Trim()
+                    + "', '" + row["GHICHU"].ToString().TrimEnd()
+                    + "');");
+            }
+            return true;
         }
 
         public void close()

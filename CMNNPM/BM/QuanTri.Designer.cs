@@ -70,7 +70,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabLoaiSanh = new System.Windows.Forms.TabPage();
             this.gridControlLoaiSanh = new DevExpress.XtraGrid.GridControl();
             this.lOAISANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLTCDataSet2 = new CMNNPM.QLTCDataSet2();
@@ -86,7 +86,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabDanhSachSanh = new System.Windows.Forms.TabPage();
             this.gridControlSanh = new DevExpress.XtraGrid.GridControl();
             this.sANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLTCDataSet1 = new CMNNPM.QLTCDataSet1();
@@ -119,12 +119,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tabLoaiSanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlLoaiSanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAISANHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.tabDanhSachSanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet1)).BeginInit();
@@ -489,20 +489,20 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // tabPage2
+            // tabLoaiSanh
             // 
-            this.tabPage2.Controls.Add(this.gridControlLoaiSanh);
-            this.tabPage2.Controls.Add(this.listView1);
-            this.tabPage2.Controls.Add(this.button10);
-            this.tabPage2.Controls.Add(this.button11);
-            this.tabPage2.Controls.Add(this.button12);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(650, 386);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Loại sảnh";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabLoaiSanh.Controls.Add(this.gridControlLoaiSanh);
+            this.tabLoaiSanh.Controls.Add(this.listView1);
+            this.tabLoaiSanh.Controls.Add(this.button10);
+            this.tabLoaiSanh.Controls.Add(this.button11);
+            this.tabLoaiSanh.Controls.Add(this.button12);
+            this.tabLoaiSanh.Location = new System.Drawing.Point(4, 22);
+            this.tabLoaiSanh.Name = "tabLoaiSanh";
+            this.tabLoaiSanh.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLoaiSanh.Size = new System.Drawing.Size(650, 386);
+            this.tabLoaiSanh.TabIndex = 1;
+            this.tabLoaiSanh.Text = "Loại sảnh";
+            this.tabLoaiSanh.UseVisualStyleBackColor = true;
             // 
             // gridControlLoaiSanh
             // 
@@ -627,20 +627,20 @@
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // tabPage1
+            // tabDanhSachSanh
             // 
-            this.tabPage1.Controls.Add(this.gridControlSanh);
-            this.tabPage1.Controls.Add(this.listView2);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(650, 386);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Danh sách sảnh";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabDanhSachSanh.Controls.Add(this.gridControlSanh);
+            this.tabDanhSachSanh.Controls.Add(this.listView2);
+            this.tabDanhSachSanh.Controls.Add(this.button3);
+            this.tabDanhSachSanh.Controls.Add(this.button2);
+            this.tabDanhSachSanh.Controls.Add(this.button1);
+            this.tabDanhSachSanh.Location = new System.Drawing.Point(4, 22);
+            this.tabDanhSachSanh.Name = "tabDanhSachSanh";
+            this.tabDanhSachSanh.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDanhSachSanh.Size = new System.Drawing.Size(650, 386);
+            this.tabDanhSachSanh.TabIndex = 0;
+            this.tabDanhSachSanh.Text = "Danh sách sảnh";
+            this.tabDanhSachSanh.UseVisualStyleBackColor = true;
             // 
             // gridControlSanh
             // 
@@ -784,8 +784,8 @@
             // 
             // QTMonAn
             // 
-            this.QTMonAn.Controls.Add(this.tabPage1);
-            this.QTMonAn.Controls.Add(this.tabPage2);
+            this.QTMonAn.Controls.Add(this.tabDanhSachSanh);
+            this.QTMonAn.Controls.Add(this.tabLoaiSanh);
             this.QTMonAn.Controls.Add(this.tabPage3);
             this.QTMonAn.Controls.Add(this.tabPage4);
             this.QTMonAn.Controls.Add(this.tabPage5);
@@ -826,12 +826,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.tabLoaiSanh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlLoaiSanh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAISANHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            this.tabPage1.ResumeLayout(false);
+            this.tabDanhSachSanh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlSanh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sANHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet1)).EndInit();
@@ -868,7 +868,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabLoaiSanh;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -877,7 +877,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabDanhSachSanh;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;

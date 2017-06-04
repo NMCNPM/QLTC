@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using CMNNPM.SQL;
 
 namespace CMNNPM
 {
@@ -30,15 +31,29 @@ namespace CMNNPM
         }
         private void LoadData()
         {
-            DataDataContext db = new DataDataContext();
-            var dsDichVu = db.DICHVUs.ToList();
-            var dsLoaiSanh = db.LOAISANHs.ToList();
-            var dsSanh = db.SANHs.ToList();
-            var dsMonAn = db.MONANs.ToList();
-            gridControlMonAn.DataSource = dsMonAn;
-            gridControlSanh.DataSource = dsSanh;
-            gridControlLoaiSanh.DataSource = dsLoaiSanh;
-            gridControlDV.DataSource = dsDichVu;
+            //DataDataContext db = new DataDataContext();
+            //var dsDichVu = db.DICHVUs.ToList();
+            //var dsLoaiSanh = db.LOAISANHs.ToList();
+            //var dsSanh = db.SANHs.ToList();
+            //var dsMonAn = db.MONANs.ToList();
+
+            //gridControlMonAn.DataSource = dsMonAn;
+            //gridControlSanh.DataSource = dsSanh;
+            //gridControlLoaiSanh.DataSource = dsLoaiSanh;
+            //gridControlDV.DataSource = dsDichVu;
+
+            gridControlMonAn.DataSource = DatabaseQuery.queryTable(
+                "SELECT MAMONAN, TENMONAN, GIA FROM MONAN ORDER BY TENMONAN;");
+
+            gridControlDV.DataSource = DanhSachDV.loadDichVu();
+
+            gridControlLoaiSanh.DataSource = DatabaseQuery.queryTable(
+                "SELECT MALOAISANH, TENLOAISANH, DONGIABANTOITHIEU FROM LOAISANH ORDER BY TENLOAISANH;");
+
+            gridControlSanh.DataSource = DatabaseQuery.queryTable(
+                "SELECT TENSANH, TENLOAISANH, SLBANTOIDA, GHICHU FROM "
+                + "SANH LEFT JOIN LOAISANH ON SANH.MALOAISANH = LOAISANH.MALOAISANH "
+                + "ORDER BY TENSANH;");
         }
 
         private void button6_Click(object sender, EventArgs e)

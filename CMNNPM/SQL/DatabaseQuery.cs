@@ -48,5 +48,15 @@ namespace CMNNPM.SQL
             khConnection.Close();
             return mTable;
         }
+
+        public static DataTable loadDichVu()
+        {
+            return DatabaseQuery.queryTable("SELECT TENDICHVU, GIA FROM DICHVU ");
+        }
+
+        public static DataTable loadMonAn()
+        {
+            return DatabaseQuery.queryTable("SELECT TENMONAN, GIA FROM MONAN ");
+        }
     }
 }
