@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMNNPM.SQL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace CMNNPM
 {
     public partial class QuanLy : Form
     {
+        private DataTable danhSachTiecCuoi;
+
         public QuanLy()
         {
             InitializeComponent();
@@ -279,6 +282,11 @@ namespace CMNNPM
         {
             HoaDon form = new HoaDon();
             form.Show();
+        }
+
+        private void QuanLy_Load(object sender, EventArgs e)
+        {
+            DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
         }
     }
 }

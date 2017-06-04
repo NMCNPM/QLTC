@@ -113,30 +113,42 @@ namespace CMNNPM
             mConnection.ConnectionString = DatabaseQuery.CONNECTION_STRING;
             mConnection.Open();
 
-            SqlCommand mCommand = mConnection.CreateCommand();
-            mCommand.CommandText =
-            " SELECT * FROM TIECCUOI "
-            + "JOIN KHACHHANG ON KHACHHANG.MAKHACHHANG = TIECCUOI.MAKHACHHANG"
-            + "JOIN SANH ON TIECCUOI.MASANH = SANH.MASANH"
-            + "JOIN CA ON TIECCUOI.MACA = CA.MACA";
+            //SqlCommand mCommand = mConnection.CreateCommand();
+            //mCommand.CommandText =
+            //" SELECT TENCHURE, TENCODAU, SANH, NGAYDATTIEC, CA, SLBAN, SLBANDUTRU FROM (((TIECCUOI "
+            //+ "JOIN KHACHHANG ON KHACHHANG.MAKHACHHANG = TIECCUOI.MAKHACHHANG) "
+            //+ "JOIN SANH ON TIECCUOI.MASANH = SANH.MASANH) "
+            //+ "JOIN CA ON TIECCUOI.MACA = CA.MACA);";
 
-            SqlDataAdapter mAdapter = new SqlDataAdapter();
-            mAdapter.SelectCommand = mCommand;
+            //SqlDataAdapter mAdapter = new SqlDataAdapter();
+            //mAdapter.SelectCommand = mCommand;
 
-            DichVu = new DataTable();
-            mAdapter.Fill(DichVu);
+            DanhSachTiecCuoi = DatabaseQuery.queryTable(
+                "SELECT TENCHURE, TENCODAU, TENSANH, NGAYDATTIEC, TENCA, SLBAN, SLBANDUTRU FROM (((TIECCUOI "
+            + "JOIN KHACHHANG ON KHACHHANG.MAKHACHHANG = TIECCUOI.MAKHACHHANG) "
+            + "JOIN SANH ON TIECCUOI.MASANH = SANH.MASANH) "
+            + "JOIN CA ON TIECCUOI.MACA = CA.MACA);");
+
+            //mAdapter.Fill(DichVu);
             mConnection.Close();
+
             if (lv.Items.Count > 0)
             {
                 lv.Clear();
             }
-            for (int i = 0; i < DichVu.Rows.Count; i++)
+            int i = 1;
+            foreach(DataRow row in DanhSachTiecCuoi.Rows)
             {
                 ListViewItem item = new ListViewItem();
-                item.Text = (i + 1).ToString();
-                item.SubItems.Add(DichVu.Rows[i]["MALOAISANH"].ToString());
-                item.SubItems.Add(DichVu.Rows[i]["TENLOAISANH"].ToString());
-                item.SubItems.Add(DichVu.Rows[i]["DONGIABANTOITHIEU"].ToString());
+                item.Text = i.ToString();
+                i++;
+                item.SubItems.Add(row["TENCHURE"].ToString().TrimEnd());
+                item.SubItems.Add(row["TENCODAU"].ToString().TrimEnd());
+                item.SubItems.Add(row["TENSANH"].ToString().TrimEnd());
+                item.SubItems.Add(row["NGAYDATTIEC"].ToString().TrimEnd());
+                item.SubItems.Add(row["TENCA"].ToString().TrimEnd());
+                item.SubItems.Add(row["SLBAN"].ToString().TrimEnd());
+                item.SubItems.Add(row["SLBANDUTRU"].ToString().TrimEnd());
 
                 lv.Items.Add(item);
             }

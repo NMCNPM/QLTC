@@ -40,7 +40,7 @@
             this.cbMonth = new System.Windows.Forms.ComboBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.cbYear = new System.Windows.Forms.ComboBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewDanhSachTiecCuoi = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,8 +49,9 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button5 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridViewDanhSachTiecCuoi = new System.Windows.Forms.DataGridView();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachTiecCuoi)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -161,22 +162,24 @@
             this.cbYear.SelectedIndexChanged += new System.EventHandler(this.cbYear_SelectedIndexChanged);
             this.cbYear.TextUpdate += new System.EventHandler(this.cbYear_TextUpdate);
             // 
-            // listView1
+            // listViewDanhSachTiecCuoi
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewDanhSachTiecCuoi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6,
-            this.columnHeader7});
-            this.listView1.Location = new System.Drawing.Point(14, 210);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(843, 31);
-            this.listView1.TabIndex = 46;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listViewDanhSachTiecCuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewDanhSachTiecCuoi.Location = new System.Drawing.Point(14, 210);
+            this.listViewDanhSachTiecCuoi.Name = "listViewDanhSachTiecCuoi";
+            this.listViewDanhSachTiecCuoi.Size = new System.Drawing.Size(843, 167);
+            this.listViewDanhSachTiecCuoi.TabIndex = 46;
+            this.listViewDanhSachTiecCuoi.UseCompatibleStateImageBehavior = false;
+            this.listViewDanhSachTiecCuoi.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -224,22 +227,27 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // dataGridView1
+            // dataGridViewDanhSachTiecCuoi
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 247);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(843, 204);
-            this.dataGridView1.TabIndex = 48;
+            this.dataGridViewDanhSachTiecCuoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDanhSachTiecCuoi.Location = new System.Drawing.Point(14, 383);
+            this.dataGridViewDanhSachTiecCuoi.Name = "dataGridViewDanhSachTiecCuoi";
+            this.dataGridViewDanhSachTiecCuoi.Size = new System.Drawing.Size(843, 68);
+            this.dataGridViewDanhSachTiecCuoi.TabIndex = 48;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Số lượng bàn dự trữ";
+            this.columnHeader8.Width = 125;
             // 
             // QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 463);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewDanhSachTiecCuoi);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewDanhSachTiecCuoi);
             this.Controls.Add(this.cbYear);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.cbMonth);
@@ -254,7 +262,8 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "QuanLy";
             this.Text = "Danh sách tiệc cưới";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.QuanLy_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachTiecCuoi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +281,7 @@
         private System.Windows.Forms.ComboBox cbMonth;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ComboBox cbYear;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewDanhSachTiecCuoi;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -281,6 +290,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewDanhSachTiecCuoi;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
