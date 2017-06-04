@@ -287,6 +287,7 @@ namespace CMNNPM
         private void QuanLy_Load(object sender, EventArgs e)
         {
             DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
+            listViewDanhSachTiecCuoi.FullRowSelect = true;
         }
     }
 }

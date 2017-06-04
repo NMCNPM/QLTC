@@ -48,9 +48,9 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridViewDanhSachTiecCuoi = new System.Windows.Forms.DataGridView();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachTiecCuoi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,7 +176,7 @@
             this.listViewDanhSachTiecCuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewDanhSachTiecCuoi.Location = new System.Drawing.Point(14, 210);
             this.listViewDanhSachTiecCuoi.Name = "listViewDanhSachTiecCuoi";
-            this.listViewDanhSachTiecCuoi.Size = new System.Drawing.Size(843, 167);
+            this.listViewDanhSachTiecCuoi.Size = new System.Drawing.Size(843, 225);
             this.listViewDanhSachTiecCuoi.TabIndex = 46;
             this.listViewDanhSachTiecCuoi.UseCompatibleStateImageBehavior = false;
             this.listViewDanhSachTiecCuoi.View = System.Windows.Forms.View.Details;
@@ -189,12 +189,12 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên chú rể";
-            this.columnHeader2.Width = 200;
+            this.columnHeader2.Width = 152;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Tên cô dâu";
-            this.columnHeader3.Width = 199;
+            this.columnHeader3.Width = 143;
             // 
             // columnHeader4
             // 
@@ -214,7 +214,12 @@
             // columnHeader7
             // 
             this.columnHeader7.Text = "Số lượng bàn";
-            this.columnHeader7.Width = 115;
+            this.columnHeader7.Width = 79;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Số lượng bàn dự trữ";
+            this.columnHeader8.Width = 110;
             // 
             // button5
             // 
@@ -230,15 +235,10 @@
             // dataGridViewDanhSachTiecCuoi
             // 
             this.dataGridViewDanhSachTiecCuoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDanhSachTiecCuoi.Location = new System.Drawing.Point(14, 383);
+            this.dataGridViewDanhSachTiecCuoi.Location = new System.Drawing.Point(14, 441);
             this.dataGridViewDanhSachTiecCuoi.Name = "dataGridViewDanhSachTiecCuoi";
-            this.dataGridViewDanhSachTiecCuoi.Size = new System.Drawing.Size(843, 68);
+            this.dataGridViewDanhSachTiecCuoi.Size = new System.Drawing.Size(843, 10);
             this.dataGridViewDanhSachTiecCuoi.TabIndex = 48;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Số lượng bàn dự trữ";
-            this.columnHeader8.Width = 125;
             // 
             // QuanLy
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMNNPM.SQL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,9 @@ namespace CMNNPM
         {
             // TODO: This line of code loads data into the 'qLTCDataSet.DICHVU' table. You can move, or remove it, as needed.
             //this.dICHVUTableAdapter.Fill(this.qLTCDataSet.DICHVU);
-
+            //gridControl1.DataSource = DanhSachDV.loadDSDichVu();
+            DanhSachDV.loadDatabaseDichVu(listViewDichVu);
+            listViewDichVu.FullRowSelect = true;
         }
 
         private void button2_Click(object sender, EventArgs e)

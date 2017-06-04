@@ -44,20 +44,9 @@ namespace CMNNPM
         }
 
         public static bool loadDatabaseDichVu(ListView lv)
-        {
-            SqlConnection mConnection = new SqlConnection();
-            mConnection.ConnectionString = DatabaseQuery.CONNECTION_STRING;
-            mConnection.Open();
+        {            
+            DichVu = DatabaseQuery.queryTable("SELECT * FROM DICHVU;");
 
-            SqlCommand mCommand = mConnection.CreateCommand();
-            mCommand.CommandText = "select * from DICHVU;";
-
-            SqlDataAdapter mAdapter = new SqlDataAdapter();
-            mAdapter.SelectCommand = mCommand;
-
-            DichVu = new DataTable();
-            mAdapter.Fill(DichVu);
-            mConnection.Close();
             if (lv.Items.Count > 0)
             {
                 lv.Clear();
@@ -76,20 +65,9 @@ namespace CMNNPM
         }
 
         public static void loadDatabaseLoaiSanh(ListView lv)
-        {
-            SqlConnection mConnection = new SqlConnection();
-            mConnection.ConnectionString = DatabaseQuery.CONNECTION_STRING;
-            mConnection.Open();
+        {                      
+            DichVu = DatabaseQuery.queryTable("SELECT * FROM LOAISANH");
 
-            SqlCommand mCommand = mConnection.CreateCommand();
-            mCommand.CommandText = "select * from LOAISANH;";
-
-            SqlDataAdapter mAdapter = new SqlDataAdapter();
-            mAdapter.SelectCommand = mCommand;
-
-            DichVu = new DataTable();
-            mAdapter.Fill(DichVu);
-            mConnection.Close();
             if (lv.Items.Count > 0)
             {
                 lv.Clear();
@@ -101,7 +79,6 @@ namespace CMNNPM
                 item.SubItems.Add(DichVu.Rows[i]["MALOAISANH"].ToString());
                 item.SubItems.Add(DichVu.Rows[i]["TENLOAISANH"].ToString());
                 item.SubItems.Add(DichVu.Rows[i]["DONGIABANTOITHIEU"].ToString());
-
                 lv.Items.Add(item);
             }
         }
@@ -109,28 +86,11 @@ namespace CMNNPM
         // LOAD danh sách tiệc cưới biểu mẫu
         public static void loadDanhSachTiecCuoi(ListView lv)
         {
-            SqlConnection mConnection = new SqlConnection();
-            mConnection.ConnectionString = DatabaseQuery.CONNECTION_STRING;
-            mConnection.Open();
-
-            //SqlCommand mCommand = mConnection.CreateCommand();
-            //mCommand.CommandText =
-            //" SELECT TENCHURE, TENCODAU, SANH, NGAYDATTIEC, CA, SLBAN, SLBANDUTRU FROM (((TIECCUOI "
-            //+ "JOIN KHACHHANG ON KHACHHANG.MAKHACHHANG = TIECCUOI.MAKHACHHANG) "
-            //+ "JOIN SANH ON TIECCUOI.MASANH = SANH.MASANH) "
-            //+ "JOIN CA ON TIECCUOI.MACA = CA.MACA);";
-
-            //SqlDataAdapter mAdapter = new SqlDataAdapter();
-            //mAdapter.SelectCommand = mCommand;
-
             DanhSachTiecCuoi = DatabaseQuery.queryTable(
                 "SELECT TENCHURE, TENCODAU, TENSANH, NGAYDATTIEC, TENCA, SLBAN, SLBANDUTRU FROM (((TIECCUOI "
             + "JOIN KHACHHANG ON KHACHHANG.MAKHACHHANG = TIECCUOI.MAKHACHHANG) "
             + "JOIN SANH ON TIECCUOI.MASANH = SANH.MASANH) "
             + "JOIN CA ON TIECCUOI.MACA = CA.MACA);");
-
-            //mAdapter.Fill(DichVu);
-            mConnection.Close();
 
             if (lv.Items.Count > 0)
             {
