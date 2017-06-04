@@ -32,7 +32,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button22 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.listViewBaoCao = new System.Windows.Forms.ListView();
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -46,7 +46,7 @@
             this.SOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GIA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.listView4 = new System.Windows.Forms.ListView();
+            this.listViewDichVu = new System.Windows.Forms.ListView();
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,7 +62,7 @@
             this.colMAMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGIA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.lvMA = new System.Windows.Forms.ListView();
+            this.listViewMonAn = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -78,7 +78,7 @@
             this.colMALOAISANH1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENLOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDONGIABANTOITHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewLoaiSanh = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -95,7 +95,7 @@
             this.colLOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSLBANTOIDA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGHICHU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.listViewDSSanh = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -136,7 +136,7 @@
             // 
             this.tabPage5.Controls.Add(this.button22);
             this.tabPage5.Controls.Add(this.button21);
-            this.tabPage5.Controls.Add(this.listView3);
+            this.tabPage5.Controls.Add(this.listViewBaoCao);
             this.tabPage5.Controls.Add(this.button23);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
@@ -164,20 +164,20 @@
             this.button21.Text = "Sửa";
             this.button21.UseVisualStyleBackColor = true;
             // 
-            // listView3
+            // listViewBaoCao
             // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewBaoCao.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader19,
             this.columnHeader20,
             this.columnHeader21,
             this.columnHeader22,
             this.columnHeader23});
-            this.listView3.Location = new System.Drawing.Point(6, 6);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(638, 345);
-            this.listView3.TabIndex = 10;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.listViewBaoCao.Location = new System.Drawing.Point(6, 6);
+            this.listViewBaoCao.Name = "listViewBaoCao";
+            this.listViewBaoCao.Size = new System.Drawing.Size(638, 345);
+            this.listViewBaoCao.TabIndex = 10;
+            this.listViewBaoCao.UseCompatibleStateImageBehavior = false;
+            this.listViewBaoCao.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader19
             // 
@@ -217,7 +217,7 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.gridControlDV);
-            this.tabPage4.Controls.Add(this.listView4);
+            this.tabPage4.Controls.Add(this.listViewDichVu);
             this.tabPage4.Controls.Add(this.button7);
             this.tabPage4.Controls.Add(this.button8);
             this.tabPage4.Controls.Add(this.button9);
@@ -291,20 +291,20 @@
             this.gridView1.GridControl = this.gridControlDV;
             this.gridView1.Name = "gridView1";
             // 
-            // listView4
+            // listViewDichVu
             // 
-            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewDichVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader15,
             this.columnHeader16,
             this.columnHeader17,
             this.columnHeader18});
-            this.listView4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView4.Location = new System.Drawing.Point(6, 81);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(638, 33);
-            this.listView4.TabIndex = 16;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.Details;
+            this.listViewDichVu.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewDichVu.Location = new System.Drawing.Point(6, 81);
+            this.listViewDichVu.Name = "listViewDichVu";
+            this.listViewDichVu.Size = new System.Drawing.Size(638, 33);
+            this.listViewDichVu.TabIndex = 16;
+            this.listViewDichVu.UseCompatibleStateImageBehavior = false;
+            this.listViewDichVu.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader15
             // 
@@ -357,7 +357,7 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.gridControlMonAn);
-            this.tabPage3.Controls.Add(this.lvMA);
+            this.tabPage3.Controls.Add(this.listViewMonAn);
             this.tabPage3.Controls.Add(this.button4);
             this.tabPage3.Controls.Add(this.button5);
             this.tabPage3.Controls.Add(this.button6);
@@ -420,26 +420,26 @@
             this.colGIA.Visible = true;
             this.colGIA.VisibleIndex = 2;
             // 
-            // lvMA
+            // listViewMonAn
             // 
-            this.lvMA.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.lvMA.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewMonAn.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.listViewMonAn.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader11,
             this.columnHeader12,
             this.columnHeader13,
             this.columnHeader14});
-            this.lvMA.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvMA.FullRowSelect = true;
-            this.lvMA.GridLines = true;
-            this.lvMA.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvMA.HideSelection = false;
-            this.lvMA.Location = new System.Drawing.Point(6, 76);
-            this.lvMA.MultiSelect = false;
-            this.lvMA.Name = "lvMA";
-            this.lvMA.Size = new System.Drawing.Size(638, 36);
-            this.lvMA.TabIndex = 11;
-            this.lvMA.UseCompatibleStateImageBehavior = false;
-            this.lvMA.View = System.Windows.Forms.View.Details;
+            this.listViewMonAn.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewMonAn.FullRowSelect = true;
+            this.listViewMonAn.GridLines = true;
+            this.listViewMonAn.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewMonAn.HideSelection = false;
+            this.listViewMonAn.Location = new System.Drawing.Point(6, 76);
+            this.listViewMonAn.MultiSelect = false;
+            this.listViewMonAn.Name = "listViewMonAn";
+            this.listViewMonAn.Size = new System.Drawing.Size(638, 36);
+            this.listViewMonAn.TabIndex = 11;
+            this.listViewMonAn.UseCompatibleStateImageBehavior = false;
+            this.listViewMonAn.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader11
             // 
@@ -492,7 +492,7 @@
             // tabLoaiSanh
             // 
             this.tabLoaiSanh.Controls.Add(this.gridControlLoaiSanh);
-            this.tabLoaiSanh.Controls.Add(this.listView1);
+            this.tabLoaiSanh.Controls.Add(this.listViewLoaiSanh);
             this.tabLoaiSanh.Controls.Add(this.button10);
             this.tabLoaiSanh.Controls.Add(this.button11);
             this.tabLoaiSanh.Controls.Add(this.button12);
@@ -562,22 +562,22 @@
             this.colDONGIABANTOITHIEU.Visible = true;
             this.colDONGIABANTOITHIEU.VisibleIndex = 2;
             // 
-            // listView1
+            // listViewLoaiSanh
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewLoaiSanh.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(6, 85);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(638, 54);
-            this.listView1.TabIndex = 16;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewLoaiSanh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewLoaiSanh.FullRowSelect = true;
+            this.listViewLoaiSanh.GridLines = true;
+            this.listViewLoaiSanh.Location = new System.Drawing.Point(6, 85);
+            this.listViewLoaiSanh.Name = "listViewLoaiSanh";
+            this.listViewLoaiSanh.Size = new System.Drawing.Size(638, 54);
+            this.listViewLoaiSanh.TabIndex = 16;
+            this.listViewLoaiSanh.UseCompatibleStateImageBehavior = false;
+            this.listViewLoaiSanh.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -630,7 +630,7 @@
             // tabDanhSachSanh
             // 
             this.tabDanhSachSanh.Controls.Add(this.gridControlSanh);
-            this.tabDanhSachSanh.Controls.Add(this.listView2);
+            this.tabDanhSachSanh.Controls.Add(this.listViewDSSanh);
             this.tabDanhSachSanh.Controls.Add(this.button3);
             this.tabDanhSachSanh.Controls.Add(this.button2);
             this.tabDanhSachSanh.Controls.Add(this.button1);
@@ -705,24 +705,24 @@
             this.colGHICHU.Visible = true;
             this.colGHICHU.VisibleIndex = 3;
             // 
-            // listView2
+            // listViewDSSanh
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewDSSanh.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
-            this.listView2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.FullRowSelect = true;
-            this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(6, 85);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(638, 33);
-            this.listView2.TabIndex = 7;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listViewDSSanh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewDSSanh.FullRowSelect = true;
+            this.listViewDSSanh.GridLines = true;
+            this.listViewDSSanh.Location = new System.Drawing.Point(6, 85);
+            this.listViewDSSanh.Name = "listViewDSSanh";
+            this.listViewDSSanh.Size = new System.Drawing.Size(638, 33);
+            this.listViewDSSanh.TabIndex = 7;
+            this.listViewDSSanh.UseCompatibleStateImageBehavior = false;
+            this.listViewDSSanh.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader5
             // 
@@ -850,7 +850,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn TENDICHVU;
         private DevExpress.XtraGrid.Columns.GridColumn SOLUONG;
         private DevExpress.XtraGrid.Columns.GridColumn GIA;
-        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView listViewDichVu;
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader17;
@@ -860,7 +860,7 @@
         private System.Windows.Forms.Button button9;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.ListView lvMA;
+        private System.Windows.Forms.ListView listViewMonAn;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
@@ -869,7 +869,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TabPage tabLoaiSanh;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewLoaiSanh;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -878,7 +878,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.TabPage tabDanhSachSanh;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listViewDSSanh;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
@@ -891,7 +891,7 @@
         private System.Windows.Forms.TabControl QTMonAn;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView listViewBaoCao;
         private System.Windows.Forms.ColumnHeader columnHeader19;
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;
