@@ -94,7 +94,7 @@ namespace CMNNPM
 
             if (lv.Items.Count > 0)
             {
-                lv.Clear();
+                lv.Items.Clear();
             }
             int i = 1;
             foreach(DataRow row in DanhSachTiecCuoi.Rows)
@@ -270,7 +270,7 @@ namespace CMNNPM
         {
             DataTable table = DatabaseQuery.queryTable(
                 "DELETE FROM THUCDON WHERE MATIECCUOI = '"
-                + thucDon.Rows[0]["MATIECCUOI"].ToString().Trim() 
+                + thucDon.Rows[0]["MATIECCUOI"].ToString().Trim()
                 + "';");
 
             foreach (DataRow row in thucDon.Rows)
@@ -282,6 +282,44 @@ namespace CMNNPM
                     + "', '" + row["GHICHU"].ToString().TrimEnd()
                     + "');");
             }
+            return true;
+        }
+
+        public static bool deleteDanhSachTiecCuoiItem(String tencodau, String tenchure)
+        {
+            DataTable tieccuoi = DatabaseQuery.queryTable(
+                "SELECT TIECCUOI.MATIECCUOI, TIECCUOI.MAKHACHHANG FROM TIECCUOI "
+                + "JOIN KHACHHANG ON TIECCUOI.MAKHACHHANG = KHACHHANG.MAKHACHHANG "
+                + "WHERE TENCODAU = '" + tencodau.TrimEnd()
+                + "' AND TENCHURE = '" + tenchure.TrimEnd() + "';");
+
+            String matieccuoi = tieccuoi.Rows[0]["MATIECCUOI"].ToString().Trim();
+
+            DataTable table = DatabaseQuery.queryTable(
+                "DELETE FROM HOADON WHERE MATIECCUOI = '"
+                + matieccuoi
+                + "';");
+
+            table = DatabaseQuery.queryTable(
+                "DELETE FROM THUCDON WHERE MATIECCUOI = '"
+                + matieccuoi + "';");
+
+            table = DatabaseQuery.queryTable(
+                "DELETE FROM DANHSACHDV WHERE MATIECCUOI = '"
+                + matieccuoi + "';");
+
+            table = DatabaseQuery.queryTable(
+                "DELETE FROM TIECCUOI WHERE MATIECCUOI = '"
+                + matieccuoi
+                + "';");
+
+            String makhachhang = tieccuoi.Rows[0]["MAKHACHHANG"].ToString().Trim();
+
+            table = DatabaseQuery.queryTable(
+                "DELETE FROM KHACHHANG WHERE MAKHACHHANG = '"
+                + makhachhang
+                + "';");
+           
             return true;
         }
 

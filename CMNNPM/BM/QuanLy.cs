@@ -30,6 +30,7 @@ namespace CMNNPM
             DatTiec mForm = new DatTiec();
             mForm.Show();
             mForm.Location = new Point(50,50);
+            DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
         }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
@@ -288,6 +289,28 @@ namespace CMNNPM
         {
             DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
             listViewDanhSachTiecCuoi.FullRowSelect = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listViewDanhSachTiecCuoi.Items)
+            {
+                if (item.Selected == true)
+                {
+                    DatTiecSQL.deleteDanhSachTiecCuoiItem(
+                        item.SubItems[2].Text, item.SubItems[1].Text);
+                    break;
+                }
+            }                  
+            DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DatTiec mForm = new DatTiec();
+            mForm.Show();
+            mForm.Location = new Point(50, 50);
+            DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);            
         }
     }
 }

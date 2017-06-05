@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMNNPM.SQL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,29 @@ namespace CMNNPM
             DanhSachDichVu mForm = new DanhSachDichVu();
             mForm.Show();
             mForm.Location = new Point(this.Location.X + this.Width, this.Location.Y);
+        }
+
+        private void buttonChapNhan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void addItemToLoaiSanh()
+        {
+            DataTable lsTable = DatTiecSQL.loadLoaiSanh();
+            if (comboBoxLoaiSanh.Items.Count > 0)
+                comboBoxLoaiSanh.Items.Clear();
+
+            for(int i = 0; i < lsTable.Rows.Count; i++)
+            {
+                comboBoxLoaiSanh.Items.Add(
+                    lsTable.Rows[i]["TENLOAISANH"].ToString().TrimEnd());
+            }
+        }
+
+        private void DatTiec_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
