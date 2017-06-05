@@ -154,6 +154,20 @@ namespace CMNNPM
             return DatabaseQuery.queryTable("SELECT SANH.SLBANTOIDA FROM SANH");
         }
 
+        public static bool checkIfTiecCuoiExisted(String sanh, String ca, DateTime ngay)
+        {
+            DataTable check = DatabaseQuery.queryTable(
+                "SELECT * FROM "
+                + "((TIECCUOI JOIN SANH ON TIECCUOI.MASANH = SANH.MASANH) "
+                + " JOIN CA ON TIECCUOI.MACA = CA.MACA) "
+                + "WHERE TIECCUOI.MASANH = '" + sanh.TrimEnd()
+                + "' AND TIECCUOI.MACA = '" + ca.TrimEnd()
+                + "' AND TIECCUOI.NGAYDATTIEC = '" + ngay.ToString() + "';");
+            if (check.Rows.Count <= 0)
+                return true;
+            return false;
+        }
+
         public static String selectMaCaFromTenCa(String tenCa)
         {
             String maCa = "";
