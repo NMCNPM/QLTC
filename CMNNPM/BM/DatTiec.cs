@@ -17,9 +17,35 @@ namespace CMNNPM
         private DataTable caTable;
         private bool validCheck;
 
-        public DatTiec()
+        private QuanLy quanLyForm;
+
+        public DatTiec( QuanLy ql)
         {
+            quanLyForm = ql;
+          
             InitializeComponent();
+            addItemToComboSanh();
+            addItemToLoaiSanh();
+
+            addItemToComboCa();
+        }
+
+        public DatTiec(QuanLy ql, ListViewItem item)
+        {
+            quanLyForm = ql;
+
+            InitializeComponent();
+            addItemToComboSanh();
+            addItemToLoaiSanh();
+            addItemToComboCa();
+
+            initExistedComponent(item);
+
+        }
+
+        private void initExistedComponent(ListViewItem item)
+        {
+
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)
@@ -55,6 +81,8 @@ namespace CMNNPM
                     comboBoxCa.SelectedItem.ToString(),
                     int.Parse(comboBoxSLBan.SelectedItem.ToString()),
                     int.Parse(textBoxSoBanDuTru.Text));
+
+                quanLyForm.updateQuanLyForm();
             }
             this.Close();
         }
@@ -165,9 +193,9 @@ namespace CMNNPM
             comboBoxSLBan.Enabled = false;
             labelKiemTra.Text = "";
             validCheck = false;
-            addItemToComboSanh();
-            addItemToLoaiSanh();
-            addItemToComboCa();
+            //addItemToComboSanh();
+            //addItemToLoaiSanh();
+            //addItemToComboCa();
         }
 
         

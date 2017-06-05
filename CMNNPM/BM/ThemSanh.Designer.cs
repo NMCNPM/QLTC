@@ -31,13 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.comboBoxLoaiSanh = new System.Windows.Forms.ComboBox();
+            this.textBoxTenSanh = new System.Windows.Forms.TextBox();
+            this.textBoxSLBanToiDa = new System.Windows.Forms.TextBox();
+            this.textBoxGhiChu = new System.Windows.Forms.TextBox();
+            this.buttonHuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -67,14 +67,15 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Lượng bàn tối đa";
             // 
-            // button1
+            // buttonThem
             // 
-            this.button1.Location = new System.Drawing.Point(36, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonThem.Location = new System.Drawing.Point(36, 161);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(75, 23);
+            this.buttonThem.TabIndex = 4;
+            this.buttonThem.Text = "Thêm";
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // label5
             // 
@@ -85,63 +86,64 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Ghi chú";
             // 
-            // comboBox1
+            // comboBoxLoaiSanh
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(144, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(129, 21);
-            this.comboBox1.TabIndex = 6;
+            this.comboBoxLoaiSanh.FormattingEnabled = true;
+            this.comboBoxLoaiSanh.Location = new System.Drawing.Point(144, 51);
+            this.comboBoxLoaiSanh.Name = "comboBoxLoaiSanh";
+            this.comboBoxLoaiSanh.Size = new System.Drawing.Size(129, 21);
+            this.comboBoxLoaiSanh.TabIndex = 6;
             // 
-            // textBox1
+            // textBoxTenSanh
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 7;
+            this.textBoxTenSanh.Location = new System.Drawing.Point(144, 25);
+            this.textBoxTenSanh.Name = "textBoxTenSanh";
+            this.textBoxTenSanh.Size = new System.Drawing.Size(129, 20);
+            this.textBoxTenSanh.TabIndex = 7;
             // 
-            // textBox2
+            // textBoxSLBanToiDa
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 20);
-            this.textBox2.TabIndex = 8;
+            this.textBoxSLBanToiDa.Location = new System.Drawing.Point(144, 78);
+            this.textBoxSLBanToiDa.Name = "textBoxSLBanToiDa";
+            this.textBoxSLBanToiDa.Size = new System.Drawing.Size(129, 20);
+            this.textBoxSLBanToiDa.TabIndex = 8;
             // 
-            // textBox4
+            // textBoxGhiChu
             // 
-            this.textBox4.Location = new System.Drawing.Point(144, 107);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(129, 48);
-            this.textBox4.TabIndex = 10;
+            this.textBoxGhiChu.Location = new System.Drawing.Point(144, 107);
+            this.textBoxGhiChu.Multiline = true;
+            this.textBoxGhiChu.Name = "textBoxGhiChu";
+            this.textBoxGhiChu.Size = new System.Drawing.Size(129, 48);
+            this.textBoxGhiChu.TabIndex = 10;
             // 
-            // button2
+            // buttonHuy
             // 
-            this.button2.Location = new System.Drawing.Point(188, 161);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Hủy";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonHuy.Location = new System.Drawing.Point(188, 161);
+            this.buttonHuy.Name = "buttonHuy";
+            this.buttonHuy.Size = new System.Drawing.Size(75, 23);
+            this.buttonHuy.TabIndex = 12;
+            this.buttonHuy.Text = "Hủy";
+            this.buttonHuy.UseVisualStyleBackColor = true;
+            this.buttonHuy.Click += new System.EventHandler(this.button2_Click);
             // 
             // ThemSanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 193);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.buttonHuy);
+            this.Controls.Add(this.textBoxGhiChu);
+            this.Controls.Add(this.textBoxSLBanToiDa);
+            this.Controls.Add(this.textBoxTenSanh);
+            this.Controls.Add(this.comboBoxLoaiSanh);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ThemSanh";
             this.Text = "Thêm Sảnh";
+            this.Load += new System.EventHandler(this.ThemSanh_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,12 +154,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBoxLoaiSanh;
+        private System.Windows.Forms.TextBox textBoxTenSanh;
+        private System.Windows.Forms.TextBox textBoxSLBanToiDa;
+        private System.Windows.Forms.TextBox textBoxGhiChu;
+        private System.Windows.Forms.Button buttonHuy;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMNNPM.SQL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,12 +26,11 @@ namespace CMNNPM
         private void DanhSachThucPham_Load(object sender, EventArgs e)
         {
             LoadData();
+            listViewDanhSachThucPham.FullRowSelect = true;
         }
         private void LoadData()
         {
-            DataDataContext db = new DataDataContext();
-            var dsMonAn = db.MONANs.ToList();
-            gridControlDSTP.DataSource = dsMonAn;
+            DanhSachTP.loadListViewDanhSachThucPham(listViewDanhSachThucPham);
         }
     }
 }

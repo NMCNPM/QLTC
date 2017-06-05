@@ -574,7 +574,7 @@
             this.listViewLoaiSanh.GridLines = true;
             this.listViewLoaiSanh.Location = new System.Drawing.Point(6, 85);
             this.listViewLoaiSanh.Name = "listViewLoaiSanh";
-            this.listViewLoaiSanh.Size = new System.Drawing.Size(638, 54);
+            this.listViewLoaiSanh.Size = new System.Drawing.Size(638, 39);
             this.listViewLoaiSanh.TabIndex = 16;
             this.listViewLoaiSanh.UseCompatibleStateImageBehavior = false;
             this.listViewLoaiSanh.View = System.Windows.Forms.View.Details;

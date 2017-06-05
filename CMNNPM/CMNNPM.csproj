@@ -78,7 +78,7 @@
       <DependentUpon>Data.dbml</DependentUpon>
     </Compile>
     <Compile Include="SQL\DanhSachDV.cs" />
-    <Compile Include="SQL\DanhSachThucPham.cs" />
+    <Compile Include="SQL\DanhSachTP.cs" />
     <Compile Include="SQL\DatabaseQuery.cs" />
     <Compile Include="SQL\DatTiecSQL.cs" />
     <Compile Include="QLTCDataSet.Designer.cs">
@@ -172,6 +172,8 @@
     <Compile Include="BM\ThemDichVu.Designer.cs">
       <DependentUpon>ThemDichVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQL\LoaiSanhSQL.cs" />
+    <Compile Include="SQL\SanhSQL.cs" />
     <EmbeddedResource Include="BM\BaoCaoDoanhSo.resx">
       <DependentUpon>BaoCaoDoanhSo.cs</DependentUpon>
     </EmbeddedResource>

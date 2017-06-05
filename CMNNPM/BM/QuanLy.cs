@@ -14,6 +14,7 @@ namespace CMNNPM
     public partial class QuanLy : Form
     {
         private DataTable danhSachTiecCuoi;
+        private DatTiec mForm;
 
         public QuanLy()
         {
@@ -25,9 +26,15 @@ namespace CMNNPM
             setDateComboBox();
         }
 
+        public void updateQuanLyForm()
+        {
+            DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            DatTiec mForm = new DatTiec();
+                mForm = new DatTiec(this);
+
             mForm.Show();
             mForm.Location = new Point(50,50);
             DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
@@ -307,7 +314,28 @@ namespace CMNNPM
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DatTiec mForm = new DatTiec();
+            int selectedIndex = -1;
+
+            for (int i = 0; i < listViewDanhSachTiecCuoi.Items.Count; i++)
+            {
+                if (listViewDanhSachTiecCuoi.Items[i].Selected)
+                {
+                    selectedIndex = i;
+                    break;
+                }
+            }
+
+            if (selectedIndex == -1)
+            {
+                MessageBox.Show("Hãy chọn một tiệc cưới!",
+                    "Lỗi", 
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
+            mForm = new DatTiec(this, listViewDanhSachTiecCuoi.Items[selectedIndex]);
+
             mForm.Show();
             mForm.Location = new Point(50, 50);
             DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);            

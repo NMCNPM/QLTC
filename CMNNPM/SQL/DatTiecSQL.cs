@@ -45,19 +45,40 @@ namespace CMNNPM
 
         public static bool loadDatabaseDichVu(ListView lv)
         {            
-            DichVu = DatabaseQuery.queryTable("SELECT * FROM DICHVU;");
+            DataTable dvTable = DatabaseQuery.queryTable("SELECT * FROM DICHVU;");
 
             if (lv.Items.Count > 0)
             {
                 lv.Clear();
             }
-            for (int i = 0; i < DichVu.Rows.Count; i++)
+            for (int i = 0; i < dvTable.Rows.Count; i++)
             {
                 ListViewItem item = new ListViewItem();
                 item.Text = (i + 1).ToString();
-                item.SubItems.Add(DichVu.Rows[i]["MADICHVU"].ToString());
-                item.SubItems.Add(DichVu.Rows[i]["TENDICHVU"].ToString());
-                item.SubItems.Add(DichVu.Rows[i]["GIADICHVU"].ToString());
+                item.SubItems.Add(dvTable.Rows[i]["MADICHVU"].ToString());
+                item.SubItems.Add(dvTable.Rows[i]["TENDICHVU"].ToString());
+                item.SubItems.Add(dvTable.Rows[i]["GIADICHVU"].ToString());
+
+                lv.Items.Add(item);
+            }
+            return true;
+        }
+
+        public static bool loadDatabaseDanhSachThucPham(ListView lv)
+        {
+            DataTable dvTable = DatabaseQuery.queryTable("SELECT * FROM DICHVU;");
+
+            if (lv.Items.Count > 0)
+            {
+                lv.Clear();
+            }
+            for (int i = 0; i < dvTable.Rows.Count; i++)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = (i + 1).ToString();
+                item.SubItems.Add(dvTable.Rows[i]["MADICHVU"].ToString());
+                item.SubItems.Add(dvTable.Rows[i]["TENDICHVU"].ToString());
+                item.SubItems.Add(dvTable.Rows[i]["GIADICHVU"].ToString());
 
                 lv.Items.Add(item);
             }
@@ -66,19 +87,19 @@ namespace CMNNPM
 
         public static void loadDatabaseLoaiSanh(ListView lv)
         {                      
-            DichVu = DatabaseQuery.queryTable("SELECT * FROM LOAISANH");
+            DataTable lsTable = DatabaseQuery.queryTable("SELECT * FROM LOAISANH");
 
             if (lv.Items.Count > 0)
             {
                 lv.Clear();
             }
-            for (int i = 0; i < DichVu.Rows.Count; i++)
+            for (int i = 0; i < lsTable.Rows.Count; i++)
             {
                 ListViewItem item = new ListViewItem();
                 item.Text = (i + 1).ToString();
-                item.SubItems.Add(DichVu.Rows[i]["MALOAISANH"].ToString());
-                item.SubItems.Add(DichVu.Rows[i]["TENLOAISANH"].ToString());
-                item.SubItems.Add(DichVu.Rows[i]["DONGIABANTOITHIEU"].ToString());
+                item.SubItems.Add(lsTable.Rows[i]["MALOAISANH"].ToString());
+                item.SubItems.Add(lsTable.Rows[i]["TENLOAISANH"].ToString());
+                item.SubItems.Add(lsTable.Rows[i]["DONGIABANTOITHIEU"].ToString());
                 lv.Items.Add(item);
             }
         }

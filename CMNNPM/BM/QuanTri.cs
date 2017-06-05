@@ -14,6 +14,8 @@ namespace CMNNPM
 {
     public partial class QuanTri : Form
     {
+        private ThemSanh tsForm;
+
         public QuanTri()
         {
             InitializeComponent();
@@ -21,8 +23,13 @@ namespace CMNNPM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ThemSanh form = new ThemSanh();
-            form.Show();
+            tsForm = new ThemSanh(this);
+            tsForm.Show();
+        }
+
+        public void updateSanh()
+        {
+            gridControlSanh.DataSource = SanhSQL.loadSanh();
         }
 
         private void QuanTri_Load(object sender, EventArgs e)
@@ -31,17 +38,7 @@ namespace CMNNPM
         }
         private void LoadData()
         {
-            //DataDataContext db = new DataDataContext();
-            //var dsDichVu = db.DICHVUs.ToList();
-            //var dsLoaiSanh = db.LOAISANHs.ToList();
-            //var dsSanh = db.SANHs.ToList();
-            //var dsMonAn = db.MONANs.ToList();
-
-            //gridControlMonAn.DataSource = dsMonAn;
-            //gridControlSanh.DataSource = dsSanh;
-            //gridControlLoaiSanh.DataSource = dsLoaiSanh;
-            //gridControlDV.DataSource = dsDichVu;
-
+            
             gridControlMonAn.DataSource = DatabaseQuery.queryTable(
                 "SELECT MAMONAN, TENMONAN, GIA FROM MONAN ORDER BY TENMONAN;");
 
@@ -50,10 +47,11 @@ namespace CMNNPM
             gridControlLoaiSanh.DataSource = DatabaseQuery.queryTable(
                 "SELECT MALOAISANH, TENLOAISANH, DONGIABANTOITHIEU FROM LOAISANH ORDER BY TENLOAISANH;");
 
-            gridControlSanh.DataSource = DatabaseQuery.queryTable(
-                "SELECT MASANH, TENSANH, TENLOAISANH, SLBANTOIDA, GHICHU FROM "
-                + "SANH LEFT JOIN LOAISANH ON SANH.MALOAISANH = LOAISANH.MALOAISANH "
-                + "ORDER BY TENSANH;");
+            //gridControlSanh.DataSource = DatabaseQuery.queryTable(
+            //    "SELECT MASANH, TENSANH, TENLOAISANH, SLBANTOIDA, GHICHU FROM "
+            //    + "SANH LEFT JOIN LOAISANH ON SANH.MALOAISANH = LOAISANH.MALOAISANH "
+            //    + "ORDER BY TENSANH;");
+            updateSanh();
         }
 
         private void button6_Click(object sender, EventArgs e)
