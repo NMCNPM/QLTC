@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace CMNNPM.SQL
 {
-    class DanhSachDV
+    class DanhSachDichVuSQL
     {
 
         public static DataTable loadDichVu()

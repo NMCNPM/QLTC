@@ -12,8 +12,11 @@ namespace CMNNPM
 {
     public partial class HoaDon : Form
     {
-        public HoaDon()
+        private String maTiecCuoi;
+
+        public HoaDon(String mtc)
         {
+            maTiecCuoi = mtc;
             InitializeComponent();
         }
 

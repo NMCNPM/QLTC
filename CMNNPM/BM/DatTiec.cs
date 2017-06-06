@@ -18,6 +18,8 @@ namespace CMNNPM
         private bool validCheck;
 
         private QuanLy quanLyForm;
+        private DanhSachDichVu dichVuForm;
+        private DanhSachThucPham thucPhamForm;
 
         public DatTiec( QuanLy ql)
         {
@@ -55,16 +57,20 @@ namespace CMNNPM
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            DanhSachThucPham mForm = new DanhSachThucPham();
-            mForm.Show();
-            mForm.Location = new Point(this.Location.X + this.Width, this.Location.Y);
+            thucPhamForm = new DanhSachThucPham();
+            thucPhamForm.Show();
+            thucPhamForm.Location = new Point(
+                this.Location.X + this.Width
+                , this.Location.Y);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonThemDichVu_Click(object sender, EventArgs e)
         {
-            DanhSachDichVu mForm = new DanhSachDichVu();
-            mForm.Show();
-            mForm.Location = new Point(this.Location.X + this.Width, this.Location.Y);
+            dichVuForm = new DanhSachDichVu();
+            dichVuForm.Show();
+            dichVuForm.Location = new Point(
+                this.Location.X + this.Width
+                , this.Location.Y);
         }
 
         private void buttonChapNhan_Click(object sender, EventArgs e)
@@ -203,6 +209,5 @@ namespace CMNNPM
             //addItemToComboCa();
         }
 
-        
     }
 }

@@ -28,19 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.listViewDichVu = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dICHVUBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.qLTCDataSet = new CMNNPM.QLTCDataSet();
-            //this.dICHVUTableAdapter = new CMNNPM.QLTCDataSetTableAdapters.DICHVUTableAdapter();
-            //((System.ComponentModel.ISupportInitialize)(this.dICHVUBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).BeginInit();
+            this.buttonHoanThanh = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewDichVu
@@ -66,7 +60,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên dịch vụ";
-            this.columnHeader2.Width = 144;
+            this.columnHeader2.Width = 266;
             // 
             // columnHeader3
             // 
@@ -76,40 +70,27 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Giá";
-            this.columnHeader4.Width = 287;
+            this.columnHeader4.Width = 167;
             // 
-            // button2
+            // buttonHoanThanh
             // 
-            this.button2.Location = new System.Drawing.Point(432, 306);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 28);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Hoàn Thành";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonHoanThanh.Location = new System.Drawing.Point(432, 306);
+            this.buttonHoanThanh.Name = "buttonHoanThanh";
+            this.buttonHoanThanh.Size = new System.Drawing.Size(134, 28);
+            this.buttonHoanThanh.TabIndex = 6;
+            this.buttonHoanThanh.Text = "Hoàn Thành";
+            this.buttonHoanThanh.UseVisualStyleBackColor = true;
+            this.buttonHoanThanh.Click += new System.EventHandler(this.buttonHoanThanh_Click);
             // 
-            // button1
+            // buttonThem
             // 
-            this.button1.Location = new System.Drawing.Point(56, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 26);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dICHVUBindingSource
-            // 
-            //this.dICHVUBindingSource.DataMember = "DICHVU";
-            //this.dICHVUBindingSource.DataSource = this.qLTCDataSet;
-            // 
-            // qLTCDataSet
-            // 
-            //this.qLTCDataSet.DataSetName = "QLTCDataSet";
-            //this.qLTCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dICHVUTableAdapter
-            // 
-            //this.dICHVUTableAdapter.ClearBeforeFill = true;
+            this.buttonThem.Location = new System.Drawing.Point(56, 306);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(134, 26);
+            this.buttonThem.TabIndex = 5;
+            this.buttonThem.Text = "Thêm";
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // DanhSachDichVu
             // 
@@ -117,13 +98,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 345);
             this.Controls.Add(this.listViewDichVu);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonHoanThanh);
+            this.Controls.Add(this.buttonThem);
             this.Name = "DanhSachDichVu";
             this.Text = "Danh Sách Dịch Vụ";
             this.Load += new System.EventHandler(this.DanhSachDichVu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dICHVUBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -135,10 +114,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        //private QLTCDataSet qLTCDataSet;
-        private System.Windows.Forms.BindingSource dICHVUBindingSource;
+        private System.Windows.Forms.Button buttonHoanThanh;
+        private System.Windows.Forms.Button buttonThem;
         //private QLTCDataSetTableAdapters.DICHVUTableAdapter dICHVUTableAdapter;
     }
 }

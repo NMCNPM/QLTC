@@ -30,7 +30,7 @@ namespace CMNNPM
         }
         private void LoadData()
         {
-            DanhSachTP.loadListViewDanhSachThucPham(listViewDanhSachThucPham);
+            DanhSachThucPhamSQL.loadListViewDanhSachThucPham(listViewDanhSachThucPham);
         }
     }
 }

@@ -286,9 +286,25 @@ namespace CMNNPM
             form.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private String getMaTiecCuoi(ListView lv)
         {
-            HoaDon form = new HoaDon();
+            foreach (ListViewItem item in lv.Items)
+            {
+                if (item.Selected == true)
+                {
+                    return DatTiecSQL.selectMaKhachHangFromCoDauChuRe(
+                        item.SubItems[2].Text
+                        , item.SubItems[1].Text);
+                }
+            }
+            return "";
+        }
+
+        private void buttonXuatHoaDon_Click(object sender, EventArgs e)
+        {
+
+            HoaDon form = new HoaDon(
+                getMaTiecCuoi(listViewDanhSachTiecCuoi));
             form.Show();
         }
 
@@ -340,5 +356,6 @@ namespace CMNNPM
             mForm.Location = new Point(50, 50);
             DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);            
         }
+      
     }
 }

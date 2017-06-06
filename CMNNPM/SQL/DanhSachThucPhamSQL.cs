@@ -8,9 +8,8 @@ using System.Windows.Forms;
 
 namespace CMNNPM.SQL
 {
-    class DanhSachTP
+    class DanhSachThucPhamSQL
     {
-        //public static DataTable DSThucPham;
 
         public static DataTable loadMonAn()
         {
@@ -46,8 +45,7 @@ namespace CMNNPM.SQL
 
                 lv.Items.Add(item);
             }
-            return true;
-        
+            return true;        
     }
 
     }

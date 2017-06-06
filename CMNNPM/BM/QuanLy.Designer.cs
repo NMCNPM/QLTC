@@ -49,7 +49,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonXuatHoaDon = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -222,23 +222,23 @@
             this.columnHeader8.Text = "Số lượng bàn dự trữ";
             this.columnHeader8.Width = 110;
             // 
-            // button5
+            // buttonXuatHoaDon
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(720, 153);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(135, 23);
-            this.button5.TabIndex = 47;
-            this.button5.Text = "Xuất hóa đơn";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonXuatHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXuatHoaDon.Location = new System.Drawing.Point(720, 153);
+            this.buttonXuatHoaDon.Name = "buttonXuatHoaDon";
+            this.buttonXuatHoaDon.Size = new System.Drawing.Size(135, 23);
+            this.buttonXuatHoaDon.TabIndex = 47;
+            this.buttonXuatHoaDon.Text = "Xuất hóa đơn";
+            this.buttonXuatHoaDon.UseVisualStyleBackColor = true;
+            this.buttonXuatHoaDon.Click += new System.EventHandler(this.buttonXuatHoaDon_Click);
             // 
             // QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 463);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonXuatHoaDon);
             this.Controls.Add(this.listViewDanhSachTiecCuoi);
             this.Controls.Add(this.cbYear);
             this.Controls.Add(this.monthCalendar1);
@@ -280,7 +280,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonXuatHoaDon;
         private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

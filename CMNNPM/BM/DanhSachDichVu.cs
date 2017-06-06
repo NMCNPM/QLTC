@@ -20,16 +20,19 @@ namespace CMNNPM
 
         private void DanhSachDichVu_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLTCDataSet.DICHVU' table. You can move, or remove it, as needed.
-            //this.dICHVUTableAdapter.Fill(this.qLTCDataSet.DICHVU);
-            //gridControl1.DataSource = DanhSachDV.loadDSDichVu();
-            DanhSachDV.loadDatabaseDichVu(listViewDichVu);
+            
+            DanhSachDichVuSQL.loadDatabaseDichVu(listViewDichVu);
             listViewDichVu.FullRowSelect = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonHoanThanh_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonThem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

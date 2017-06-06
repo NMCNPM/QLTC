@@ -44,7 +44,7 @@
             this.comboBoxCa = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNgayDatTiec = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btnThemMonAn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxSDT = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonThemDichVu = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -221,15 +221,15 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "Danh sách món ăn      :";
             // 
-            // btnThem
+            // btnThemMonAn
             // 
-            this.btnThem.Location = new System.Drawing.Point(511, 67);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 21);
-            this.btnThem.TabIndex = 24;
-            this.btnThem.Text = "Thêm món";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThemMonAn.Location = new System.Drawing.Point(511, 67);
+            this.btnThemMonAn.Name = "btnThemMonAn";
+            this.btnThemMonAn.Size = new System.Drawing.Size(75, 21);
+            this.btnThemMonAn.TabIndex = 24;
+            this.btnThemMonAn.Text = "Thêm món";
+            this.btnThemMonAn.UseVisualStyleBackColor = true;
+            this.btnThemMonAn.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupBox1
             // 
@@ -359,7 +359,7 @@
             // 
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.btnThem);
+            this.groupBox3.Controls.Add(this.btnThemMonAn);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Location = new System.Drawing.Point(12, 151);
             this.groupBox3.Name = "groupBox3";
@@ -424,7 +424,7 @@
             // 
             this.groupBox4.Controls.Add(this.dataGridView2);
             this.groupBox4.Controls.Add(this.button6);
-            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Controls.Add(this.buttonThemDichVu);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Location = new System.Drawing.Point(12, 305);
             this.groupBox4.Name = "groupBox4";
@@ -485,15 +485,15 @@
             this.button6.Text = "Hủy DV";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonThemDichVu
             // 
-            this.button4.Location = new System.Drawing.Point(511, 63);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Thêm DV";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonThemDichVu.Location = new System.Drawing.Point(511, 63);
+            this.buttonThemDichVu.Name = "buttonThemDichVu";
+            this.buttonThemDichVu.Size = new System.Drawing.Size(75, 23);
+            this.buttonThemDichVu.TabIndex = 4;
+            this.buttonThemDichVu.Text = "Thêm DV";
+            this.buttonThemDichVu.UseVisualStyleBackColor = true;
+            this.buttonThemDichVu.Click += new System.EventHandler(this.buttonThemDichVu_Click);
             // 
             // label12
             // 
@@ -583,12 +583,12 @@
         private System.Windows.Forms.ComboBox comboBoxCa;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayDatTiec;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnThemMonAn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonThemDichVu;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox9;
