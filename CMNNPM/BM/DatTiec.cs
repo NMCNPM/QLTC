@@ -83,8 +83,13 @@ namespace CMNNPM
                     int.Parse(textBoxSoBanDuTru.Text));
 
                 quanLyForm.updateQuanLyForm();
+                this.Close();
             }
-            this.Close();
+            else
+            {
+                MessageBox.Show("Thao tác không thực hiện được", "Lỗi!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
 
         private void comboBoxSanh_DropDownClosed(object sender, EventArgs e)

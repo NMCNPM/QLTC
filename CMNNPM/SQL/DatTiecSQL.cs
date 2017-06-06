@@ -177,16 +177,15 @@ namespace CMNNPM
 
         public static bool checkIfTiecCuoiExisted(String sanh, String ca, DateTime ngay)
         {
-            DataTable check = DatabaseQuery.queryTable(
-                "SELECT * FROM "
-                + "((TIECCUOI JOIN SANH ON TIECCUOI.MASANH = SANH.MASANH) "
-                + " JOIN CA ON TIECCUOI.MACA = CA.MACA) "
-                + "WHERE TIECCUOI.MASANH = '" + sanh.TrimEnd()
-                + "' AND TIECCUOI.MACA = '" + ca.TrimEnd()
-                + "' AND TIECCUOI.NGAYDATTIEC = '" + ngay.ToString() + "';");
-            if (check.Rows.Count <= 0)
-                return true;
-            return false;
+            DataTable tieccuoi = DatabaseQuery.queryTable(
+                "SELECT * FROM TIECCUOI WHERE MASANH = '"
+                + selectMaSanhFromTenSanh(sanh).Trim()
+                + "' AND MACA = '" + selectMaCaFromTenCa(ca).Trim()
+                + "' AND NGAYDATTIEC = '" + ngay + "';");
+
+            if (tieccuoi.Rows.Count > 0)
+                return false;
+            return true;
         }
 
         public static String selectMaCaFromTenCa(String tenCa)
@@ -222,11 +221,13 @@ namespace CMNNPM
             ma = mTable.Rows[0][0].ToString();
             return ma;
         }
+        
 
         public static bool insertDatTiec(String tenChuRe, String tenCoDau, String SDT,
             DateTime ngayThang, String loaiSanh, String sanh, String ca,
             int slBan, int slBanDuTru)
         {
+            
             insertKhachHang(tenCoDau, tenChuRe, SDT);
             DataTable khachhangTable = DatabaseQuery.queryTable("SELECT KHACHHANG.MAKHACHHANG FROM KHACHHANG WHERE "
                 + "TENCODAU = '" + tenCoDau + "'AND "

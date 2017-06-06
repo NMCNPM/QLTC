@@ -32,11 +32,11 @@
             this.buttonXoaBaoCao = new System.Windows.Forms.Button();
             this.buttonSuaBaoCao = new System.Windows.Forms.Button();
             this.listViewBaoCao = new System.Windows.Forms.ListView();
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.STT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ngay = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.soluong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.doanhthu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tile = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonLapBaoCao = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.listViewDichVu = new System.Windows.Forms.ListView();
@@ -104,6 +104,7 @@
             this.buttonXoaBaoCao.TabIndex = 13;
             this.buttonXoaBaoCao.Text = "Xóa";
             this.buttonXoaBaoCao.UseVisualStyleBackColor = true;
+            this.buttonXoaBaoCao.Click += new System.EventHandler(this.buttonXoaBaoCao_Click);
             // 
             // buttonSuaBaoCao
             // 
@@ -113,15 +114,18 @@
             this.buttonSuaBaoCao.TabIndex = 12;
             this.buttonSuaBaoCao.Text = "Sửa";
             this.buttonSuaBaoCao.UseVisualStyleBackColor = true;
+            this.buttonSuaBaoCao.Click += new System.EventHandler(this.buttonSuaBaoCao_Click);
             // 
             // listViewBaoCao
             // 
             this.listViewBaoCao.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader19,
-            this.columnHeader20,
-            this.columnHeader21,
-            this.columnHeader22,
-            this.columnHeader23});
+            this.STT,
+            this.ngay,
+            this.soluong,
+            this.doanhthu,
+            this.tile});
+            this.listViewBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewBaoCao.FullRowSelect = true;
             this.listViewBaoCao.GridLines = true;
             this.listViewBaoCao.Location = new System.Drawing.Point(6, 6);
             this.listViewBaoCao.Name = "listViewBaoCao";
@@ -130,30 +134,30 @@
             this.listViewBaoCao.UseCompatibleStateImageBehavior = false;
             this.listViewBaoCao.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader19
+            // STT
             // 
-            this.columnHeader19.Text = "STT";
-            this.columnHeader19.Width = 37;
+            this.STT.Text = "STT";
+            this.STT.Width = 37;
             // 
-            // columnHeader20
+            // ngay
             // 
-            this.columnHeader20.Text = "Ngày";
-            this.columnHeader20.Width = 125;
+            this.ngay.Text = "Ngày";
+            this.ngay.Width = 144;
             // 
-            // columnHeader21
+            // soluong
             // 
-            this.columnHeader21.Text = "Số lượng tiệc cưới";
-            this.columnHeader21.Width = 146;
+            this.soluong.Text = "Số lượng tiệc cưới";
+            this.soluong.Width = 120;
             // 
-            // columnHeader22
+            // doanhthu
             // 
-            this.columnHeader22.Text = "Doanh Thu";
-            this.columnHeader22.Width = 218;
+            this.doanhthu.Text = "Doanh Thu";
+            this.doanhthu.Width = 218;
             // 
-            // columnHeader23
+            // tile
             // 
-            this.columnHeader23.Text = "Tỉ lệ";
-            this.columnHeader23.Width = 108;
+            this.tile.Text = "Tỉ lệ (%)";
+            this.tile.Width = 108;
             // 
             // buttonLapBaoCao
             // 
@@ -163,7 +167,7 @@
             this.buttonLapBaoCao.TabIndex = 11;
             this.buttonLapBaoCao.Text = "Báo cáo";
             this.buttonLapBaoCao.UseVisualStyleBackColor = true;
-            this.buttonLapBaoCao.Click += new System.EventHandler(this.button23_Click);
+            this.buttonLapBaoCao.Click += new System.EventHandler(this.buttonThemBaoCao_Click);
             // 
             // tabPage4
             // 
@@ -185,7 +189,7 @@
             this.columnHeader15,
             this.columnHeader16,
             this.columnHeader17});
-            this.listViewDichVu.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewDichVu.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewDichVu.FullRowSelect = true;
             this.listViewDichVu.GridLines = true;
             this.listViewDichVu.Location = new System.Drawing.Point(6, 81);
@@ -261,7 +265,7 @@
             this.columnHeader11,
             this.columnHeader12,
             this.columnHeader13});
-            this.listViewMonAn.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewMonAn.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewMonAn.FullRowSelect = true;
             this.listViewMonAn.GridLines = true;
             this.listViewMonAn.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -339,7 +343,7 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader4});
-            this.listViewLoaiSanh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewLoaiSanh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewLoaiSanh.FullRowSelect = true;
             this.listViewLoaiSanh.GridLines = true;
             this.listViewLoaiSanh.Location = new System.Drawing.Point(6, 85);
@@ -417,7 +421,7 @@
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
-            this.listViewDSSanh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewDSSanh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewDSSanh.FullRowSelect = true;
             this.listViewDSSanh.GridLines = true;
             this.listViewDSSanh.Location = new System.Drawing.Point(6, 85);
@@ -561,11 +565,11 @@
         private System.Windows.Forms.Button buttonXoaBaoCao;
         private System.Windows.Forms.Button buttonSuaBaoCao;
         private System.Windows.Forms.ListView listViewBaoCao;
-        private System.Windows.Forms.ColumnHeader columnHeader19;
-        private System.Windows.Forms.ColumnHeader columnHeader20;
-        private System.Windows.Forms.ColumnHeader columnHeader21;
-        private System.Windows.Forms.ColumnHeader columnHeader22;
-        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader STT;
+        private System.Windows.Forms.ColumnHeader ngay;
+        private System.Windows.Forms.ColumnHeader soluong;
+        private System.Windows.Forms.ColumnHeader doanhthu;
+        private System.Windows.Forms.ColumnHeader tile;
         private System.Windows.Forms.Button buttonLapBaoCao;
     }
 }

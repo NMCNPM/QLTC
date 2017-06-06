@@ -18,6 +18,7 @@ namespace CMNNPM
         private ThemLoaiSanh lsForm;
         private ThemMonAn maForm;
         private ThemDichVu dvForm;
+        private BaoCaoDoanhSo bcdsForm;
 
         public QuanTri()
         {
@@ -46,7 +47,10 @@ namespace CMNNPM
         {
             DichVuSQL.loadListViewDichVu(listViewDichVu);
         }
-
+        public void updateBaoCao()
+        {
+            BaoCaoSQL.loadListViewBaoCao(listViewBaoCao);
+        }
         private void QuanTri_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -57,6 +61,7 @@ namespace CMNNPM
             updateDichVu();
             updateLoaiSanh();
             updateSanh();
+            updateBaoCao();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -77,10 +82,10 @@ namespace CMNNPM
             dvForm.Show();
         }
 
-        private void button23_Click(object sender, EventArgs e)
+        private void buttonThemBaoCao_Click(object sender, EventArgs e)
         {
-            BaoCaoDoanhSo form = new BaoCaoDoanhSo();
-            form.Show();
+            bcdsForm = new BaoCaoDoanhSo(this);
+            bcdsForm.Show();
         }
 
         private void buttonXoaDSSanh_Click(object sender, EventArgs e)
@@ -248,6 +253,51 @@ namespace CMNNPM
                         .TrimEnd());
 
                     dvForm.Show();
+                    result = true;
+                    break;
+                }
+            }
+
+            if (result == false)
+            {
+                MessageBox.Show("Vui lòng chọn dịch vụ", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonXoaBaoCao_Click(object sender, EventArgs e)
+        {
+            bool result = false;
+
+            foreach (ListViewItem item in listViewBaoCao.Items)
+            {
+                if (item.Selected == true)
+                {
+                    result = BaoCaoSQL.deleteBaoCao(item.SubItems[1].Text.TrimEnd());
+                    break;
+                }
+            }
+            if (result == false)
+            {
+                MessageBox.Show("Thao tác không thành công", "Lỗi!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            updateBaoCao();
+        }
+
+        private void buttonSuaBaoCao_Click(object sender, EventArgs e)
+        {
+            bool result = false;
+            foreach (ListViewItem item in listViewBaoCao.Items)
+            {
+                if (item.Selected == true)
+                {
+                    bcdsForm = new BaoCaoDoanhSo(this,
+                        item.SubItems[1]
+                        .Text
+                        .TrimEnd());
+
+                    bcdsForm.Show();
                     result = true;
                     break;
                 }

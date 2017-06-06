@@ -77,6 +77,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Data.dbml</DependentUpon>
     </Compile>
+    <Compile Include="SQL\BaoCaoSQL.cs" />
     <Compile Include="SQL\DanhSachDV.cs" />
     <Compile Include="SQL\DanhSachTP.cs" />
     <Compile Include="SQL\DatabaseQuery.cs" />
@@ -138,6 +139,7 @@
       <DependentUpon>ThemDichVu.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL\DichVuSQL.cs" />
+    <Compile Include="SQL\HoaDonSQL.cs" />
     <Compile Include="SQL\LoaiSanhSQL.cs" />
     <Compile Include="SQL\MonAnSQL.cs" />
     <Compile Include="SQL\SanhSQL.cs" />

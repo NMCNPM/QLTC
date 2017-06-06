@@ -87,7 +87,7 @@ namespace CMNNPM.SQL
             table = DatabaseQuery.queryTable(
                 "UPDATE DICHVU SET "
                 + "GIA = '" + gia
-                + "' WHERE TENMONAN = '" + tendichvu.TrimEnd() + "';");
+                + "' WHERE TENDICHVU = '" + tendichvu.TrimEnd() + "';");
             return true;
         }
 
