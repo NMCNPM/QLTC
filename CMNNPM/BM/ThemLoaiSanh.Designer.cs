@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonHuyBo = new System.Windows.Forms.Button();
+            this.buttonChapNhan = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxDonGiaBanToiThieu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTenLoaiSanh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // buttonHuyBo
             // 
-            this.button2.Location = new System.Drawing.Point(187, 77);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Hủy bỏ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonHuyBo.Location = new System.Drawing.Point(187, 77);
+            this.buttonHuyBo.Name = "buttonHuyBo";
+            this.buttonHuyBo.Size = new System.Drawing.Size(75, 23);
+            this.buttonHuyBo.TabIndex = 23;
+            this.buttonHuyBo.Text = "Hủy bỏ";
+            this.buttonHuyBo.UseVisualStyleBackColor = true;
+            this.buttonHuyBo.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // buttonChapNhan
             // 
-            this.button1.Location = new System.Drawing.Point(24, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Chấp nhận";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonChapNhan.Location = new System.Drawing.Point(24, 77);
+            this.buttonChapNhan.Name = "buttonChapNhan";
+            this.buttonChapNhan.Size = new System.Drawing.Size(75, 23);
+            this.buttonChapNhan.TabIndex = 22;
+            this.buttonChapNhan.Text = "Chấp nhận";
+            this.buttonChapNhan.UseVisualStyleBackColor = true;
+            this.buttonChapNhan.Click += new System.EventHandler(this.buttonChapNhan_Click);
             // 
             // label6
             // 
@@ -65,12 +66,12 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "VNĐ";
             // 
-            // textBox3
+            // textBoxDonGiaBanToiThieu
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 48);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(129, 20);
-            this.textBox3.TabIndex = 20;
+            this.textBoxDonGiaBanToiThieu.Location = new System.Drawing.Point(123, 48);
+            this.textBoxDonGiaBanToiThieu.Name = "textBoxDonGiaBanToiThieu";
+            this.textBoxDonGiaBanToiThieu.Size = new System.Drawing.Size(129, 20);
+            this.textBoxDonGiaBanToiThieu.TabIndex = 20;
             // 
             // label4
             // 
@@ -81,12 +82,12 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Đơn giá bàn tối thiểu";
             // 
-            // textBox1
+            // textBoxTenLoaiSanh
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 18;
+            this.textBoxTenLoaiSanh.Location = new System.Drawing.Point(123, 17);
+            this.textBoxTenLoaiSanh.Name = "textBoxTenLoaiSanh";
+            this.textBoxTenLoaiSanh.Size = new System.Drawing.Size(129, 20);
+            this.textBoxTenLoaiSanh.TabIndex = 18;
             // 
             // label1
             // 
@@ -102,15 +103,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 116);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonHuyBo);
+            this.Controls.Add(this.buttonChapNhan);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxDonGiaBanToiThieu);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTenLoaiSanh);
             this.Controls.Add(this.label1);
             this.Name = "ThemLoaiSanh";
             this.Text = "Thêm loại sảnh";
+            this.Load += new System.EventHandler(this.ThemLoaiSanh_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,12 +120,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonHuyBo;
+        private System.Windows.Forms.Button buttonChapNhan;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxDonGiaBanToiThieu;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTenLoaiSanh;
         private System.Windows.Forms.Label label1;
     }
 }

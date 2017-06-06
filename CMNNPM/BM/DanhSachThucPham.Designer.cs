@@ -37,11 +37,11 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLTCDataSet4 = new CMNNPM.QLTCDataSet4();
-            this.mONANTableAdapter = new CMNNPM.QLTCDataSet4TableAdapters.MONANTableAdapter();
+            //this.qLTCDataSet4 = new CMNNPM.QLTCDataSet4();
+            //this.mONANTableAdapter = new CMNNPM.QLTCDataSet4TableAdapters.MONANTableAdapter();
             this.dataGridViewDSThucPham = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSThucPham)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,16 +102,16 @@
             // mONANBindingSource
             // 
             this.mONANBindingSource.DataMember = "MONAN";
-            this.mONANBindingSource.DataSource = this.qLTCDataSet4;
+            //this.mONANBindingSource.DataSource = this.qLTCDataSet4;
             // 
             // qLTCDataSet4
             // 
-            this.qLTCDataSet4.DataSetName = "QLTCDataSet4";
-            this.qLTCDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.qLTCDataSet4.DataSetName = "QLTCDataSet4";
+            //this.qLTCDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // mONANTableAdapter
             // 
-            this.mONANTableAdapter.ClearBeforeFill = true;
+            //this.mONANTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewDSThucPham
             // 
@@ -134,7 +134,7 @@
             this.Text = "Danh sách thực phẩm";
             this.Load += new System.EventHandler(this.DanhSachThucPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSThucPham)).EndInit();
             this.ResumeLayout(false);
 
@@ -148,9 +148,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private QLTCDataSet4 qLTCDataSet4;
+        //private QLTCDataSet4 qLTCDataSet4;
         private System.Windows.Forms.BindingSource mONANBindingSource;
-        private QLTCDataSet4TableAdapters.MONANTableAdapter mONANTableAdapter;
+        //private QLTCDataSet4TableAdapters.MONANTableAdapter mONANTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewDSThucPham;
     }
 }

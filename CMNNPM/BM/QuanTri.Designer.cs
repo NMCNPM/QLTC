@@ -28,73 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.buttonXoaBaoCao = new System.Windows.Forms.Button();
+            this.buttonSuaBaoCao = new System.Windows.Forms.Button();
             this.listViewBaoCao = new System.Windows.Forms.ListView();
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button23 = new System.Windows.Forms.Button();
+            this.buttonLapBaoCao = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.gridControlDV = new DevExpress.XtraGrid.GridControl();
-            this.gvDV = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.TENDICHVU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GIA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.listViewDichVu = new System.Windows.Forms.ListView();
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.buttonSuaDichVu = new System.Windows.Forms.Button();
+            this.buttonXoaDichVu = new System.Windows.Forms.Button();
+            this.buttonThemDichVu = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.gridControlMonAn = new DevExpress.XtraGrid.GridControl();
-            this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLTCDataSet3 = new CMNNPM.QLTCDataSet3();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMAMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTENMONAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGIA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.listViewMonAn = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonSuaMonAn = new System.Windows.Forms.Button();
+            this.buttonXoaMonAn = new System.Windows.Forms.Button();
+            this.buttonThemMonAn = new System.Windows.Forms.Button();
             this.tabLoaiSanh = new System.Windows.Forms.TabPage();
-            this.gridControlLoaiSanh = new DevExpress.XtraGrid.GridControl();
-            this.lOAISANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLTCDataSet2 = new CMNNPM.QLTCDataSet2();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMALOAISANH1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTENLOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDONGIABANTOITHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.listViewLoaiSanh = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.buttonSuaLoaiSanh = new System.Windows.Forms.Button();
+            this.buttonXoaLoaiSanh = new System.Windows.Forms.Button();
+            this.buttonThemLoaiSanh = new System.Windows.Forms.Button();
             this.tabDanhSachSanh = new System.Windows.Forms.TabPage();
-            this.gridControlSanh = new DevExpress.XtraGrid.GridControl();
-            this.sANHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLTCDataSet1 = new CMNNPM.QLTCDataSet1();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colTENSANH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLOAISANH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSLBANTOIDA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGHICHU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.listViewDSSanh = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -102,42 +70,24 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSuaDSSanh = new System.Windows.Forms.Button();
+            this.buttonXoaDSSanh = new System.Windows.Forms.Button();
+            this.buttonThemDSSanh = new System.Windows.Forms.Button();
             this.QTMonAn = new System.Windows.Forms.TabControl();
-            this.sANHTableAdapter = new CMNNPM.QLTCDataSet1TableAdapters.SANHTableAdapter();
-            this.lOAISANHTableAdapter = new CMNNPM.QLTCDataSet2TableAdapters.LOAISANHTableAdapter();
-            this.mONANTableAdapter = new CMNNPM.QLTCDataSet3TableAdapters.MONANTableAdapter();
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlDV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvDV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlMonAn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.tabLoaiSanh.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlLoaiSanh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOAISANHBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.tabDanhSachSanh.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlSanh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sANHBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.QTMonAn.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.button22);
-            this.tabPage5.Controls.Add(this.button21);
+            this.tabPage5.Controls.Add(this.buttonXoaBaoCao);
+            this.tabPage5.Controls.Add(this.buttonSuaBaoCao);
             this.tabPage5.Controls.Add(this.listViewBaoCao);
-            this.tabPage5.Controls.Add(this.button23);
+            this.tabPage5.Controls.Add(this.buttonLapBaoCao);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -146,23 +96,23 @@
             this.tabPage5.Text = "Báo cáo";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // button22
+            // buttonXoaBaoCao
             // 
-            this.button22.Location = new System.Drawing.Point(276, 357);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 13;
-            this.button22.Text = "Xóa";
-            this.button22.UseVisualStyleBackColor = true;
+            this.buttonXoaBaoCao.Location = new System.Drawing.Point(276, 357);
+            this.buttonXoaBaoCao.Name = "buttonXoaBaoCao";
+            this.buttonXoaBaoCao.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoaBaoCao.TabIndex = 13;
+            this.buttonXoaBaoCao.Text = "Xóa";
+            this.buttonXoaBaoCao.UseVisualStyleBackColor = true;
             // 
-            // button21
+            // buttonSuaBaoCao
             // 
-            this.button21.Location = new System.Drawing.Point(514, 357);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 23);
-            this.button21.TabIndex = 12;
-            this.button21.Text = "Sửa";
-            this.button21.UseVisualStyleBackColor = true;
+            this.buttonSuaBaoCao.Location = new System.Drawing.Point(514, 357);
+            this.buttonSuaBaoCao.Name = "buttonSuaBaoCao";
+            this.buttonSuaBaoCao.Size = new System.Drawing.Size(75, 23);
+            this.buttonSuaBaoCao.TabIndex = 12;
+            this.buttonSuaBaoCao.Text = "Sửa";
+            this.buttonSuaBaoCao.UseVisualStyleBackColor = true;
             // 
             // listViewBaoCao
             // 
@@ -172,6 +122,7 @@
             this.columnHeader21,
             this.columnHeader22,
             this.columnHeader23});
+            this.listViewBaoCao.GridLines = true;
             this.listViewBaoCao.Location = new System.Drawing.Point(6, 6);
             this.listViewBaoCao.Name = "listViewBaoCao";
             this.listViewBaoCao.Size = new System.Drawing.Size(638, 345);
@@ -204,23 +155,22 @@
             this.columnHeader23.Text = "Tỉ lệ";
             this.columnHeader23.Width = 108;
             // 
-            // button23
+            // buttonLapBaoCao
             // 
-            this.button23.Location = new System.Drawing.Point(54, 357);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 23);
-            this.button23.TabIndex = 11;
-            this.button23.Text = "Báo cáo";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.buttonLapBaoCao.Location = new System.Drawing.Point(54, 357);
+            this.buttonLapBaoCao.Name = "buttonLapBaoCao";
+            this.buttonLapBaoCao.Size = new System.Drawing.Size(75, 23);
+            this.buttonLapBaoCao.TabIndex = 11;
+            this.buttonLapBaoCao.Text = "Báo cáo";
+            this.buttonLapBaoCao.UseVisualStyleBackColor = true;
+            this.buttonLapBaoCao.Click += new System.EventHandler(this.button23_Click);
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.gridControlDV);
             this.tabPage4.Controls.Add(this.listViewDichVu);
-            this.tabPage4.Controls.Add(this.button7);
-            this.tabPage4.Controls.Add(this.button8);
-            this.tabPage4.Controls.Add(this.button9);
+            this.tabPage4.Controls.Add(this.buttonSuaDichVu);
+            this.tabPage4.Controls.Add(this.buttonXoaDichVu);
+            this.tabPage4.Controls.Add(this.buttonThemDichVu);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -229,79 +179,18 @@
             this.tabPage4.Text = "Dịch vụ";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // gridControlDV
-            // 
-            this.gridControlDV.Location = new System.Drawing.Point(6, 120);
-            this.gridControlDV.MainView = this.gvDV;
-            this.gridControlDV.Name = "gridControlDV";
-            this.gridControlDV.Size = new System.Drawing.Size(638, 260);
-            this.gridControlDV.TabIndex = 17;
-            this.gridControlDV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvDV,
-            this.gridView1});
-            // 
-            // gvDV
-            // 
-            this.gvDV.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.TENDICHVU,
-            this.SOLUONG,
-            this.GIA});
-            this.gvDV.GridControl = this.gridControlDV;
-            this.gvDV.Name = "gvDV";
-            this.gvDV.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gvDV.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gvDV.OptionsBehavior.Editable = false;
-            this.gvDV.OptionsBehavior.FocusLeaveOnTab = true;
-            this.gvDV.OptionsBehavior.ReadOnly = true;
-            this.gvDV.OptionsFind.AlwaysVisible = true;
-            this.gvDV.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
-            this.gvDV.OptionsFind.FindNullPrompt = "Tìm kiếm";
-            this.gvDV.OptionsFind.HighlightFindResults = false;
-            this.gvDV.OptionsFind.ShowClearButton = false;
-            this.gvDV.OptionsFind.ShowCloseButton = false;
-            this.gvDV.OptionsFind.ShowFindButton = false;
-            this.gvDV.OptionsSelection.EnableAppearanceFocusedCell = false;
-            // 
-            // TENDICHVU
-            // 
-            this.TENDICHVU.Caption = "Tên dịch vụ";
-            this.TENDICHVU.FieldName = "TENDICHVU";
-            this.TENDICHVU.Name = "TENDICHVU";
-            this.TENDICHVU.Visible = true;
-            this.TENDICHVU.VisibleIndex = 0;
-            // 
-            // SOLUONG
-            // 
-            this.SOLUONG.Caption = "Số lượng";
-            this.SOLUONG.FieldName = "SOLUONG";
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.Visible = true;
-            this.SOLUONG.VisibleIndex = 1;
-            // 
-            // GIA
-            // 
-            this.GIA.Caption = "Giá";
-            this.GIA.FieldName = "GIA";
-            this.GIA.Name = "GIA";
-            this.GIA.Visible = true;
-            this.GIA.VisibleIndex = 2;
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControlDV;
-            this.gridView1.Name = "gridView1";
-            // 
             // listViewDichVu
             // 
             this.listViewDichVu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader15,
             this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18});
+            this.columnHeader17});
             this.listViewDichVu.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewDichVu.FullRowSelect = true;
+            this.listViewDichVu.GridLines = true;
             this.listViewDichVu.Location = new System.Drawing.Point(6, 81);
             this.listViewDichVu.Name = "listViewDichVu";
-            this.listViewDichVu.Size = new System.Drawing.Size(638, 33);
+            this.listViewDichVu.Size = new System.Drawing.Size(638, 299);
             this.listViewDichVu.TabIndex = 16;
             this.listViewDichVu.UseCompatibleStateImageBehavior = false;
             this.listViewDichVu.View = System.Windows.Forms.View.Details;
@@ -321,46 +210,42 @@
             this.columnHeader17.Text = "Giá";
             this.columnHeader17.Width = 107;
             // 
-            // columnHeader18
+            // buttonSuaDichVu
             // 
-            this.columnHeader18.Text = "Ghi chú";
-            this.columnHeader18.Width = 282;
+            this.buttonSuaDichVu.Location = new System.Drawing.Point(552, 52);
+            this.buttonSuaDichVu.Name = "buttonSuaDichVu";
+            this.buttonSuaDichVu.Size = new System.Drawing.Size(75, 23);
+            this.buttonSuaDichVu.TabIndex = 12;
+            this.buttonSuaDichVu.Text = "Sửa";
+            this.buttonSuaDichVu.UseVisualStyleBackColor = true;
+            this.buttonSuaDichVu.Click += new System.EventHandler(this.buttonSuaDichVu_Click);
             // 
-            // button7
+            // buttonXoaDichVu
             // 
-            this.button7.Location = new System.Drawing.Point(552, 52);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 12;
-            this.button7.Text = "Sửa";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonXoaDichVu.Location = new System.Drawing.Point(471, 52);
+            this.buttonXoaDichVu.Name = "buttonXoaDichVu";
+            this.buttonXoaDichVu.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoaDichVu.TabIndex = 11;
+            this.buttonXoaDichVu.Text = "Xóa";
+            this.buttonXoaDichVu.UseVisualStyleBackColor = true;
+            this.buttonXoaDichVu.Click += new System.EventHandler(this.buttonXoaDichVu_Click);
             // 
-            // button8
+            // buttonThemDichVu
             // 
-            this.button8.Location = new System.Drawing.Point(471, 52);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Xóa";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(390, 52);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "Thêm";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.buttonThemDichVu.Location = new System.Drawing.Point(390, 52);
+            this.buttonThemDichVu.Name = "buttonThemDichVu";
+            this.buttonThemDichVu.Size = new System.Drawing.Size(75, 23);
+            this.buttonThemDichVu.TabIndex = 10;
+            this.buttonThemDichVu.Text = "Thêm";
+            this.buttonThemDichVu.UseVisualStyleBackColor = true;
+            this.buttonThemDichVu.Click += new System.EventHandler(this.buttonThemDichVu_Click);
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.gridControlMonAn);
             this.tabPage3.Controls.Add(this.listViewMonAn);
-            this.tabPage3.Controls.Add(this.button4);
-            this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.button6);
+            this.tabPage3.Controls.Add(this.buttonSuaMonAn);
+            this.tabPage3.Controls.Add(this.buttonXoaMonAn);
+            this.tabPage3.Controls.Add(this.buttonThemMonAn);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -369,65 +254,13 @@
             this.tabPage3.Text = "Món ăn";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // gridControlMonAn
-            // 
-            this.gridControlMonAn.DataSource = this.mONANBindingSource;
-            this.gridControlMonAn.Location = new System.Drawing.Point(6, 118);
-            this.gridControlMonAn.MainView = this.gridView4;
-            this.gridControlMonAn.Name = "gridControlMonAn";
-            this.gridControlMonAn.Size = new System.Drawing.Size(638, 262);
-            this.gridControlMonAn.TabIndex = 12;
-            this.gridControlMonAn.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView4});
-            // 
-            // mONANBindingSource
-            // 
-            this.mONANBindingSource.DataMember = "MONAN";
-            this.mONANBindingSource.DataSource = this.qLTCDataSet3;
-            // 
-            // qLTCDataSet3
-            // 
-            this.qLTCDataSet3.DataSetName = "QLTCDataSet3";
-            this.qLTCDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gridView4
-            // 
-            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMAMONAN,
-            this.colTENMONAN,
-            this.colGIA});
-            this.gridView4.GridControl = this.gridControlMonAn;
-            this.gridView4.Name = "gridView4";
-            // 
-            // colMAMONAN
-            // 
-            this.colMAMONAN.FieldName = "MAMONAN";
-            this.colMAMONAN.Name = "colMAMONAN";
-            this.colMAMONAN.Visible = true;
-            this.colMAMONAN.VisibleIndex = 0;
-            // 
-            // colTENMONAN
-            // 
-            this.colTENMONAN.FieldName = "TENMONAN";
-            this.colTENMONAN.Name = "colTENMONAN";
-            this.colTENMONAN.Visible = true;
-            this.colTENMONAN.VisibleIndex = 1;
-            // 
-            // colGIA
-            // 
-            this.colGIA.FieldName = "GIA";
-            this.colGIA.Name = "colGIA";
-            this.colGIA.Visible = true;
-            this.colGIA.VisibleIndex = 2;
-            // 
             // listViewMonAn
             // 
             this.listViewMonAn.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.listViewMonAn.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader11,
             this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14});
+            this.columnHeader13});
             this.listViewMonAn.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewMonAn.FullRowSelect = true;
             this.listViewMonAn.GridLines = true;
@@ -436,7 +269,7 @@
             this.listViewMonAn.Location = new System.Drawing.Point(6, 76);
             this.listViewMonAn.MultiSelect = false;
             this.listViewMonAn.Name = "listViewMonAn";
-            this.listViewMonAn.Size = new System.Drawing.Size(638, 36);
+            this.listViewMonAn.Size = new System.Drawing.Size(638, 304);
             this.listViewMonAn.TabIndex = 11;
             this.listViewMonAn.UseCompatibleStateImageBehavior = false;
             this.listViewMonAn.View = System.Windows.Forms.View.Details;
@@ -456,46 +289,42 @@
             this.columnHeader13.Text = "Giá";
             this.columnHeader13.Width = 107;
             // 
-            // columnHeader14
+            // buttonSuaMonAn
             // 
-            this.columnHeader14.Text = "Ghi chú";
-            this.columnHeader14.Width = 282;
+            this.buttonSuaMonAn.Location = new System.Drawing.Point(552, 47);
+            this.buttonSuaMonAn.Name = "buttonSuaMonAn";
+            this.buttonSuaMonAn.Size = new System.Drawing.Size(75, 23);
+            this.buttonSuaMonAn.TabIndex = 7;
+            this.buttonSuaMonAn.Text = "Sửa";
+            this.buttonSuaMonAn.UseVisualStyleBackColor = true;
+            this.buttonSuaMonAn.Click += new System.EventHandler(this.buttonSuaMonAn_Click);
             // 
-            // button4
+            // buttonXoaMonAn
             // 
-            this.button4.Location = new System.Drawing.Point(552, 47);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Sửa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonXoaMonAn.Location = new System.Drawing.Point(471, 47);
+            this.buttonXoaMonAn.Name = "buttonXoaMonAn";
+            this.buttonXoaMonAn.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoaMonAn.TabIndex = 6;
+            this.buttonXoaMonAn.Text = "Xóa";
+            this.buttonXoaMonAn.UseVisualStyleBackColor = true;
+            this.buttonXoaMonAn.Click += new System.EventHandler(this.buttonXoaMonAn_Click);
             // 
-            // button5
+            // buttonThemMonAn
             // 
-            this.button5.Location = new System.Drawing.Point(471, 47);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Xóa";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(390, 47);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Thêm";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.buttonThemMonAn.Location = new System.Drawing.Point(390, 47);
+            this.buttonThemMonAn.Name = "buttonThemMonAn";
+            this.buttonThemMonAn.Size = new System.Drawing.Size(75, 23);
+            this.buttonThemMonAn.TabIndex = 5;
+            this.buttonThemMonAn.Text = "Thêm";
+            this.buttonThemMonAn.UseVisualStyleBackColor = true;
+            this.buttonThemMonAn.Click += new System.EventHandler(this.button6_Click);
             // 
             // tabLoaiSanh
             // 
-            this.tabLoaiSanh.Controls.Add(this.gridControlLoaiSanh);
             this.tabLoaiSanh.Controls.Add(this.listViewLoaiSanh);
-            this.tabLoaiSanh.Controls.Add(this.button10);
-            this.tabLoaiSanh.Controls.Add(this.button11);
-            this.tabLoaiSanh.Controls.Add(this.button12);
+            this.tabLoaiSanh.Controls.Add(this.buttonSuaLoaiSanh);
+            this.tabLoaiSanh.Controls.Add(this.buttonXoaLoaiSanh);
+            this.tabLoaiSanh.Controls.Add(this.buttonThemLoaiSanh);
             this.tabLoaiSanh.Location = new System.Drawing.Point(4, 22);
             this.tabLoaiSanh.Name = "tabLoaiSanh";
             this.tabLoaiSanh.Padding = new System.Windows.Forms.Padding(3);
@@ -504,77 +333,18 @@
             this.tabLoaiSanh.Text = "Loại sảnh";
             this.tabLoaiSanh.UseVisualStyleBackColor = true;
             // 
-            // gridControlLoaiSanh
-            // 
-            this.gridControlLoaiSanh.DataSource = this.lOAISANHBindingSource;
-            this.gridControlLoaiSanh.Location = new System.Drawing.Point(6, 145);
-            this.gridControlLoaiSanh.MainView = this.gridView3;
-            this.gridControlLoaiSanh.Name = "gridControlLoaiSanh";
-            this.gridControlLoaiSanh.Size = new System.Drawing.Size(638, 235);
-            this.gridControlLoaiSanh.TabIndex = 17;
-            this.gridControlLoaiSanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
-            // 
-            // lOAISANHBindingSource
-            // 
-            this.lOAISANHBindingSource.DataMember = "LOAISANH";
-            this.lOAISANHBindingSource.DataSource = this.qLTCDataSet2;
-            // 
-            // qLTCDataSet2
-            // 
-            this.qLTCDataSet2.DataSetName = "QLTCDataSet2";
-            this.qLTCDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gridView3
-            // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMALOAISANH1,
-            this.colTENLOAISANH,
-            this.colDONGIABANTOITHIEU});
-            this.gridView3.GridControl = this.gridControlLoaiSanh;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsDetail.ShowDetailTabs = false;
-            this.gridView3.OptionsFind.AlwaysVisible = true;
-            this.gridView3.OptionsFind.FindDelay = 100;
-            this.gridView3.OptionsFind.FindNullPrompt = "Tìm kiếm...";
-            this.gridView3.OptionsFind.ShowClearButton = false;
-            this.gridView3.OptionsFind.ShowCloseButton = false;
-            this.gridView3.OptionsFind.ShowFindButton = false;
-            // 
-            // colMALOAISANH1
-            // 
-            this.colMALOAISANH1.FieldName = "MALOAISANH";
-            this.colMALOAISANH1.Name = "colMALOAISANH1";
-            this.colMALOAISANH1.Visible = true;
-            this.colMALOAISANH1.VisibleIndex = 0;
-            // 
-            // colTENLOAISANH
-            // 
-            this.colTENLOAISANH.FieldName = "TENLOAISANH";
-            this.colTENLOAISANH.Name = "colTENLOAISANH";
-            this.colTENLOAISANH.Visible = true;
-            this.colTENLOAISANH.VisibleIndex = 1;
-            // 
-            // colDONGIABANTOITHIEU
-            // 
-            this.colDONGIABANTOITHIEU.FieldName = "DONGIABANTOITHIEU";
-            this.colDONGIABANTOITHIEU.Name = "colDONGIABANTOITHIEU";
-            this.colDONGIABANTOITHIEU.Visible = true;
-            this.colDONGIABANTOITHIEU.VisibleIndex = 2;
-            // 
             // listViewLoaiSanh
             // 
             this.listViewLoaiSanh.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3,
             this.columnHeader4});
             this.listViewLoaiSanh.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewLoaiSanh.FullRowSelect = true;
             this.listViewLoaiSanh.GridLines = true;
             this.listViewLoaiSanh.Location = new System.Drawing.Point(6, 85);
             this.listViewLoaiSanh.Name = "listViewLoaiSanh";
-            this.listViewLoaiSanh.Size = new System.Drawing.Size(638, 39);
+            this.listViewLoaiSanh.Size = new System.Drawing.Size(638, 295);
             this.listViewLoaiSanh.TabIndex = 16;
             this.listViewLoaiSanh.UseCompatibleStateImageBehavior = false;
             this.listViewLoaiSanh.View = System.Windows.Forms.View.Details;
@@ -587,53 +357,49 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên loại";
-            this.columnHeader2.Width = 197;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Số lượng bàn tối đa";
-            this.columnHeader3.Width = 227;
+            this.columnHeader2.Width = 322;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Đơn giá bàn tối thiểu";
             this.columnHeader4.Width = 169;
             // 
-            // button10
+            // buttonSuaLoaiSanh
             // 
-            this.button10.Location = new System.Drawing.Point(552, 56);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "Sửa";
-            this.button10.UseVisualStyleBackColor = true;
+            this.buttonSuaLoaiSanh.Location = new System.Drawing.Point(552, 56);
+            this.buttonSuaLoaiSanh.Name = "buttonSuaLoaiSanh";
+            this.buttonSuaLoaiSanh.Size = new System.Drawing.Size(75, 23);
+            this.buttonSuaLoaiSanh.TabIndex = 12;
+            this.buttonSuaLoaiSanh.Text = "Sửa";
+            this.buttonSuaLoaiSanh.UseVisualStyleBackColor = true;
+            this.buttonSuaLoaiSanh.Click += new System.EventHandler(this.buttonSuaLoaiSanh_Click);
             // 
-            // button11
+            // buttonXoaLoaiSanh
             // 
-            this.button11.Location = new System.Drawing.Point(471, 56);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 11;
-            this.button11.Text = "Xóa";
-            this.button11.UseVisualStyleBackColor = true;
+            this.buttonXoaLoaiSanh.Location = new System.Drawing.Point(471, 56);
+            this.buttonXoaLoaiSanh.Name = "buttonXoaLoaiSanh";
+            this.buttonXoaLoaiSanh.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoaLoaiSanh.TabIndex = 11;
+            this.buttonXoaLoaiSanh.Text = "Xóa";
+            this.buttonXoaLoaiSanh.UseVisualStyleBackColor = true;
+            this.buttonXoaLoaiSanh.Click += new System.EventHandler(this.buttonXoaLoaiSanh_Click);
             // 
-            // button12
+            // buttonThemLoaiSanh
             // 
-            this.button12.Location = new System.Drawing.Point(390, 56);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 10;
-            this.button12.Text = "Thêm";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.buttonThemLoaiSanh.Location = new System.Drawing.Point(390, 56);
+            this.buttonThemLoaiSanh.Name = "buttonThemLoaiSanh";
+            this.buttonThemLoaiSanh.Size = new System.Drawing.Size(75, 23);
+            this.buttonThemLoaiSanh.TabIndex = 10;
+            this.buttonThemLoaiSanh.Text = "Thêm";
+            this.buttonThemLoaiSanh.UseVisualStyleBackColor = true;
+            this.buttonThemLoaiSanh.Click += new System.EventHandler(this.buttonThemLoaiSanh_Click);
             // 
             // tabDanhSachSanh
             // 
-            this.tabDanhSachSanh.Controls.Add(this.gridControlSanh);
             this.tabDanhSachSanh.Controls.Add(this.listViewDSSanh);
-            this.tabDanhSachSanh.Controls.Add(this.button3);
-            this.tabDanhSachSanh.Controls.Add(this.button2);
-            this.tabDanhSachSanh.Controls.Add(this.button1);
+            this.tabDanhSachSanh.Controls.Add(this.buttonSuaDSSanh);
+            this.tabDanhSachSanh.Controls.Add(this.buttonXoaDSSanh);
+            this.tabDanhSachSanh.Controls.Add(this.buttonThemDSSanh);
             this.tabDanhSachSanh.Location = new System.Drawing.Point(4, 22);
             this.tabDanhSachSanh.Name = "tabDanhSachSanh";
             this.tabDanhSachSanh.Padding = new System.Windows.Forms.Padding(3);
@@ -641,69 +407,6 @@
             this.tabDanhSachSanh.TabIndex = 0;
             this.tabDanhSachSanh.Text = "Danh sách sảnh";
             this.tabDanhSachSanh.UseVisualStyleBackColor = true;
-            // 
-            // gridControlSanh
-            // 
-            this.gridControlSanh.DataSource = this.sANHBindingSource;
-            this.gridControlSanh.Location = new System.Drawing.Point(0, 124);
-            this.gridControlSanh.MainView = this.gridView2;
-            this.gridControlSanh.Name = "gridControlSanh";
-            this.gridControlSanh.Size = new System.Drawing.Size(650, 262);
-            this.gridControlSanh.TabIndex = 8;
-            this.gridControlSanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // sANHBindingSource
-            // 
-            this.sANHBindingSource.DataMember = "SANH";
-            this.sANHBindingSource.DataSource = this.qLTCDataSet1;
-            // 
-            // qLTCDataSet1
-            // 
-            this.qLTCDataSet1.DataSetName = "QLTCDataSet1";
-            this.qLTCDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gridView2
-            // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTENSANH,
-            this.colLOAISANH,
-            this.colSLBANTOIDA,
-            this.colGHICHU});
-            this.gridView2.GridControl = this.gridControlSanh;
-            this.gridView2.Name = "gridView2";
-            // 
-            // colTENSANH
-            // 
-            this.colTENSANH.Caption = "Tên sảnh";
-            this.colTENSANH.FieldName = "TENSANH";
-            this.colTENSANH.Name = "colTENSANH";
-            this.colTENSANH.Visible = true;
-            this.colTENSANH.VisibleIndex = 0;
-            // 
-            // colLOAISANH
-            // 
-            this.colLOAISANH.Caption = "Loại sảnh";
-            this.colLOAISANH.FieldName = "TENLOAISANH";
-            this.colLOAISANH.Name = "colLOAISANH";
-            this.colLOAISANH.Visible = true;
-            this.colLOAISANH.VisibleIndex = 1;
-            // 
-            // colSLBANTOIDA
-            // 
-            this.colSLBANTOIDA.Caption = "SL bàn tối đa";
-            this.colSLBANTOIDA.FieldName = "SLBANTOIDA";
-            this.colSLBANTOIDA.Name = "colSLBANTOIDA";
-            this.colSLBANTOIDA.Visible = true;
-            this.colSLBANTOIDA.VisibleIndex = 2;
-            // 
-            // colGHICHU
-            // 
-            this.colGHICHU.Caption = "Ghi chú";
-            this.colGHICHU.FieldName = "GHICHU";
-            this.colGHICHU.Name = "colGHICHU";
-            this.colGHICHU.Visible = true;
-            this.colGHICHU.VisibleIndex = 3;
             // 
             // listViewDSSanh
             // 
@@ -719,7 +422,7 @@
             this.listViewDSSanh.GridLines = true;
             this.listViewDSSanh.Location = new System.Drawing.Point(6, 85);
             this.listViewDSSanh.Name = "listViewDSSanh";
-            this.listViewDSSanh.Size = new System.Drawing.Size(638, 33);
+            this.listViewDSSanh.Size = new System.Drawing.Size(638, 295);
             this.listViewDSSanh.TabIndex = 7;
             this.listViewDSSanh.UseCompatibleStateImageBehavior = false;
             this.listViewDSSanh.View = System.Windows.Forms.View.Details;
@@ -754,33 +457,35 @@
             this.columnHeader10.Text = "Ghi chú";
             this.columnHeader10.Width = 140;
             // 
-            // button3
+            // buttonSuaDSSanh
             // 
-            this.button3.Location = new System.Drawing.Point(548, 56);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonSuaDSSanh.Location = new System.Drawing.Point(548, 56);
+            this.buttonSuaDSSanh.Name = "buttonSuaDSSanh";
+            this.buttonSuaDSSanh.Size = new System.Drawing.Size(75, 23);
+            this.buttonSuaDSSanh.TabIndex = 3;
+            this.buttonSuaDSSanh.Text = "Sửa";
+            this.buttonSuaDSSanh.UseVisualStyleBackColor = true;
+            this.buttonSuaDSSanh.Click += new System.EventHandler(this.buttonSuaDSSanh_Click);
             // 
-            // button2
+            // buttonXoaDSSanh
             // 
-            this.button2.Location = new System.Drawing.Point(467, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonXoaDSSanh.Location = new System.Drawing.Point(467, 56);
+            this.buttonXoaDSSanh.Name = "buttonXoaDSSanh";
+            this.buttonXoaDSSanh.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoaDSSanh.TabIndex = 2;
+            this.buttonXoaDSSanh.Text = "Xóa";
+            this.buttonXoaDSSanh.UseVisualStyleBackColor = true;
+            this.buttonXoaDSSanh.Click += new System.EventHandler(this.buttonXoaDSSanh_Click);
             // 
-            // button1
+            // buttonThemDSSanh
             // 
-            this.button1.Location = new System.Drawing.Point(386, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonThemDSSanh.Location = new System.Drawing.Point(386, 56);
+            this.buttonThemDSSanh.Name = "buttonThemDSSanh";
+            this.buttonThemDSSanh.Size = new System.Drawing.Size(75, 23);
+            this.buttonThemDSSanh.TabIndex = 1;
+            this.buttonThemDSSanh.Text = "Thêm";
+            this.buttonThemDSSanh.UseVisualStyleBackColor = true;
+            this.buttonThemDSSanh.Click += new System.EventHandler(this.button1_Click);
             // 
             // QTMonAn
             // 
@@ -795,18 +500,6 @@
             this.QTMonAn.Size = new System.Drawing.Size(658, 412);
             this.QTMonAn.TabIndex = 0;
             // 
-            // sANHTableAdapter
-            // 
-            this.sANHTableAdapter.ClearBeforeFill = true;
-            // 
-            // lOAISANHTableAdapter
-            // 
-            this.lOAISANHTableAdapter.ClearBeforeFill = true;
-            // 
-            // mONANTableAdapter
-            // 
-            this.mONANTableAdapter.ClearBeforeFill = true;
-            // 
             // QuanTri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -818,24 +511,9 @@
             this.Load += new System.EventHandler(this.QuanTri_Load);
             this.tabPage5.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlDV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvDV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlMonAn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.tabLoaiSanh.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlLoaiSanh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOAISANHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.tabDanhSachSanh.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlSanh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sANHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.QTMonAn.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -845,38 +523,29 @@
 
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage4;
-        private DevExpress.XtraGrid.GridControl gridControlDV;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvDV;
-        private DevExpress.XtraGrid.Columns.GridColumn TENDICHVU;
-        private DevExpress.XtraGrid.Columns.GridColumn SOLUONG;
-        private DevExpress.XtraGrid.Columns.GridColumn GIA;
         private System.Windows.Forms.ListView listViewDichVu;
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader17;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.Button buttonSuaDichVu;
+        private System.Windows.Forms.Button buttonXoaDichVu;
+        private System.Windows.Forms.Button buttonThemDichVu;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ListView listViewMonAn;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonSuaMonAn;
+        private System.Windows.Forms.Button buttonXoaMonAn;
+        private System.Windows.Forms.Button buttonThemMonAn;
         private System.Windows.Forms.TabPage tabLoaiSanh;
         private System.Windows.Forms.ListView listViewLoaiSanh;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button buttonSuaLoaiSanh;
+        private System.Windows.Forms.Button buttonXoaLoaiSanh;
+        private System.Windows.Forms.Button buttonThemLoaiSanh;
         private System.Windows.Forms.TabPage tabDanhSachSanh;
         private System.Windows.Forms.ListView listViewDSSanh;
         private System.Windows.Forms.ColumnHeader columnHeader5;
@@ -885,43 +554,18 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSuaDSSanh;
+        private System.Windows.Forms.Button buttonXoaDSSanh;
+        private System.Windows.Forms.Button buttonThemDSSanh;
         private System.Windows.Forms.TabControl QTMonAn;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button buttonXoaBaoCao;
+        private System.Windows.Forms.Button buttonSuaBaoCao;
         private System.Windows.Forms.ListView listViewBaoCao;
         private System.Windows.Forms.ColumnHeader columnHeader19;
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader23;
-        private System.Windows.Forms.Button button23;
-        private DevExpress.XtraGrid.GridControl gridControlSanh;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private QLTCDataSet1 qLTCDataSet1;
-        private System.Windows.Forms.BindingSource sANHBindingSource;
-        private QLTCDataSet1TableAdapters.SANHTableAdapter sANHTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn colTENSANH;
-        private DevExpress.XtraGrid.Columns.GridColumn colSLBANTOIDA;
-        private DevExpress.XtraGrid.Columns.GridColumn colGHICHU;
-        private DevExpress.XtraGrid.GridControl gridControlLoaiSanh;
-        private QLTCDataSet2 qLTCDataSet2;
-        private System.Windows.Forms.BindingSource lOAISANHBindingSource;
-        private QLTCDataSet2TableAdapters.LOAISANHTableAdapter lOAISANHTableAdapter;
-        private DevExpress.XtraGrid.GridControl gridControlMonAn;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private DevExpress.XtraGrid.Columns.GridColumn colMALOAISANH1;
-        private DevExpress.XtraGrid.Columns.GridColumn colTENLOAISANH;
-        private DevExpress.XtraGrid.Columns.GridColumn colDONGIABANTOITHIEU;
-        private QLTCDataSet3 qLTCDataSet3;
-        private System.Windows.Forms.BindingSource mONANBindingSource;
-        private QLTCDataSet3TableAdapters.MONANTableAdapter mONANTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn colMAMONAN;
-        private DevExpress.XtraGrid.Columns.GridColumn colTENMONAN;
-        private DevExpress.XtraGrid.Columns.GridColumn colGIA;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraGrid.Columns.GridColumn colLOAISANH;
+        private System.Windows.Forms.Button buttonLapBaoCao;
     }
 }

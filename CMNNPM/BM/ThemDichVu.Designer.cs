@@ -28,70 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonHuyBo = new System.Windows.Forms.Button();
+            this.buttonChapNhan = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxGiaDichVu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTenDichVu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // buttonHuyBo
             // 
-            this.button2.Location = new System.Drawing.Point(152, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Hủy bỏ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonHuyBo.Location = new System.Drawing.Point(162, 120);
+            this.buttonHuyBo.Name = "buttonHuyBo";
+            this.buttonHuyBo.Size = new System.Drawing.Size(75, 23);
+            this.buttonHuyBo.TabIndex = 30;
+            this.buttonHuyBo.Text = "Hủy bỏ";
+            this.buttonHuyBo.UseVisualStyleBackColor = true;
+            this.buttonHuyBo.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // buttonChapNhan
             // 
-            this.button1.Location = new System.Drawing.Point(32, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Chấp nhận";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonChapNhan.Location = new System.Drawing.Point(42, 120);
+            this.buttonChapNhan.Name = "buttonChapNhan";
+            this.buttonChapNhan.Size = new System.Drawing.Size(75, 23);
+            this.buttonChapNhan.TabIndex = 29;
+            this.buttonChapNhan.Text = "Chấp nhận";
+            this.buttonChapNhan.UseVisualStyleBackColor = true;
+            this.buttonChapNhan.Click += new System.EventHandler(this.buttonChapNhan_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(217, 52);
+            this.label6.Location = new System.Drawing.Point(243, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 28;
             this.label6.Text = "VNĐ";
             // 
-            // textBox3
+            // textBoxGiaDichVu
             // 
-            this.textBox3.Location = new System.Drawing.Point(82, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(129, 20);
-            this.textBox3.TabIndex = 27;
+            this.textBoxGiaDichVu.Location = new System.Drawing.Point(108, 75);
+            this.textBoxGiaDichVu.Name = "textBoxGiaDichVu";
+            this.textBoxGiaDichVu.Size = new System.Drawing.Size(129, 20);
+            this.textBoxGiaDichVu.TabIndex = 27;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 52);
+            this.label4.Location = new System.Drawing.Point(38, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 13);
             this.label4.TabIndex = 26;
             this.label4.Text = "Giá";
             // 
-            // textBox1
+            // textBoxTenDichVu
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 25;
+            this.textBoxTenDichVu.Location = new System.Drawing.Point(108, 25);
+            this.textBoxTenDichVu.Name = "textBoxTenDichVu";
+            this.textBoxTenDichVu.Size = new System.Drawing.Size(129, 20);
+            this.textBoxTenDichVu.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Location = new System.Drawing.Point(38, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 24;
@@ -101,16 +102,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 107);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(293, 178);
+            this.Controls.Add(this.buttonHuyBo);
+            this.Controls.Add(this.buttonChapNhan);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxGiaDichVu);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTenDichVu);
             this.Controls.Add(this.label1);
             this.Name = "ThemDichVu";
             this.Text = "Thêm dịch vụ";
+            this.Load += new System.EventHandler(this.ThemDichVu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,12 +120,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonHuyBo;
+        private System.Windows.Forms.Button buttonChapNhan;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxGiaDichVu;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTenDichVu;
         private System.Windows.Forms.Label label1;
     }
 }

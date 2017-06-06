@@ -37,10 +37,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dICHVUBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLTCDataSet = new CMNNPM.QLTCDataSet();
-            this.dICHVUTableAdapter = new CMNNPM.QLTCDataSetTableAdapters.DICHVUTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dICHVUBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).BeginInit();
+            //this.qLTCDataSet = new CMNNPM.QLTCDataSet();
+            //this.dICHVUTableAdapter = new CMNNPM.QLTCDataSetTableAdapters.DICHVUTableAdapter();
+            //((System.ComponentModel.ISupportInitialize)(this.dICHVUBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // listViewDichVu
@@ -99,17 +99,17 @@
             // 
             // dICHVUBindingSource
             // 
-            this.dICHVUBindingSource.DataMember = "DICHVU";
-            this.dICHVUBindingSource.DataSource = this.qLTCDataSet;
+            //this.dICHVUBindingSource.DataMember = "DICHVU";
+            //this.dICHVUBindingSource.DataSource = this.qLTCDataSet;
             // 
             // qLTCDataSet
             // 
-            this.qLTCDataSet.DataSetName = "QLTCDataSet";
-            this.qLTCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.qLTCDataSet.DataSetName = "QLTCDataSet";
+            //this.qLTCDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dICHVUTableAdapter
             // 
-            this.dICHVUTableAdapter.ClearBeforeFill = true;
+            //this.dICHVUTableAdapter.ClearBeforeFill = true;
             // 
             // DanhSachDichVu
             // 
@@ -123,7 +123,7 @@
             this.Text = "Danh Sách Dịch Vụ";
             this.Load += new System.EventHandler(this.DanhSachDichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dICHVUBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,8 +137,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private QLTCDataSet qLTCDataSet;
+        //private QLTCDataSet qLTCDataSet;
         private System.Windows.Forms.BindingSource dICHVUBindingSource;
-        private QLTCDataSetTableAdapters.DICHVUTableAdapter dICHVUTableAdapter;
+        //private QLTCDataSetTableAdapters.DICHVUTableAdapter dICHVUTableAdapter;
     }
 }

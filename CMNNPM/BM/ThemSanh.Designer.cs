@@ -92,21 +92,21 @@
             this.comboBoxLoaiSanh.Location = new System.Drawing.Point(144, 51);
             this.comboBoxLoaiSanh.Name = "comboBoxLoaiSanh";
             this.comboBoxLoaiSanh.Size = new System.Drawing.Size(129, 21);
-            this.comboBoxLoaiSanh.TabIndex = 6;
+            this.comboBoxLoaiSanh.TabIndex = 1;
             // 
             // textBoxTenSanh
             // 
             this.textBoxTenSanh.Location = new System.Drawing.Point(144, 25);
             this.textBoxTenSanh.Name = "textBoxTenSanh";
             this.textBoxTenSanh.Size = new System.Drawing.Size(129, 20);
-            this.textBoxTenSanh.TabIndex = 7;
+            this.textBoxTenSanh.TabIndex = 0;
             // 
             // textBoxSLBanToiDa
             // 
             this.textBoxSLBanToiDa.Location = new System.Drawing.Point(144, 78);
             this.textBoxSLBanToiDa.Name = "textBoxSLBanToiDa";
             this.textBoxSLBanToiDa.Size = new System.Drawing.Size(129, 20);
-            this.textBoxSLBanToiDa.TabIndex = 8;
+            this.textBoxSLBanToiDa.TabIndex = 2;
             // 
             // textBoxGhiChu
             // 
@@ -114,14 +114,14 @@
             this.textBoxGhiChu.Multiline = true;
             this.textBoxGhiChu.Name = "textBoxGhiChu";
             this.textBoxGhiChu.Size = new System.Drawing.Size(129, 48);
-            this.textBoxGhiChu.TabIndex = 10;
+            this.textBoxGhiChu.TabIndex = 3;
             // 
             // buttonHuy
             // 
             this.buttonHuy.Location = new System.Drawing.Point(188, 161);
             this.buttonHuy.Name = "buttonHuy";
             this.buttonHuy.Size = new System.Drawing.Size(75, 23);
-            this.buttonHuy.TabIndex = 12;
+            this.buttonHuy.TabIndex = 5;
             this.buttonHuy.Text = "Hủy";
             this.buttonHuy.UseVisualStyleBackColor = true;
             this.buttonHuy.Click += new System.EventHandler(this.button2_Click);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMNNPM.SQL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,17 +14,29 @@ namespace CMNNPM
     public partial class ThemSanh : Form
     {
         private QuanTri qtForm;
+        private bool isUpdate = false;
 
         public ThemSanh()
         {
-            InitializeComponent();
+            isUpdate = false;
+            InitializeComponent();           
         }
 
-        public ThemSanh(QuanTri qt)
+        public ThemSanh(QuanTri qt, String tensanh)
         {
+            isUpdate = true;
             qtForm = qt;
             InitializeComponent();
+
+            textBoxTenSanh.Enabled = false;
+
+            SanhSQL.loadSanhFromTenSanh(tensanh,
+                textBoxTenSanh,
+                comboBoxLoaiSanh,
+                textBoxSLBanToiDa,
+                textBoxGhiChu);
         }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -33,11 +46,12 @@ namespace CMNNPM
         private void ThemSanh_Load(object sender, EventArgs e)
         {
             addItemToComboLoaiSanh();
+            this.ActiveControl = textBoxTenSanh;
         }
 
         public void addItemToComboLoaiSanh()
         {
-            DataTable lsTable = DatTiecSQL.loadSanh();
+            DataTable lsTable = DatTiecSQL.loadLoaiSanh();
             if (comboBoxLoaiSanh.Items.Count > 0)
                 comboBoxLoaiSanh.Items.Clear();
 
@@ -53,7 +67,43 @@ namespace CMNNPM
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            DataTable sanhTable = 
+            String tenloaisanh = comboBoxLoaiSanh
+                .Items[comboBoxLoaiSanh.SelectedIndex]
+                .ToString()
+                .TrimEnd();
+
+            bool result = false;
+
+            try
+            {
+                if (isUpdate == false)
+                {
+                    result = SanhSQL.insertSanh(
+                    tenloaisanh,
+                    textBoxTenSanh.Text,
+                    int.Parse(textBoxSLBanToiDa.Text),
+                    textBoxGhiChu.Text);
+                }
+                else
+                {
+                    result = SanhSQL.updateSanh(
+                    tenloaisanh,
+                    textBoxTenSanh.Text,
+                    int.Parse(textBoxSLBanToiDa.Text),
+                    textBoxGhiChu.Text);
+                }
+            }
+            catch (Exception) { }
+
+            if (result == true)
+            {
+                qtForm.updateSanh();
+                this.Close();
+            }
+            else
+                MessageBox.Show("Thao tác không thành công", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            qtForm.updateSanh();
         }
     }
 }

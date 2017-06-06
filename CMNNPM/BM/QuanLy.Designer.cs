@@ -50,8 +50,6 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button5 = new System.Windows.Forms.Button();
-            this.dataGridViewDanhSachTiecCuoi = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachTiecCuoi)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -176,9 +174,10 @@
             this.columnHeader7,
             this.columnHeader8});
             this.listViewDanhSachTiecCuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewDanhSachTiecCuoi.GridLines = true;
             this.listViewDanhSachTiecCuoi.Location = new System.Drawing.Point(14, 210);
             this.listViewDanhSachTiecCuoi.Name = "listViewDanhSachTiecCuoi";
-            this.listViewDanhSachTiecCuoi.Size = new System.Drawing.Size(843, 225);
+            this.listViewDanhSachTiecCuoi.Size = new System.Drawing.Size(843, 241);
             this.listViewDanhSachTiecCuoi.TabIndex = 46;
             this.listViewDanhSachTiecCuoi.UseCompatibleStateImageBehavior = false;
             this.listViewDanhSachTiecCuoi.View = System.Windows.Forms.View.Details;
@@ -234,20 +233,11 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // dataGridViewDanhSachTiecCuoi
-            // 
-            this.dataGridViewDanhSachTiecCuoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDanhSachTiecCuoi.Location = new System.Drawing.Point(14, 441);
-            this.dataGridViewDanhSachTiecCuoi.Name = "dataGridViewDanhSachTiecCuoi";
-            this.dataGridViewDanhSachTiecCuoi.Size = new System.Drawing.Size(843, 10);
-            this.dataGridViewDanhSachTiecCuoi.TabIndex = 48;
-            // 
             // QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 463);
-            this.Controls.Add(this.dataGridViewDanhSachTiecCuoi);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.listViewDanhSachTiecCuoi);
             this.Controls.Add(this.cbYear);
@@ -265,7 +255,6 @@
             this.Name = "QuanLy";
             this.Text = "Danh sách tiệc cưới";
             this.Load += new System.EventHandler(this.QuanLy_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachTiecCuoi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,7 +281,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridViewDanhSachTiecCuoi;
         private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
