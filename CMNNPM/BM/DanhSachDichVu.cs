@@ -13,8 +13,10 @@ namespace CMNNPM
 {
     public partial class DanhSachDichVu : Form
     {
-        public DanhSachDichVu()
+        private DatTiec dtForm;
+        public DanhSachDichVu(DatTiec dt)
         {
+            dtForm = dt;
             InitializeComponent();
         }
 

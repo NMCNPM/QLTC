@@ -142,6 +142,7 @@
     <Compile Include="SQL\HoaDonSQL.cs" />
     <Compile Include="SQL\LoaiSanhSQL.cs" />
     <Compile Include="SQL\MonAnSQL.cs" />
+    <Compile Include="SQL\QuanLySQL.cs" />
     <Compile Include="SQL\SanhSQL.cs" />
     <EmbeddedResource Include="BM\BaoCaoDoanhSo.resx">
       <DependentUpon>BaoCaoDoanhSo.cs</DependentUpon>

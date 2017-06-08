@@ -16,15 +16,18 @@ namespace CMNNPM
         private DataTable sanhTable;
         private DataTable caTable;
         private bool validCheck;
+        private String maTiecCuoi = "";
 
         private QuanLy quanLyForm;
         private DanhSachDichVu dichVuForm;
         private DanhSachThucPham thucPhamForm;
 
+        private bool isUpdate = false;
+
         public DatTiec( QuanLy ql)
         {
             quanLyForm = ql;
-          
+            isUpdate = false;
             InitializeComponent();
             addItemToComboSanh();
             addItemToLoaiSanh();
@@ -32,21 +35,75 @@ namespace CMNNPM
             addItemToComboCa();
         }
 
-        public DatTiec(QuanLy ql, ListViewItem item)
+        public DatTiec(QuanLy ql, String mtc)
         {
             quanLyForm = ql;
+            isUpdate = true;
+            maTiecCuoi = mtc;
 
             InitializeComponent();
+
             addItemToComboSanh();
             addItemToLoaiSanh();
             addItemToComboCa();
 
-            initExistedComponent(item);
-
+            if (!maTiecCuoi.Equals(""))
+            {
+                DataTable tiec = DatTiecSQL.getTiecCuoiInfo(mtc);
+                loadKhachHangInfo(tiec);
+                loadTiecCuoiInfo(tiec);
+                updateListViews();
+            }
+        }
+              
+        public void updateListViews()
+        {
+            DatTiecSQL.loadDatabaseDSDichVu(listViewDichVu, maTiecCuoi);
+            DatTiecSQL.loadDatabaseDanhSachThucPham(listViewMonAn, maTiecCuoi);
         }
 
-        private void initExistedComponent(ListViewItem item)
+        private void loadKhachHangInfo(DataTable table)
         {
+            textBoxTenChuRe.Text = table.Rows[0]["TENCHURE"]
+                .ToString()
+                .TrimEnd();
+            textBoxTenCoDau.Text = table.Rows[0]["TENCODAU"]
+                .ToString()
+                .TrimEnd();
+            textBoxSDT.Text = table.Rows[0]["SDT"]
+                .ToString()
+                .TrimEnd();
+        }
+
+        private void loadTiecCuoiInfo(DataTable table)
+        {
+            dateTimePickerNgayDatTiec.Value = DateTime.Parse(
+                table.Rows[0]["NGAYDATTIEC"]
+                .ToString()
+                .TrimEnd());
+
+            comboBoxSanh.Text = table.Rows[0]["TENSANH"]
+                .ToString()
+                .TrimEnd();
+            addItemToComboSanh();
+
+            comboBoxSLBan.Text = table.Rows[0]["SLBAN"]
+                .ToString()
+                .TrimEnd();
+            addItemToComboSLBan();
+
+            textBoxLoaiSanh.Text = table.Rows[0]["TENSANH"]
+                .ToString()
+                .TrimEnd();
+
+            comboBoxCa.Text = table.Rows[0]["TENCA"]
+                .ToString()
+                .TrimEnd();
+            addItemToComboCa();
+
+            textBoxSoBanDuTru.Text = table.Rows[0]["SLBANDUTRU"]
+                .ToString()
+                .TrimEnd();
 
         }
 
@@ -57,7 +114,7 @@ namespace CMNNPM
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            thucPhamForm = new DanhSachThucPham();
+            thucPhamForm = new DanhSachThucPham(this, listViewMonAn);
             thucPhamForm.Show();
             thucPhamForm.Location = new Point(
                 this.Location.X + this.Width
@@ -66,15 +123,29 @@ namespace CMNNPM
 
         private void buttonThemDichVu_Click(object sender, EventArgs e)
         {
-            dichVuForm = new DanhSachDichVu();
+            dichVuForm = new DanhSachDichVu(this);
             dichVuForm.Show();
             dichVuForm.Location = new Point(
                 this.Location.X + this.Width
                 , this.Location.Y);
         }
 
+        private bool checkNull()
+        {
+            if (textBoxTenChuRe.Text.Equals("")
+                || textBoxTenCoDau.Text.Equals("")
+                || textBoxSDT.Text.Equals("")
+                || comboBoxSanh.Text.Equals("")
+                || comboBoxCa.Text.Equals("")
+                || comboBoxSLBan.Text.Equals("")
+                || textBoxSoBanDuTru.Text.Equals(""))
+                return false;
+            return true;
+        }
+
         private void buttonChapNhan_Click(object sender, EventArgs e)
         {
+            validCheck = checkNull();
             if (validCheck == true)
             {
                 DatTiecSQL.insertDatTiec(
@@ -88,6 +159,7 @@ namespace CMNNPM
                     int.Parse(comboBoxSLBan.SelectedItem.ToString()),
                     int.Parse(textBoxSoBanDuTru.Text));
 
+
                 quanLyForm.updateQuanLyForm();
                 this.Close();
             }
@@ -97,6 +169,7 @@ namespace CMNNPM
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }            
         }
+
 
         private void comboBoxSanh_DropDownClosed(object sender, EventArgs e)
         {
@@ -204,10 +277,25 @@ namespace CMNNPM
             comboBoxSLBan.Enabled = false;
             labelKiemTra.Text = "";
             validCheck = false;
-            //addItemToComboSanh();
-            //addItemToLoaiSanh();
-            //addItemToComboCa();
         }
 
+        private void buttonThanhTien_Click(object sender, EventArgs e)
+        {
+            float tongTien = 0;
+            foreach(ListViewItem item in listViewDichVu.Items)
+            {
+                tongTien = tongTien
+                    + float.Parse(item.SubItems[2].Text.Trim())
+                    * float.Parse(item.SubItems[3].Text.Trim());
+            }
+            foreach (ListViewItem item in listViewMonAn.Items)
+            {
+                tongTien = tongTien
+                    + float.Parse(item.SubItems[2].Text.Trim());
+            }
+
+            textBoxTongTien.Text = tongTien.ToString();
+            textBoxTienCoc.Text = (tongTien * 30 / 100).ToString();
+        }
     }
 }

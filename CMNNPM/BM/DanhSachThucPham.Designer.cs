@@ -29,40 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
+            this.buttonHoanThanh = new System.Windows.Forms.Button();
             this.listViewDanhSachThucPham = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.qLTCDataSet4 = new CMNNPM.QLTCDataSet4();
-            //this.mONANTableAdapter = new CMNNPM.QLTCDataSet4TableAdapters.MONANTableAdapter();
             this.dataGridViewDSThucPham = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSThucPham)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonThem
             // 
-            this.button1.Location = new System.Drawing.Point(56, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 26);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonThem.Location = new System.Drawing.Point(56, 306);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(134, 26);
+            this.buttonThem.TabIndex = 1;
+            this.buttonThem.Text = "Thêm";
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
-            // button2
+            // buttonHoanThanh
             // 
-            this.button2.Location = new System.Drawing.Point(432, 306);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 28);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Hoàn Thành";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonHoanThanh.Location = new System.Drawing.Point(432, 306);
+            this.buttonHoanThanh.Name = "buttonHoanThanh";
+            this.buttonHoanThanh.Size = new System.Drawing.Size(134, 28);
+            this.buttonHoanThanh.TabIndex = 2;
+            this.buttonHoanThanh.Text = "Hoàn Thành";
+            this.buttonHoanThanh.UseVisualStyleBackColor = true;
+            this.buttonHoanThanh.Click += new System.EventHandler(this.button2_Click);
             // 
             // listViewDanhSachThucPham
             // 
@@ -102,16 +100,6 @@
             // mONANBindingSource
             // 
             this.mONANBindingSource.DataMember = "MONAN";
-            //this.mONANBindingSource.DataSource = this.qLTCDataSet4;
-            // 
-            // qLTCDataSet4
-            // 
-            //this.qLTCDataSet4.DataSetName = "QLTCDataSet4";
-            //this.qLTCDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mONANTableAdapter
-            // 
-            //this.mONANTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewDSThucPham
             // 
@@ -128,21 +116,20 @@
             this.ClientSize = new System.Drawing.Size(616, 353);
             this.Controls.Add(this.dataGridViewDSThucPham);
             this.Controls.Add(this.listViewDanhSachThucPham);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonHoanThanh);
+            this.Controls.Add(this.buttonThem);
             this.Name = "DanhSachThucPham";
             this.Text = "Danh sách thực phẩm";
             this.Load += new System.EventHandler(this.DanhSachThucPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.qLTCDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSThucPham)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonThem;
+        private System.Windows.Forms.Button buttonHoanThanh;
         private System.Windows.Forms.ListView listViewDanhSachThucPham;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;

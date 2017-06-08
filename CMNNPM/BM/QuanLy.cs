@@ -286,26 +286,32 @@ namespace CMNNPM
             form.Show();
         }
 
-        private String getMaTiecCuoi(ListView lv)
+        public bool checkNullItemClick(ListView lv)
         {
-            foreach (ListViewItem item in lv.Items)
+            foreach (ListViewItem item in listViewDanhSachTiecCuoi.Items)
             {
                 if (item.Selected == true)
-                {
-                    return DatTiecSQL.selectMaKhachHangFromCoDauChuRe(
-                        item.SubItems[2].Text
-                        , item.SubItems[1].Text);
+                {                    
+                    return true;
                 }
             }
-            return "";
+
+            MessageBox.Show("Hãy chọn một tiệc cưới!",
+                "Lỗi",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            return false;
         }
 
         private void buttonXuatHoaDon_Click(object sender, EventArgs e)
         {
-
-            HoaDon form = new HoaDon(
-                getMaTiecCuoi(listViewDanhSachTiecCuoi));
-            form.Show();
+            bool check = checkNullItemClick(listViewDanhSachTiecCuoi);
+            if (check)
+            {
+                HoaDon form = new HoaDon(
+                    QuanLySQL.getMaTiecCuoi(listViewDanhSachTiecCuoi));
+                form.Show();
+            }
         }
 
         private void QuanLy_Load(object sender, EventArgs e)
@@ -316,45 +322,34 @@ namespace CMNNPM
 
         private void button3_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in listViewDanhSachTiecCuoi.Items)
+            if (checkNullItemClick(listViewDanhSachTiecCuoi))
             {
-                if (item.Selected == true)
+
+                foreach (ListViewItem item in listViewDanhSachTiecCuoi.Items)
                 {
-                    DatTiecSQL.deleteDanhSachTiecCuoiItem(
-                        item.SubItems[2].Text, item.SubItems[1].Text);
-                    break;
+                    if (item.Selected == true)
+                    {
+                        DatTiecSQL.deleteDanhSachTiecCuoiItem(
+                            item.SubItems[2].Text, item.SubItems[1].Text);
+                        break;
+                    }
                 }
-            }                  
-            DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
+                DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int selectedIndex = -1;
-
-            for (int i = 0; i < listViewDanhSachTiecCuoi.Items.Count; i++)
+            if (checkNullItemClick(listViewDanhSachTiecCuoi))
             {
-                if (listViewDanhSachTiecCuoi.Items[i].Selected)
-                {
-                    selectedIndex = i;
-                    break;
-                }
-            }
+                String maTiecCuoi = QuanLySQL.getMaTiecCuoi(listViewDanhSachTiecCuoi);
 
-            if (selectedIndex == -1)
-            {
-                MessageBox.Show("Hãy chọn một tiệc cưới!",
-                    "Lỗi", 
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return;
-            }
+                mForm = new DatTiec(this, maTiecCuoi);
 
-            mForm = new DatTiec(this, listViewDanhSachTiecCuoi.Items[selectedIndex]);
-
-            mForm.Show();
-            mForm.Location = new Point(50, 50);
-            DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);            
+                mForm.Show();
+                mForm.Location = new Point(50, 50);
+                DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
+            }      
         }
       
     }

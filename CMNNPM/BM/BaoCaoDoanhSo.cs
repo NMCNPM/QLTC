@@ -39,8 +39,8 @@ namespace CMNNPM
         private void buttonHoanThanh_Click(object sender, EventArgs e)
         {
             bool result = false;
-            //try
-            //{
+            try
+            {
                 if (isUpdate == false)
                 {
                     result = BaoCaoSQL.insertBaoCao(
@@ -55,8 +55,8 @@ namespace CMNNPM
                         int.Parse(textBoxSoLuong.Text),
                         textBoxDoanhThu.Text);
                 }
-            //}
-            //catch (Exception) { }
+            }
+            catch (Exception) { }
 
             if (result == true)
             {

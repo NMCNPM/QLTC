@@ -116,13 +116,12 @@ namespace CMNNPM.SQL
             float doanhThuTiepTheo = float.Parse(table
                 .Rows[0]["DOANHTHU"]
                 .ToString());
+
             String ngayTiepTheo = table
                 .Rows[0]["NGAYBAOCAO"]
                 .ToString();
 
-            double tiLeTiepTheo = Math.Round(
-                (doanhThuTiepTheo / doanhThu) * 100
-                , 0);
+            double tiLeTiepTheo = getTiLe(doanhThuTiepTheo, doanhThu);
 
             table = DatabaseQuery.queryTable(
                 "UPDATE BAOCAO SET TILE = '" + tiLeTiepTheo
@@ -141,7 +140,7 @@ namespace CMNNPM.SQL
                 return false;
             }
            
-            double tiLe = getTiLe(long.Parse(doanhThu), getLastDoanhThu(
+            double tiLe = getTiLe(double.Parse(doanhThu), getLastDoanhThu(
                 DateTime.Parse(ngayBaoCao)));
 
             table = DatabaseQuery.queryTable(

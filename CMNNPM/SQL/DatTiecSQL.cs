@@ -27,58 +27,56 @@ namespace CMNNPM
         private static DataTable DanhSachTiecCuoi;
 
         public static String MATIECCUOI = "";
-        public static DataRow rowTiecCuoi;              
+        public static DataRow rowTiecCuoi;                      
 
-        private void createConnection()
-        {
-            mConn = new OleDbConnection(DatabaseQuery.CONNECTION_STRING);
-            mConn.Open();
-            mComm = new OleDbCommand("select * from DICHVU", mConn);
-            DichVu = new DataTable();
-            DichVu.Load(mComm.ExecuteReader());
-
-            mComm = new OleDbCommand("select * from LOAISANH", mConn);
-            LoaiSanh = new DataTable();
-            LoaiSanh.Load(mComm.ExecuteReader());
-
-        }
-
-        public static bool loadDatabaseDichVu(ListView lv)
+        public static bool loadDatabaseDSDichVu(ListView lv, String maTiecCuoi)
         {            
-            DataTable dvTable = DatabaseQuery.queryTable("SELECT * FROM DICHVU;");
+            DataTable dvTable = DatabaseQuery.queryTable(
+                "SELECT DANHSACHDV.MATIECCUOI, DICHVU.TENDICHVU, "
+                + "DANHSACHDV.SOLUONG, DICHVU.GIA "
+                + "FROM DANHSACHDV LEFT JOIN DICHVU "
+                + "ON DANHSACHDV.MADICHVU = DICHVU.MADICHVU "
+                + "WHERE DANHSACHDV.MATIECCUOI = '" 
+                + maTiecCuoi.Trim() + "';");
 
             if (lv.Items.Count > 0)
             {
-                lv.Clear();
+                lv.Items.Clear();
             }
             for (int i = 0; i < dvTable.Rows.Count; i++)
             {
                 ListViewItem item = new ListViewItem();
                 item.Text = (i + 1).ToString();
-                item.SubItems.Add(dvTable.Rows[i]["MADICHVU"].ToString());
                 item.SubItems.Add(dvTable.Rows[i]["TENDICHVU"].ToString());
-                item.SubItems.Add(dvTable.Rows[i]["GIADICHVU"].ToString());
+                item.SubItems.Add(dvTable.Rows[i]["SOLUONG"].ToString());
+                item.SubItems.Add(dvTable.Rows[i]["GIA"].ToString());
 
                 lv.Items.Add(item);
             }
             return true;
         }
 
-        public static bool loadDatabaseDanhSachThucPham(ListView lv)
+        public static bool loadDatabaseDanhSachThucPham(ListView lv, String maTiecCuoi)
         {
-            DataTable dvTable = DatabaseQuery.queryTable("SELECT * FROM DICHVU;");
+            DataTable tpTable = DatabaseQuery.queryTable(
+                "SELECT THUCDON.MATIECCUOI, MONAN.TENMONAN, "
+                + "MONAN.GIA, THUCDON.GHICHU "
+                + "FROM THUCDON LEFT JOIN MONAN "
+                + "ON THUCDON.MAMONAN = MONAN.MAMONAN "
+                + "WHERE THUCDON.MATIECCUOI = '"
+                + maTiecCuoi.Trim() + "';");
 
             if (lv.Items.Count > 0)
             {
-                lv.Clear();
+                lv.Items.Clear();
             }
-            for (int i = 0; i < dvTable.Rows.Count; i++)
+            for (int i = 0; i < tpTable.Rows.Count; i++)
             {
                 ListViewItem item = new ListViewItem();
                 item.Text = (i + 1).ToString();
-                item.SubItems.Add(dvTable.Rows[i]["MADICHVU"].ToString());
-                item.SubItems.Add(dvTable.Rows[i]["TENDICHVU"].ToString());
-                item.SubItems.Add(dvTable.Rows[i]["GIADICHVU"].ToString());
+                item.SubItems.Add(tpTable.Rows[i]["TENMONAN"].ToString());
+                item.SubItems.Add(tpTable.Rows[i]["GIA"].ToString());
+                item.SubItems.Add(tpTable.Rows[i]["GHICHU"].ToString());
 
                 lv.Items.Add(item);
             }
@@ -178,10 +176,10 @@ namespace CMNNPM
         public static bool checkIfTiecCuoiExisted(String sanh, String ca, DateTime ngay)
         {
             DataTable tieccuoi = DatabaseQuery.queryTable(
-                "SELECT * FROM TIECCUOI WHERE MASANH = '"
+                "select * from tieccuoi where masanh = '"
                 + selectMaSanhFromTenSanh(sanh).Trim()
-                + "' AND MACA = '" + selectMaCaFromTenCa(ca).Trim()
-                + "' AND NGAYDATTIEC = '" + ngay + "';");
+                + "' and maca = '" + selectMaCaFromTenCa(ca).Trim()
+                + "' and ngaydattiec = '" + ngay + "';");
 
             if (tieccuoi.Rows.Count > 0)
                 return false;
@@ -358,11 +356,16 @@ namespace CMNNPM
            
             return true;
         }
-
-        public void close()
+        
+        public static DataTable getTiecCuoiInfo(String maTiecCuoi)
         {
-            mConn.Close();
-            mConnLoaiSanh.Close();
+            return DatabaseQuery.queryTable(
+                "SELECT TENCHURE, TENCODAU, TENSANH, NGAYDATTIEC, "
+                + "TENCA, SLBAN, SLBANDUTRU, SDT FROM (((TIECCUOI "
+                + "JOIN KHACHHANG ON KHACHHANG.MAKHACHHANG = TIECCUOI.MAKHACHHANG) "
+                + "JOIN SANH ON TIECCUOI.MASANH = SANH.MASANH) "
+                + "JOIN CA ON TIECCUOI.MACA = CA.MACA);");
         }
+       
     }
 }
