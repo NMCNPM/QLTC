@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbMatKhau = new System.Windows.Forms.TextBox();
             this.tbTaiKhoan = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonDangNhap = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,33 +84,33 @@
             this.tbTaiKhoan.Size = new System.Drawing.Size(112, 20);
             this.tbTaiKhoan.TabIndex = 1;
             // 
-            // button1
+            // buttonThoat
             // 
-            this.button1.Location = new System.Drawing.Point(68, 146);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonThoat.Location = new System.Drawing.Point(178, 146);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(75, 23);
+            this.buttonThoat.TabIndex = 2;
+            this.buttonThoat.Text = "Thoát";
+            this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // buttonDangNhap
             // 
-            this.button2.Location = new System.Drawing.Point(178, 146);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonDangNhap.Location = new System.Drawing.Point(68, 146);
+            this.buttonDangNhap.Name = "buttonDangNhap";
+            this.buttonDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.buttonDangNhap.TabIndex = 1;
+            this.buttonDangNhap.Text = "Đăng nhập";
+            this.buttonDangNhap.UseVisualStyleBackColor = true;
+            this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
             // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 181);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonThoat);
+            this.Controls.Add(this.buttonDangNhap);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -130,7 +130,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbMatKhau;
         private System.Windows.Forms.TextBox tbTaiKhoan;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonThoat;
+        private System.Windows.Forms.Button buttonDangNhap;
     }
 }

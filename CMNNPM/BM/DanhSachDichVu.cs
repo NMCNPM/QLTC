@@ -16,6 +16,8 @@ namespace CMNNPM
         private DatTiec dtForm;
         private ListView danhSachDichVu;
 
+        // constructor cho form DanhSachDichVu: truyền vào form DatTiec, ListView lv
+        // từ form DatTiec
         public DanhSachDichVu(DatTiec dt, ListView lv)
         {
             dtForm = dt;
@@ -23,6 +25,7 @@ namespace CMNNPM
             InitializeComponent();
         }
 
+        // load form DanhSachDichVu
         private void DanhSachDichVu_Load(object sender, EventArgs e)
         {
             
@@ -30,11 +33,13 @@ namespace CMNNPM
             listViewDichVu.FullRowSelect = true;
         }
 
+        // sự kiện nhấn nút hoàn thành form: đóng form
         private void buttonHoanThanh_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // thêm Item được chọn từ startList vào endList
         public void addItem(ListView startList, ListView endList)
         {
             foreach (ListViewItem item in startList.Items)
@@ -50,6 +55,8 @@ namespace CMNNPM
             }
         }
 
+        // sự kiện nhấn nút thêm: thêm hàng được chọn từ listViewDichVu
+        // sang danhSachDichVu ở form DatTiec
         private void buttonThem_Click(object sender, EventArgs e)
         {
             addItem(listViewDichVu, danhSachDichVu);

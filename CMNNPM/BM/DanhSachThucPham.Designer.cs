@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.buttonThem = new System.Windows.Forms.Button();
             this.buttonHoanThanh = new System.Windows.Forms.Button();
             this.listViewDanhSachThucPham = new System.Windows.Forms.ListView();
@@ -36,8 +35,6 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonThem
@@ -95,10 +92,6 @@
             this.columnHeader4.Text = "Ghi chú";
             this.columnHeader4.Width = 287;
             // 
-            // mONANBindingSource
-            // 
-            this.mONANBindingSource.DataMember = "MONAN";
-            // 
             // DanhSachThucPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,7 +103,6 @@
             this.Name = "DanhSachThucPham";
             this.Text = "Danh sách thực phẩm";
             this.Load += new System.EventHandler(this.DanhSachThucPham_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -123,7 +115,5 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        //private QLTCDataSet4 qLTCDataSet4;
-        private System.Windows.Forms.BindingSource mONANBindingSource;
     }
 }

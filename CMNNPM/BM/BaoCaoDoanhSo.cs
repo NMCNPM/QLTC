@@ -16,13 +16,15 @@ namespace CMNNPM
         private QuanTri qtForm;
         private bool isUpdate = false;
 
+        // constructor cho form BaoCaoDoanhSo: truyền vào form QuanTri
         public BaoCaoDoanhSo(QuanTri qt)
         {
             qtForm = qt;
             InitializeComponent();
         }
 
-        public BaoCaoDoanhSo(QuanTri qt, String ngaybaocao)
+        // constructor cho form BaoCaoDoanhSo: truyền vào form QuanTri và ngayBaoCao
+        public BaoCaoDoanhSo(QuanTri qt, String ngayBaoCao)
         {
             qtForm = qt;
             isUpdate = true;
@@ -30,15 +32,25 @@ namespace CMNNPM
 
             dateTimePickerNgayThang.Enabled = false;
 
-            BaoCaoSQL.loadBaoCaoFromNgayBaoCao(ngaybaocao,
+            BaoCaoSQL.loadBaoCaoFromNgayBaoCao(ngayBaoCao,
                 dateTimePickerNgayThang,
                 textBoxSoLuong,
                 textBoxDoanhThu);
         }
 
+        // sự kiện nhấn nút hoàn thành lập báo cáo: thêm các thông tin vừa nhập 
+        // vào CSDL khi hoàn thành form
         private void buttonHoanThanh_Click(object sender, EventArgs e)
         {
             bool result = false;
+            if(textBoxSoLuong.Text.Equals("")
+                || textBoxDoanhThu.Text.Equals(""))
+            {
+                MessageBox.Show("Thao tác không thành công", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+                
             try
             {
                 if (isUpdate == false)
@@ -69,6 +81,7 @@ namespace CMNNPM
             qtForm.updateBaoCao();
         }
 
+        // sự kiện nhấn nút hủy form: hủy form lập báo cáo
         private void buttonHuyBo_Click(object sender, EventArgs e)
         {
             this.Close();
