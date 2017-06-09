@@ -63,14 +63,14 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonHuyMonAn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.listViewDichVu = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonHuyDichVu = new System.Windows.Forms.Button();
             this.buttonThemDichVu = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -162,6 +162,7 @@
             // 
             this.textBoxTienCoc.Enabled = false;
             this.textBoxTienCoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTienCoc.ForeColor = System.Drawing.Color.Red;
             this.textBoxTienCoc.Location = new System.Drawing.Point(87, 519);
             this.textBoxTienCoc.Name = "textBoxTienCoc";
             this.textBoxTienCoc.Size = new System.Drawing.Size(243, 27);
@@ -231,7 +232,7 @@
             this.btnThemMonAn.TabIndex = 24;
             this.btnThemMonAn.Text = "Thêm món";
             this.btnThemMonAn.UseVisualStyleBackColor = true;
-            this.btnThemMonAn.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThemMonAn.Click += new System.EventHandler(this.btnThemMonAn_Click);
             // 
             // groupBox1
             // 
@@ -362,7 +363,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.listViewMonAn);
-            this.groupBox3.Controls.Add(this.button5);
+            this.groupBox3.Controls.Add(this.buttonHuyMonAn);
             this.groupBox3.Controls.Add(this.btnThemMonAn);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Location = new System.Drawing.Point(12, 151);
@@ -407,19 +408,20 @@
             this.columnHeader4.Text = "Ghi Chú";
             this.columnHeader4.Width = 223;
             // 
-            // button5
+            // buttonHuyMonAn
             // 
-            this.button5.Location = new System.Drawing.Point(510, 94);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Hủy món";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonHuyMonAn.Location = new System.Drawing.Point(510, 94);
+            this.buttonHuyMonAn.Name = "buttonHuyMonAn";
+            this.buttonHuyMonAn.Size = new System.Drawing.Size(75, 23);
+            this.buttonHuyMonAn.TabIndex = 28;
+            this.buttonHuyMonAn.Text = "Hủy món";
+            this.buttonHuyMonAn.UseVisualStyleBackColor = true;
+            this.buttonHuyMonAn.Click += new System.EventHandler(this.buttonHuyMonAn_Click);
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.listViewDichVu);
-            this.groupBox4.Controls.Add(this.button6);
+            this.groupBox4.Controls.Add(this.buttonHuyDichVu);
             this.groupBox4.Controls.Add(this.buttonThemDichVu);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Location = new System.Drawing.Point(12, 305);
@@ -464,14 +466,15 @@
             this.columnHeader8.Text = "Giá";
             this.columnHeader8.Width = 90;
             // 
-            // button6
+            // buttonHuyDichVu
             // 
-            this.button6.Location = new System.Drawing.Point(511, 92);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 29;
-            this.button6.Text = "Hủy DV";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonHuyDichVu.Location = new System.Drawing.Point(511, 92);
+            this.buttonHuyDichVu.Name = "buttonHuyDichVu";
+            this.buttonHuyDichVu.Size = new System.Drawing.Size(75, 23);
+            this.buttonHuyDichVu.TabIndex = 29;
+            this.buttonHuyDichVu.Text = "Hủy DV";
+            this.buttonHuyDichVu.UseVisualStyleBackColor = true;
+            this.buttonHuyDichVu.Click += new System.EventHandler(this.buttonHuyDichVu_Click);
             // 
             // buttonThemDichVu
             // 
@@ -505,6 +508,7 @@
             // 
             this.textBoxTongTien.Enabled = false;
             this.textBoxTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTongTien.ForeColor = System.Drawing.Color.Red;
             this.textBoxTongTien.Location = new System.Drawing.Point(87, 488);
             this.textBoxTongTien.Name = "textBoxTongTien";
             this.textBoxTongTien.Size = new System.Drawing.Size(243, 27);
@@ -595,8 +599,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBoxTongTien;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonHuyMonAn;
+        private System.Windows.Forms.Button buttonHuyDichVu;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxSDT;
         private System.Windows.Forms.Label label13;

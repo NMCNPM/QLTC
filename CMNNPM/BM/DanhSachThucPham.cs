@@ -51,7 +51,6 @@ namespace CMNNPM
                     break;
                 }
             }
-            dtForm.updateListViews();
         }
 
         private void buttonThem_Click(object sender, EventArgs e)

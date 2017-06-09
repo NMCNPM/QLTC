@@ -37,9 +37,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mONANBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewDSThucPham = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSThucPham)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonThem
@@ -69,10 +67,10 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listViewDanhSachThucPham.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewDanhSachThucPham.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewDanhSachThucPham.Location = new System.Drawing.Point(12, 12);
             this.listViewDanhSachThucPham.Name = "listViewDanhSachThucPham";
-            this.listViewDanhSachThucPham.Size = new System.Drawing.Size(592, 262);
+            this.listViewDanhSachThucPham.Size = new System.Drawing.Size(592, 288);
             this.listViewDanhSachThucPham.TabIndex = 4;
             this.listViewDanhSachThucPham.UseCompatibleStateImageBehavior = false;
             this.listViewDanhSachThucPham.View = System.Windows.Forms.View.Details;
@@ -101,20 +99,11 @@
             // 
             this.mONANBindingSource.DataMember = "MONAN";
             // 
-            // dataGridViewDSThucPham
-            // 
-            this.dataGridViewDSThucPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDSThucPham.Location = new System.Drawing.Point(12, 280);
-            this.dataGridViewDSThucPham.Name = "dataGridViewDSThucPham";
-            this.dataGridViewDSThucPham.Size = new System.Drawing.Size(592, 10);
-            this.dataGridViewDSThucPham.TabIndex = 6;
-            // 
             // DanhSachThucPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 353);
-            this.Controls.Add(this.dataGridViewDSThucPham);
             this.Controls.Add(this.listViewDanhSachThucPham);
             this.Controls.Add(this.buttonHoanThanh);
             this.Controls.Add(this.buttonThem);
@@ -122,7 +111,6 @@
             this.Text = "Danh sách thực phẩm";
             this.Load += new System.EventHandler(this.DanhSachThucPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mONANBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSThucPham)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,7 +125,5 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         //private QLTCDataSet4 qLTCDataSet4;
         private System.Windows.Forms.BindingSource mONANBindingSource;
-        //private QLTCDataSet4TableAdapters.MONANTableAdapter mONANTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridViewDSThucPham;
     }
 }

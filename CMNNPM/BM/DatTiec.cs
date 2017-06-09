@@ -109,10 +109,22 @@ namespace CMNNPM
 
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                thucPhamForm.Close();                
+            }
+            catch (Exception) { }
+
+            try
+            {
+                dichVuForm.Close();
+            }
+            catch (Exception) { }
+
             this.Close();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThemMonAn_Click(object sender, EventArgs e)
         {
             thucPhamForm = new DanhSachThucPham(this, listViewMonAn);
             thucPhamForm.Show();
@@ -120,10 +132,9 @@ namespace CMNNPM
                 this.Location.X + this.Width
                 , this.Location.Y);
         }
-
         private void buttonThemDichVu_Click(object sender, EventArgs e)
         {
-            dichVuForm = new DanhSachDichVu(this);
+            dichVuForm = new DanhSachDichVu(this, listViewDichVu);            
             dichVuForm.Show();
             dichVuForm.Location = new Point(
                 this.Location.X + this.Width
@@ -159,8 +170,9 @@ namespace CMNNPM
                     int.Parse(comboBoxSLBan.SelectedItem.ToString()),
                     int.Parse(textBoxSoBanDuTru.Text));
 
-
                 quanLyForm.updateQuanLyForm();
+                dichVuForm.Close();
+                thucPhamForm.Close();
                 this.Close();
             }
             else
@@ -274,6 +286,7 @@ namespace CMNNPM
         {
             comboBoxSanh.DropDownClosed += new EventHandler(
                 comboBoxSanh_DropDownClosed);
+
             comboBoxSLBan.Enabled = false;
             labelKiemTra.Text = "";
             validCheck = false;
@@ -291,11 +304,22 @@ namespace CMNNPM
             foreach (ListViewItem item in listViewMonAn.Items)
             {
                 tongTien = tongTien
-                    + float.Parse(item.SubItems[2].Text.Trim());
+                    + float.Parse(item.SubItems[2].Text.Trim())
+                    * int.Parse(comboBoxSLBan.Text);
             }
 
             textBoxTongTien.Text = tongTien.ToString();
             textBoxTienCoc.Text = (tongTien * 30 / 100).ToString();
+        }
+
+        private void buttonHuyMonAn_Click(object sender, EventArgs e)
+        {
+            listViewMonAn.Items.Clear();
+        }
+
+        private void buttonHuyDichVu_Click(object sender, EventArgs e)
+        {
+            listViewDichVu.Items.Clear();
         }
     }
 }

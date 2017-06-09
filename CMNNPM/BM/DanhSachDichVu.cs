@@ -14,9 +14,12 @@ namespace CMNNPM
     public partial class DanhSachDichVu : Form
     {
         private DatTiec dtForm;
-        public DanhSachDichVu(DatTiec dt)
+        private ListView danhSachDichVu;
+
+        public DanhSachDichVu(DatTiec dt, ListView lv)
         {
             dtForm = dt;
+            danhSachDichVu = lv;
             InitializeComponent();
         }
 
@@ -32,9 +35,24 @@ namespace CMNNPM
             this.Close();
         }
 
+        public void addItem(ListView startList, ListView endList)
+        {
+            foreach (ListViewItem item in startList.Items)
+            {
+                if (item.Selected == true)
+                {
+                    ListViewItem selectedItem = (ListViewItem)item.Clone();
+                    selectedItem.Text = (endList.Items.Count + 1).ToString();
+
+                    endList.Items.Add(selectedItem);
+                    break;
+                }
+            }
+        }
+
         private void buttonThem_Click(object sender, EventArgs e)
         {
-
+            addItem(listViewDichVu, danhSachDichVu);
         }
     }
 }
