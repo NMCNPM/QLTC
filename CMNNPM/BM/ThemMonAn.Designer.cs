@@ -54,7 +54,7 @@
             this.buttonHuyBo.TabIndex = 7;
             this.buttonHuyBo.Text = "Hủy bỏ";
             this.buttonHuyBo.UseVisualStyleBackColor = true;
-            this.buttonHuyBo.Click += new System.EventHandler(this.button2_Click);
+            this.buttonHuyBo.Click += new System.EventHandler(this.buttonHuy_Click);
             // 
             // textBoxGia
             // 

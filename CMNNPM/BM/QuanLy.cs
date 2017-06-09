@@ -14,32 +14,35 @@ namespace CMNNPM
     public partial class QuanLy : Form
     {
         private DataTable danhSachTiecCuoi;
-        private DatTiec mForm;
+        private DatTiec dtForm;
 
+        // constructor form quản lý: cài đặt công cụ nhập xuất 
+        //ngày, tháng
         public QuanLy()
         {
             InitializeComponent();
             setDefault();
-            //set data
             setMonthComboBox();
             setYearComboBox();
             setDateComboBox();
         }
 
+        // cập nhật lại danh sách tiệc cưới vào listViewDanhSachTiecCuoi
         public void updateQuanLyForm()
         {
             DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút thêm tiệc cưới: mở form DatTiec thêm tiệc cưới
+        private void buttonThemTiecCuoi_Click(object sender, EventArgs e)
         {
-                mForm = new DatTiec(this);
-
-            mForm.Show();
-            mForm.Location = new Point(50,50);
+            dtForm = new DatTiec(this);
+            dtForm.Show();
+            dtForm.Location = new Point(50, 50);
             DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
         }
 
+        // sự kiện chọn ngày trong montCalendar1
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
             string date = monthCalendar1.SelectionRange.Start.ToString("dd");
@@ -50,6 +53,7 @@ namespace CMNNPM
             cbYear.Text = year;
         }
 
+        // sự kiện sửa dữ liệu tại cbDate
         private void cbDate_TextUpdate(object sender, EventArgs e)
         {
             int[] dateOfMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -86,6 +90,7 @@ namespace CMNNPM
             }
         }
 
+        // sự kiện sửa dữ liệu tại cbMonth
         private void cbMonth_TextUpdate(object sender, EventArgs e)
         {
             try
@@ -109,6 +114,7 @@ namespace CMNNPM
             }
         }
 
+        // sự kiện sửa dữ liệu tại cbYear
         private void cbYear_TextUpdate(object sender, EventArgs e)
         {
             cbDate.Items.Clear();
@@ -149,6 +155,7 @@ namespace CMNNPM
                 cbMonth.Items.Add(i);
             }
         }
+        //add ngày
         private void setDateComboBox()
         {
             string strThisYear = monthCalendar1.SelectionRange.Start.ToString("yyyy");
@@ -190,7 +197,8 @@ namespace CMNNPM
             cbDate.SelectedIndex = dateIndex;
         }
 
-        private void resetDateComboBox() //reset combobox theo giá trị mới của tháng
+        //reset combobox theo giá trị mới của tháng
+        private void resetDateComboBox() 
         {
             string strThisYear = monthCalendar1.SelectionRange.Start.ToString("yyyy");
             int intThisYear = int.Parse(strThisYear);
@@ -279,16 +287,19 @@ namespace CMNNPM
             monthCalendar1.SetDate(new DateTime(int.Parse(cbYear.Text),int.Parse(cbMonth.Text),int.Parse(cbDate.Text)));
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút đăng nhập: mở form đăng nhập
+        private void buttonDangNhap_Click(object sender, EventArgs e)
         {
             DangNhap form = new DangNhap();
             form.Location = new Point(700, 500);
             form.Show();
         }
 
+        // kiểm tra có item nào trong ListView lv được chọn không,
+        // nếu có trả về true, nếu không xuất thông báo, trả về false
         public bool checkNullItemClick(ListView lv)
         {
-            foreach (ListViewItem item in listViewDanhSachTiecCuoi.Items)
+            foreach (ListViewItem item in lv.Items)
             {
                 if (item.Selected == true)
                 {                    
@@ -303,6 +314,8 @@ namespace CMNNPM
             return false;
         }
 
+        // sự kiện nhấn nút xuất hóa đơn: kiểm tra xem có tiệc đc chọn,
+        // nếu có mở form hóa đơn
         private void buttonXuatHoaDon_Click(object sender, EventArgs e)
         {
             bool check = checkNullItemClick(listViewDanhSachTiecCuoi);
@@ -314,13 +327,16 @@ namespace CMNNPM
             }
         }
 
+        // load form QuanLy
         private void QuanLy_Load(object sender, EventArgs e)
         {
             DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
             listViewDanhSachTiecCuoi.FullRowSelect = true;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút xóa tiệc cưới đc chọn: kiểm tra tiệc đã đc chọn,
+        // nếu có thì xóa tiệc, không có thì xuất thông báo
+        private void buttonXoaTiec_Click(object sender, EventArgs e)
         {
             if (checkNullItemClick(listViewDanhSachTiecCuoi))
             {
@@ -338,19 +354,21 @@ namespace CMNNPM
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút sửa tiệc cưới: kiểm tra tiệc đã đc chọn,
+        // nếu có thì mở form DatTiec để sửa, không có thì xuất thông báo
+        private void buttonSuaTiecCuoi_Click(object sender, EventArgs e)
         {
             if (checkNullItemClick(listViewDanhSachTiecCuoi))
             {
                 String maTiecCuoi = QuanLySQL.getMaTiecCuoi(listViewDanhSachTiecCuoi);
 
-                mForm = new DatTiec(this, maTiecCuoi);
+                dtForm = new DatTiec(this, maTiecCuoi);
 
-                mForm.Show();
-                mForm.Location = new Point(50, 50);
+                dtForm.Show();
+                dtForm.Location = new Point(50, 50);
                 DatTiecSQL.loadDanhSachTiecCuoi(listViewDanhSachTiecCuoi);
-            }      
+            }
         }
-      
+
     }
 }

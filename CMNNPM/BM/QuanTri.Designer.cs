@@ -321,7 +321,7 @@
             this.buttonThemMonAn.TabIndex = 5;
             this.buttonThemMonAn.Text = "Thêm";
             this.buttonThemMonAn.UseVisualStyleBackColor = true;
-            this.buttonThemMonAn.Click += new System.EventHandler(this.button6_Click);
+            this.buttonThemMonAn.Click += new System.EventHandler(this.buttonThemMonAn_Click);
             // 
             // tabLoaiSanh
             // 
@@ -489,7 +489,7 @@
             this.buttonThemDSSanh.TabIndex = 1;
             this.buttonThemDSSanh.Text = "Thêm";
             this.buttonThemDSSanh.UseVisualStyleBackColor = true;
-            this.buttonThemDSSanh.Click += new System.EventHandler(this.button1_Click);
+            this.buttonThemDSSanh.Click += new System.EventHandler(this.buttonThemSanh_Click);
             // 
             // QTMonAn
             // 

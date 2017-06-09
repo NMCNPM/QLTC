@@ -12,7 +12,6 @@ namespace CMNNPM.SQL
     {
         public static String CONNECTION_STRING =
             "Data Source=DESKTOP-DM3AGPH\\SQLEXPRESS;Initial Catalog=_QLTC;Integrated Security=True";
-
         public static String DichVuName = "DICHVU";
         public static String LoaiSanhName = "LOAISANH";
         public static String KhachHangName = "KHACHHANG";
@@ -26,6 +25,7 @@ namespace CMNNPM.SQL
         public static String TiecCuoiName = "TIECCUOI";
         public static String tableName = "qlnv2";
 
+        // trình tạo mã tự động dựa vào thời gian thực
         public static string generateID(string Header)
         {
             string result = DateTime.Now.ToString("ddMMyyyyhhmmss");
@@ -33,6 +33,7 @@ namespace CMNNPM.SQL
             return result;
         }
 
+        // truy vấn cơ sở dữ liệu bằng câu lệnh SQL từ cmd
         public static DataTable queryTable(String cmd)
         {
             DataTable mTable = new DataTable();

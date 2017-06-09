@@ -309,7 +309,7 @@ namespace CMNNPM
             }
 
             textBoxTongTien.Text = tongTien.ToString();
-            textBoxTienCoc.Text = (tongTien * 30 / 100).ToString();
+            textBoxTienCoc.Text = (tongTien * 60 / 100).ToString();
         }
 
         private void buttonHuyMonAn_Click(object sender, EventArgs e)

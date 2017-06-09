@@ -12,23 +12,13 @@ using System.Windows.Forms;
 namespace CMNNPM
 {
     class DatTiecSQL
-    {
-        //private DataTable mTable;
-
-        private OleDbConnection mConn;
-        private OleDbCommand mComm;
-        private OleDbConnection mConnLoaiSanh;
-
-        private OleDbDataAdapter DichVuAdapter;
-        private OleDbDataAdapter LoaiSanhAdapter;        
-
-        private static DataTable DichVu;
-        private static DataTable LoaiSanh;
+    {        
         private static DataTable DanhSachTiecCuoi;
-
         public static String MATIECCUOI = "";
         public static DataRow rowTiecCuoi;                      
 
+        // truy vấn csdl, lấy danh sách dịch vụ từ mã tiệc cưới,
+        // truyền dữ liệu vào ListView lv
         public static bool loadDatabaseDSDichVu(ListView lv, String maTiecCuoi)
         {            
             DataTable dvTable = DatabaseQuery.queryTable(
@@ -56,6 +46,8 @@ namespace CMNNPM
             return true;
         }
 
+        // truy vấn csdl, lấy danh sách thực phẩm từ mã tiệc cưới,
+        // truyền dữ liệu vào ListView lv 
         public static bool loadDatabaseDanhSachThucPham(ListView lv, String maTiecCuoi)
         {
             DataTable tpTable = DatabaseQuery.queryTable(

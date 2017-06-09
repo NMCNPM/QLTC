@@ -60,7 +60,7 @@
             this.button1.Size = new System.Drawing.Size(30, 24);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.buttonDangNhap_Click);
             // 
             // button2
             // 
@@ -71,7 +71,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Thêm";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.buttonThemTiecCuoi_Click);
             // 
             // button3
             // 
@@ -82,7 +82,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.buttonXoaTiec_Click);
             // 
             // button4
             // 
@@ -93,7 +93,7 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "Sửa";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.buttonSuaTiecCuoi_Click);
             // 
             // label1
             // 

@@ -124,7 +124,7 @@
             this.buttonHuy.TabIndex = 5;
             this.buttonHuy.Text = "Hủy";
             this.buttonHuy.UseVisualStyleBackColor = true;
-            this.buttonHuy.Click += new System.EventHandler(this.button2_Click);
+            this.buttonHuy.Click += new System.EventHandler(this.buttonHuy_Click);
             // 
             // ThemSanh
             // 

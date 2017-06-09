@@ -23,6 +23,8 @@ namespace CMNNPM
             InitializeComponent();
         }
 
+        // constructor ThemLoaiSanh: truyền vào form QuanTri 
+        // và tên loại sảnh từ form QuanTri
         public ThemLoaiSanh(QuanTri qt, String tenloaisanh)
         {            
             qtForm = qt;
@@ -36,11 +38,15 @@ namespace CMNNPM
                 textBoxDonGiaBanToiThieu);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút hủy: đóng form       
+        private void buttonHuy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // sự kiện nhấn nút chấp nhận: kiểm tra trạng thái thêm mới hoặc trạng thái sửa
+        // trạng thái sửa: cập nhật dữ liệu mới và lưu vào database
+        // trạng thái thêm mới: thêm dữ liệu vào database
         private void buttonChapNhan_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -72,6 +78,7 @@ namespace CMNNPM
             qtForm.updateLoaiSanh();
         }
 
+        // load form thêm loại sảnh
         private void ThemLoaiSanh_Load(object sender, EventArgs e)
         {
             this.ActiveControl = textBoxTenLoaiSanh;

@@ -16,12 +16,14 @@ namespace CMNNPM
         private QuanTri qtForm;
         private bool isUpdate = false;
 
+        // constructor ThemSanh
         public ThemSanh()
         {
             isUpdate = false;
             InitializeComponent();           
         }
 
+        // constructor ThemSanh
         public ThemSanh(QuanTri qt, String tensanh)
         {
             isUpdate = true;
@@ -37,18 +39,20 @@ namespace CMNNPM
                 textBoxGhiChu);
         }
         
-
-        private void button2_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút hủy form: đóng form
+        private void buttonHuy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // load form ThemSanh
         private void ThemSanh_Load(object sender, EventArgs e)
         {
             addItemToComboLoaiSanh();
             this.ActiveControl = textBoxTenSanh;
         }
 
+        // thêm item vào combobox comboBoxLoaiSanh
         public void addItemToComboLoaiSanh()
         {
             DataTable lsTable = DatTiecSQL.loadLoaiSanh();
@@ -65,6 +69,9 @@ namespace CMNNPM
             comboBoxLoaiSanh.Text = comboBoxLoaiSanh.Items[0].ToString();
         }
 
+        // sự kiện nhấn nút thêm: kiểm tra trạng thái thêm mới hoặc trạng thái sửa
+        // trạng thái sửa: cập nhật dữ liệu mới và lưu vào database
+        // trạng thái thêm mới: thêm dữ liệu vào database
         private void buttonThem_Click(object sender, EventArgs e)
         {
             String tenloaisanh = comboBoxLoaiSanh

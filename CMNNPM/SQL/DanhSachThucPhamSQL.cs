@@ -10,13 +10,7 @@ namespace CMNNPM.SQL
 {
     class DanhSachThucPhamSQL
     {
-
-        public static DataTable loadMonAn()
-        {
-            return DatabaseQuery.queryTable(
-                "SELECT MAMONAN, TENMONAN, GIA FROM MONAN ORDER BY TENMONAN ASC");
-        }
-
+        // trả ra DataTable từ bảng MONAN và THUCDON
         public static DataTable loadDSThucPham()
         {
             DataTable table = DatabaseQuery.queryTable(
@@ -26,9 +20,9 @@ namespace CMNNPM.SQL
             return table;
         }
 
+        // lấy danh sách thực phẩm vào ListView lv
         public static bool loadListViewDanhSachThucPham(ListView lv)
-        {
-            
+        {            
             DataTable table = loadDSThucPham();
 
             if (lv.Items.Count > 0)

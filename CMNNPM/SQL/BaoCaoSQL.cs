@@ -10,11 +10,15 @@ namespace CMNNPM.SQL
 {
     class BaoCaoSQL
     {
+        // load báo cáo từ bảng BAOCAO và trả ra DataTable
         public static DataTable loadBaoCao()
         {
             return DatabaseQuery.queryTable(
                 "SELECT * FROM BAOCAO ORDER BY NGAYBAOCAO;");
         }
+
+        // load dữ liệu từ bảng BAOCAO vào ListView lv
+        // trả về true nếu thành công, false nếu không thành công
         public static bool loadListViewBaoCao(ListView lv)
         {
             DataTable baocao = loadBaoCao();
@@ -36,6 +40,9 @@ namespace CMNNPM.SQL
             }
             return true;
         }
+
+        // load thông tin bảng BAOCAO từ ngayBaoCao vào ngayBaoCao1,
+        // soLuong, doanhThu
         public static bool loadBaoCaoFromNgayBaoCao(String ngayBaoCao,
             DateTimePicker ngayBaoCao1,
             TextBox soLuong,
@@ -61,6 +68,7 @@ namespace CMNNPM.SQL
             else return false;
         }
 
+        // trả về tỉ lệ của doanhThu1 so với doanhThu2
         public static double getTiLe(double doanhThu1, double doanhThu2)
         {
             if(doanhThu1 < doanhThu2)
@@ -77,6 +85,7 @@ namespace CMNNPM.SQL
             }
         }
 
+        // trả về ngày trước ngày ngayBaoCao trong bảng BAOCAO
         public static DateTime getPreviousDayInBaoCao(DateTime ngayBaoCao)
         {
             DataTable table = DatabaseQuery.queryTable(
@@ -91,6 +100,8 @@ namespace CMNNPM.SQL
                 .ToString());
             }
         }
+
+        // trả về doanh thu ngày trước của ngayBaoCao từ bảng BAOCAO
         public static float getLastDoanhThu(DateTime ngayBaoCao)
         {
             DataTable table = DatabaseQuery.queryTable(
@@ -105,6 +116,7 @@ namespace CMNNPM.SQL
             return  doanhThuCuoi;
         }
 
+        // set tỉ lệ tiếp theo cho ngày báo cáo tiếp theo từ doanh thu của ngày đó
         public static bool setNextTiLe(DateTime ngayBaoCao, double doanhThu)
         {
             DataTable table = DatabaseQuery.queryTable(
@@ -129,6 +141,7 @@ namespace CMNNPM.SQL
             return true;
         }
 
+        // thêm vào bảng BAOCAO ngày báo cáo, số lượng, doanh thu
         public static bool insertBaoCao(String ngayBaoCao, int soLuong,
             String doanhThu)
         {
@@ -152,6 +165,7 @@ namespace CMNNPM.SQL
             return true;
         }
 
+        //cập nhật báo cáo từ ngày báo cáo, số lượng, doanh thu
         public static bool updateBaoCao(String ngayBaoCao, int soLuong,
             String doanhThu)
         {
@@ -171,6 +185,7 @@ namespace CMNNPM.SQL
             return true;
         }
 
+        // lấy mã báo cáo từ bảng BAOCAO với ngày báo cáo truyền vào
         public static String getMaBaoCaoFromNgayBaoCao(String ngayBaoCao)
         {
             DataTable table = DatabaseQuery.queryTable(
@@ -186,6 +201,7 @@ namespace CMNNPM.SQL
                 return "";
         }
 
+        // xóa báo cáo với ngày báo cáo từ bảng BAOCAO
         public static bool deleteBaoCao(String ngayBaoCao)
         {
             String maBaoCao = getMaBaoCaoFromNgayBaoCao(ngayBaoCao)

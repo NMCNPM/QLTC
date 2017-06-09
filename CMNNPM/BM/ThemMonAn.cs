@@ -16,12 +16,14 @@ namespace CMNNPM
         private QuanTri qtForm;
         private bool isUpdate = false;
 
+        // constructor ThemMonAn
         public ThemMonAn(QuanTri qt)
         {
             qtForm = qt;
             InitializeComponent();
         }
 
+        // constructor ThemMonAn
         public ThemMonAn(QuanTri qt, String tenmonan)
         {
             qtForm = qt;
@@ -35,16 +37,21 @@ namespace CMNNPM
                 textBoxGia);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút hủy form: đóng form
+        private void buttonHuy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // load form ThemMonAn
         private void ThemMonAn_Load(object sender, EventArgs e)
         {
             this.ActiveControl = textBoxTenMonAn;
         }
 
+        // sự kiện nhấn nút xác nhận: kiểm tra trạng thái thêm mới hoặc trạng thái sửa
+        // trạng thái sửa: cập nhật dữ liệu mới và lưu vào database
+        // trạng thái thêm mới: thêm dữ liệu vào database
         private void buttonXacNhan_Click(object sender, EventArgs e)
         {
             bool result = false;

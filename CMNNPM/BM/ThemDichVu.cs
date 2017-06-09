@@ -15,12 +15,14 @@ namespace CMNNPM
     {
         private QuanTri qtForm;
         private bool isUpdate = false;
-
+        
         public ThemDichVu(QuanTri qt)
         {
             qtForm = qt;
             InitializeComponent();
         }
+
+        // constructor ThemDichVu: truyền vào form QuanTri và tên dịch vụ từ form QuanTri
         public ThemDichVu(QuanTri qt, String tendichvu)
         {
             qtForm = qt;
@@ -32,21 +34,26 @@ namespace CMNNPM
             DichVuSQL.loadDichVuFromTenDichVu(tendichvu,
                 textBoxTenDichVu,
                 textBoxGiaDichVu);
-        }
+        }       
 
-        private void button2_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút thoát form: đóng form
+        private void buttonThoatForm_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // load form 
         private void ThemDichVu_Load(object sender, EventArgs e)
         {
             this.ActiveControl = textBoxTenDichVu;
         }
 
+        // sự kiện nhấn nút chấp nhận: kiểm tra trạng thái thêm mới hoặc
+        // trạng thái sửa
+        // trạng thái sửa: cập nhật dữ liệu mới và lưu vào database
+        // trạng thái thêm mới: thêm dữ liệu vào database
         private void buttonChapNhan_Click(object sender, EventArgs e)
         {
-
             bool result = false;
             try
             {

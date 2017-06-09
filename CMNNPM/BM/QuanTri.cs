@@ -20,41 +20,56 @@ namespace CMNNPM
         private ThemDichVu dvForm;
         private BaoCaoDoanhSo bcdsForm;
 
+        // constructor cho form QuanTri
         public QuanTri()
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+  
+        // sự kiện nhấn nút thêm sảnh: mở form thêm sảnh
+        private void buttonThemSanh_Click(object sender, EventArgs e)
         {
             tsForm = new ThemSanh();
             tsForm.Show();
         }
 
+        // cập nhật danh sách sảnh
         public void updateSanh()
         {
             SanhSQL.loadListViewDSSanh(listViewDSSanh);
         }
+
+        // cập nhật danh sách loại sảnh
         public void updateLoaiSanh()
         {
             LoaiSanhSQL.loadListViewDSLoaiSanh(listViewLoaiSanh);
         }
+
+        // cập nhật danh sách món ăn
         public void updateMonAn()
         {
             MonAnSQL.loadListViewMonAn(listViewMonAn);
         }
+
+        // cập nhật danh sách dịch vụ
         public void updateDichVu()
         {
             DichVuSQL.loadListViewDichVu(listViewDichVu);
         }
+
+        // cập nhật danh sách báo cáo
         public void updateBaoCao()
         {
             BaoCaoSQL.loadListViewBaoCao(listViewBaoCao);
         }
+
+        // load form QuanTri
         private void QuanTri_Load(object sender, EventArgs e)
         {
             LoadData();
         }
+
+        //cập nhật các danh sách có trong form
         private void LoadData()
         {
             updateMonAn();
@@ -64,30 +79,37 @@ namespace CMNNPM
             updateBaoCao();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút thêm món ăn: mở form thêm món ăn
+        private void buttonThemMonAn_Click(object sender, EventArgs e)
         {
             maForm = new ThemMonAn(this);
             maForm.Show();
         }
 
+        // sự kiện nhấn nút thêm loại sảnh: mở form thêm loại sảnh
         private void buttonThemLoaiSanh_Click(object sender, EventArgs e)
         {
             lsForm = new ThemLoaiSanh(this);
             lsForm.Show();
         }
 
+        // sự kiện nhấn nút thêm dịch vụ: mở form thêm dịch vụ
         private void buttonThemDichVu_Click(object sender, EventArgs e)
         {
             dvForm = new ThemDichVu(this);
             dvForm.Show();
         }
 
+        // sự kiện nhấn nút thêm báo cáo: mở form thêm báo cáo
         private void buttonThemBaoCao_Click(object sender, EventArgs e)
         {
             bcdsForm = new BaoCaoDoanhSo(this);
             bcdsForm.Show();
         }
 
+        // sự kiện xóa danh sách sảnh: kiểm tra có sảnh đc chọn, 
+        // nếu sảnh không có tiệc nào đang đặt xóa sảnh đc chọn,
+        // nếu có xuất thông báo
         private void buttonXoaDSSanh_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -108,6 +130,9 @@ namespace CMNNPM
             updateSanh();
         }
 
+        // sự kiện sửa danh sách sảnh: kiểm tra có sảnh đc chọn, 
+        // nếu có, mở form ThemSanh để sửa sảnh đc chọn,
+        // nếu không xuất thông báo
         private void buttonSuaDSSanh_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -130,6 +155,9 @@ namespace CMNNPM
             
         }
 
+        // sự kiện sửa danh sách loại sảnh: kiểm tra có loại sảnh đc chọn, 
+        // nếu có mở form ThemLoaiSanh sửa sảnh đc chọn,
+        // nếu không xuất thông báo
         private void buttonSuaLoaiSanh_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -152,6 +180,9 @@ namespace CMNNPM
 
         }
 
+        // sự kiện xóa danh sách loại sảnh: kiểm tra có loại sảnh đc chọn, 
+        // nếu loại sảnh không trùng với sảnh, xóa sảnh đc chọn,
+        // nếu có xuất thông báo
         private void buttonXoaLoaiSanh_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -172,6 +203,9 @@ namespace CMNNPM
             updateLoaiSanh();
         }
 
+        // sự kiện xóa danh sách món ăn: kiểm tra có món ăn đc chọn, 
+        // nếu món ăn không có tiệc nào đang đặt xóa món ăn đc chọn,
+        // nếu có xuất thông báo
         private void buttonXoaMonAn_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -193,6 +227,9 @@ namespace CMNNPM
             updateMonAn();
         }
 
+        // sự kiện sửa danh sách món ăn: kiểm tra có món ăn đc chọn, 
+        // nếu có, mở form ThemMonAn sửa món đc chọn,
+        // nếu không xuất thông báo
         private void buttonSuaMonAn_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -217,6 +254,9 @@ namespace CMNNPM
             }
         }
 
+        // sự kiện xóa danh sách dịch vụ: kiểm tra có dịch vụ đc chọn, 
+        // nếu dịch vụ không có tiệc nào đang đặt xóa dịch vụ đc chọn,
+        // nếu có xuất thông báo
         private void buttonXoaDichVu_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -240,6 +280,9 @@ namespace CMNNPM
             updateDichVu();
         }
 
+        // sự kiện sửa danh sách dịch vụ: kiểm tra có dịch vụ đc chọn, 
+        // nếu có mở form ThemDichVu sửa dịch vụ đc chọn,
+        // nếu không xuất thông báo
         private void buttonSuaDichVu_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -265,6 +308,9 @@ namespace CMNNPM
             }
         }
 
+        // sự kiện xóa danh sách báo cáo: kiểm tra có báo cáo đc chọn, 
+        // nếu có xóa báo cáo đc chọn,
+        // nếu không xuất thông báo
         private void buttonXoaBaoCao_Click(object sender, EventArgs e)
         {
             bool result = false;
@@ -285,6 +331,9 @@ namespace CMNNPM
             updateBaoCao();
         }
 
+        // sự kiện sửa danh sách báo cáo: kiểm tra có báo cáo đc chọn, 
+        // nếu có mở form ThemBaoCao sửa báo cáo đc chọn,
+        // nếu không xuất thông báo
         private void buttonSuaBaoCao_Click(object sender, EventArgs e)
         {
             bool result = false;

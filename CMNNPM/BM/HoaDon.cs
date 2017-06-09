@@ -14,17 +14,24 @@ namespace CMNNPM
     {
         private String maTiecCuoi;
 
+        // constructor cho form hóa đơn: truyền vào mã tiệc cưới từ form DatTiec
         public HoaDon(String mtc)
         {
             maTiecCuoi = mtc;
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // sự kiện nhấn nút hủy bỏ: đóng form
+        private void buttonHuy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // load form HoaDon: load các thông tin của tiệc cưới vào form
+        // gồm tên cô dâu, tên chú rể, số lượng bàn, đơn giá bàn,
+        // danh sách các dịch vụ sử dụng, ngày đặt tiệc, ngày thanh toán, 
+        // tổng tiền dịch vụ, tổng tiền bàn, tổng tiền hóa đơn,
+        // tiền cọc, Thành tiền phải trả
         private void HoaDon_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Top;
@@ -42,9 +49,8 @@ namespace CMNNPM
             textBoxSLBan.Text = table.Rows[0]["SLBAN"]
                 .ToString()
                 .TrimEnd();
-            //textBoxDonGia.Text =;
-            loadListViewDichVu(listViewDSDichVu);
-            textBoxNgayDai.Text = table.Rows[0]["NGAYDATTIEC"]
+           loadListViewDichVu(listViewDSDichVu);
+           textBoxNgayDai.Text = table.Rows[0]["NGAYDATTIEC"]
                 .ToString()
                 .TrimEnd();
             textBoxNgayThanhToan.Text = table.Rows[0]["TENCODAU"]
@@ -53,6 +59,7 @@ namespace CMNNPM
 
         }
 
+        // load danh sách dịch vụ tiệc đã đặt vào ListView lv
         private void loadListViewDichVu(ListView lv)
         {
 

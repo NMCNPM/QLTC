@@ -11,13 +11,7 @@ namespace CMNNPM.SQL
 {
     class DanhSachDichVuSQL
     {
-
-        public static DataTable loadDichVu()
-        {
-            return DatabaseQuery.queryTable(
-                "SELECT MADICHVU, TENDICHVU, GIA FROM DICHVU ORDER BY TENDICHVU ASC");
-        }
-
+        // trả ra DataTable từ bảng DICHVU và DANHSACHDICHVU        
         public static DataTable loadDSDichVu()
         {
             DataTable table = DatabaseQuery.queryTable(
@@ -27,6 +21,7 @@ namespace CMNNPM.SQL
             return table;
         }
 
+        // danh sách các dịch vụ vào ListView lv
         public static void loadDatabaseDichVu(ListView lv)
         {            
 
