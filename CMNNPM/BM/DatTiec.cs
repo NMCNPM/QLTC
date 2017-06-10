@@ -24,6 +24,7 @@ namespace CMNNPM
 
         private bool isUpdate = false;
 
+        // constructor DatTiec
         public DatTiec( QuanLy ql)
         {
             quanLyForm = ql;
@@ -35,6 +36,7 @@ namespace CMNNPM
             addItemToComboCa();
         }
 
+        // constructor DatTiec: mtc là mã tiệc cưới lấy từ QuanLy
         public DatTiec(QuanLy ql, String mtc)
         {
             quanLyForm = ql;
@@ -56,12 +58,14 @@ namespace CMNNPM
             }
         }
               
+        //cập nhật dữ liệu ở các list view
         public void updateListViews()
         {
             DatTiecSQL.loadDatabaseDSDichVu(listViewDichVu, maTiecCuoi);
             DatTiecSQL.loadDatabaseDanhSachThucPham(listViewMonAn, maTiecCuoi);
         }
 
+        // load thông tin khách hàng
         private void loadKhachHangInfo(DataTable table)
         {
             textBoxTenChuRe.Text = table.Rows[0]["TENCHURE"]
@@ -75,6 +79,8 @@ namespace CMNNPM
                 .TrimEnd();
         }
 
+        // load thông tin tiệc cưới: ngày tháng, sảnh, loại sảnh
+        //, ca, số lượng bàn, ...
         private void loadTiecCuoiInfo(DataTable table)
         {
             dateTimePickerNgayDatTiec.Value = DateTime.Parse(
@@ -107,6 +113,7 @@ namespace CMNNPM
 
         }
 
+        // sự kiện nhấn nút hủy form: đóng form
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             try
@@ -124,6 +131,7 @@ namespace CMNNPM
             this.Close();
         }
 
+        // sự kiện nhấn nút thêm món ăn: mở form DanhSachThucPham
         private void btnThemMonAn_Click(object sender, EventArgs e)
         {
             thucPhamForm = new DanhSachThucPham(this, listViewMonAn);
@@ -132,6 +140,8 @@ namespace CMNNPM
                 this.Location.X + this.Width
                 , this.Location.Y);
         }
+
+        // sự kiện nhấn nút thêm dịch vụ: mở form DanhSachDichVu
         private void buttonThemDichVu_Click(object sender, EventArgs e)
         {
             dichVuForm = new DanhSachDichVu(this, listViewDichVu);            
@@ -141,6 +151,7 @@ namespace CMNNPM
                 , this.Location.Y);
         }
 
+        // kiểm tra kiểu dữ liệu trong form có phù hợp
         private bool checkNull()
         {
             if (textBoxTenChuRe.Text.Equals("")
@@ -154,25 +165,40 @@ namespace CMNNPM
             return true;
         }
 
+        // sự kiện nhấn nút chấp nhận đặt tiệc: cập nhật dữ liệu 
+        // vào csdl và đóng form
         private void buttonChapNhan_Click(object sender, EventArgs e)
         {
             validCheck = checkNull();
+
+
             if (validCheck == true)
             {
-                DatTiecSQL.insertDatTiec(
-                    textBoxTenChuRe.Text,
-                    textBoxTenCoDau.Text,
-                    textBoxSDT.Text,
-                    dateTimePickerNgayDatTiec.Value,
-                    textBoxLoaiSanh.Text,
-                    comboBoxSanh.SelectedItem.ToString(),
-                    comboBoxCa.SelectedItem.ToString(),
-                    int.Parse(comboBoxSLBan.SelectedItem.ToString()),
-                    int.Parse(textBoxSoBanDuTru.Text));
-
+                try
+                {
+                    DatTiecSQL.insertDatTiec(
+                        textBoxTenChuRe.Text,
+                        textBoxTenCoDau.Text,
+                        textBoxSDT.Text,
+                        dateTimePickerNgayDatTiec.Value,
+                        textBoxLoaiSanh.Text,
+                        comboBoxSanh.Text,
+                        comboBoxCa.Text,
+                        int.Parse(comboBoxSLBan.Text),
+                        int.Parse(textBoxSoBanDuTru.Text));
+                }
+                catch (Exception) { };
                 quanLyForm.updateQuanLyForm();
-                dichVuForm.Close();
-                thucPhamForm.Close();
+                try
+                {
+                    dichVuForm.Close();
+                }
+                catch (Exception) { };
+                try
+                {
+                    thucPhamForm.Close();
+                }
+                catch (Exception) { };                
                 this.Close();
             }
             else
@@ -182,7 +208,20 @@ namespace CMNNPM
             }            
         }
 
+        public bool checkDonGiaBanToiThieu(ListView lv)
+        {
+            double tongTien = 0;
+            
+            foreach (ListViewItem item in listViewMonAn.Items)
+            {
+                tongTien = tongTien
+                    + double.Parse(item.SubItems[2].Text.Trim());
+            }
+            if (tongTien > )
+            return false;
+        }
 
+        // sự kiện chọn sảnh trong comboBoxSanh: cập nhật loại sảnh
         private void comboBoxSanh_DropDownClosed(object sender, EventArgs e)
         {
             String sanh = comboBoxSanh.SelectedItem.ToString();
@@ -190,6 +229,7 @@ namespace CMNNPM
             addItemToComboSLBan();
         }
 
+        // thêm item vào comboBoxSanh
         public void addItemToComboSanh()
         {
             sanhTable = DatTiecSQL.loadSanh();
@@ -206,6 +246,7 @@ namespace CMNNPM
             comboBoxSanh.Text = comboBoxSanh.Items[0].ToString();
         }
 
+        // thêm item vào comboBoxLoaiSanh
         public void addItemToLoaiSanh()
         {
             String loaiSanh = sanhTable
@@ -227,6 +268,7 @@ namespace CMNNPM
                      
         }
 
+        // thêm item vào comboBoxCa
         public void addItemToComboCa()
         {
             caTable = DatTiecSQL.loadCa();
@@ -241,8 +283,9 @@ namespace CMNNPM
             }
 
             comboBoxCa.Text = comboBoxCa.Items[0].ToString();
-        }        
+        }
 
+        // thêm item vào comboBoxSLBan
         public void addItemToComboSLBan()
         {
             comboBoxSLBan.Enabled = true;
@@ -263,6 +306,8 @@ namespace CMNNPM
             comboBoxCa.Text = comboBoxCa.Items[0].ToString();
         }
 
+        // sự kiện nhấn nút kiểm tra thời gian tiệc:
+        // nếu trùng thông báo
         private void buttonKiemTra_Click(object sender, EventArgs e)
         {
             String tensanh = comboBoxSanh.SelectedItem.ToString();
@@ -282,6 +327,7 @@ namespace CMNNPM
             }
         }
 
+        // load form DatTiec
         private void DatTiec_Load(object sender, EventArgs e)
         {
             comboBoxSanh.DropDownClosed += new EventHandler(
@@ -292,9 +338,10 @@ namespace CMNNPM
             validCheck = false;
         }
 
+        // sự kiện nhấn nút thành tiền: hiển thị số tiền và tiền cọc vào textBox
         private void buttonThanhTien_Click(object sender, EventArgs e)
         {
-            float tongTien = 0;
+            double tongTien = 0;
             foreach(ListViewItem item in listViewDichVu.Items)
             {
                 tongTien = tongTien
@@ -304,7 +351,7 @@ namespace CMNNPM
             foreach (ListViewItem item in listViewMonAn.Items)
             {
                 tongTien = tongTien
-                    + float.Parse(item.SubItems[2].Text.Trim())
+                    + double.Parse(item.SubItems[2].Text.Trim())
                     * int.Parse(comboBoxSLBan.Text);
             }
 
@@ -312,11 +359,13 @@ namespace CMNNPM
             textBoxTienCoc.Text = (tongTien * 60 / 100).ToString();
         }
 
+        // sự kiện nhấn nút hủy món ăn: hủy danh sách món ăn
         private void buttonHuyMonAn_Click(object sender, EventArgs e)
         {
             listViewMonAn.Items.Clear();
         }
 
+        // sự kiện nhấn nút hủy dịch vụ: hủy danh sách dịch vụ
         private void buttonHuyDichVu_Click(object sender, EventArgs e)
         {
             listViewDichVu.Items.Clear();
