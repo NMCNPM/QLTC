@@ -124,6 +124,36 @@ namespace CMNNPM
                 lv.Items.Add(item);
             }
         }
+        // Filter
+        public static void locDanhSachTiecCuoi(ListView lv, string time)
+        {
+            DanhSachTiecCuoi = DatabaseQuery.queryTable(
+                "SELECT TENCHURE, TENCODAU, TENSANH, NGAYDATTIEC, TENCA, SLBAN, SLBANDUTRU FROM (((TIECCUOI "
+            + "JOIN KHACHHANG ON KHACHHANG.MAKHACHHANG = TIECCUOI.MAKHACHHANG) "
+            + "JOIN SANH ON TIECCUOI.MASANH = SANH.MASANH) "
+            + "JOIN CA ON TIECCUOI.MACA = CA.MACA)"+"WHERE(TIECCUOI.NGAYDATTIEC = '"+ time +"');");
+
+            if (lv.Items.Count > 0)
+            {
+                lv.Items.Clear();
+            }
+            int i = 1;
+            foreach (DataRow row in DanhSachTiecCuoi.Rows)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = i.ToString();
+                i++;
+                item.SubItems.Add(row["TENCHURE"].ToString().TrimEnd());
+                item.SubItems.Add(row["TENCODAU"].ToString().TrimEnd());
+                item.SubItems.Add(row["TENSANH"].ToString().TrimEnd());
+                item.SubItems.Add(row["NGAYDATTIEC"].ToString().TrimEnd());
+                item.SubItems.Add(row["TENCA"].ToString().TrimEnd());
+                item.SubItems.Add(row["SLBAN"].ToString().TrimEnd());
+                item.SubItems.Add(row["SLBANDUTRU"].ToString().TrimEnd());
+
+                lv.Items.Add(item);
+            }
+        }
 
         public static bool insertKhachHang(String tenCoDau, String tenChuRe, String SDT)
         {

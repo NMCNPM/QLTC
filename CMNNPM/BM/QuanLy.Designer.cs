@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbDate = new System.Windows.Forms.ComboBox();
             this.cbMonth = new System.Windows.Forms.ComboBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dateTime = new System.Windows.Forms.MonthCalendar();
             this.cbYear = new System.Windows.Forms.ComboBox();
             this.listViewDanhSachTiecCuoi = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -145,12 +145,12 @@
             this.cbMonth.SelectedIndexChanged += new System.EventHandler(this.cbMonth_SelectedIndexChanged);
             this.cbMonth.TextUpdate += new System.EventHandler(this.cbMonth_TextUpdate);
             // 
-            // monthCalendar1
+            // dateTime
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(278, 36);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 43;
-            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            this.dateTime.Location = new System.Drawing.Point(278, 36);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.TabIndex = 43;
+            this.dateTime.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // cbYear
             // 
@@ -237,11 +237,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 463);
+            this.ClientSize = new System.Drawing.Size(874, 463);
             this.Controls.Add(this.buttonXuatHoaDon);
             this.Controls.Add(this.listViewDanhSachTiecCuoi);
             this.Controls.Add(this.cbYear);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.dateTime);
             this.Controls.Add(this.cbMonth);
             this.Controls.Add(this.cbDate);
             this.Controls.Add(this.label3);
@@ -270,7 +270,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbDate;
         private System.Windows.Forms.ComboBox cbMonth;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar dateTime;
         private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.ListView listViewDanhSachTiecCuoi;
         private System.Windows.Forms.ColumnHeader columnHeader1;

@@ -45,12 +45,14 @@ namespace CMNNPM
         // sự kiện chọn ngày trong montCalendar1
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            string date = monthCalendar1.SelectionRange.Start.ToString("dd");
-            string month = monthCalendar1.SelectionRange.Start.ToString("MM");
-            string year = monthCalendar1.SelectionRange.Start.ToString("yyyy");
+            string date = dateTime.SelectionRange.Start.ToString("dd");
+            string month = dateTime.SelectionRange.Start.ToString("MM");
+            string year = dateTime.SelectionRange.Start.ToString("yyyy");
+            string time = year + "-" + month + "-" + date;
             cbDate.Text = date;
             cbMonth.Text = month;
             cbYear.Text = year;
+            DatTiecSQL.locDanhSachTiecCuoi(listViewDanhSachTiecCuoi,time);
         }
 
         // sự kiện sửa dữ liệu tại cbDate
@@ -59,7 +61,7 @@ namespace CMNNPM
             int[] dateOfMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             try
             {
-                monthCalendar1.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
+                dateTime.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
             }
             catch
             {
@@ -88,6 +90,11 @@ namespace CMNNPM
                     return;
                 }
             }
+            string date = dateTime.SelectionRange.Start.ToString("dd");
+            string month = dateTime.SelectionRange.Start.ToString("MM");
+            string year = dateTime.SelectionRange.Start.ToString("yyyy");
+            string time = year + "-" + month + "-" + date;
+            DatTiecSQL.locDanhSachTiecCuoi(listViewDanhSachTiecCuoi, time);
         }
 
         // sự kiện sửa dữ liệu tại cbMonth
@@ -95,7 +102,7 @@ namespace CMNNPM
         {
             try
             {
-                monthCalendar1.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
+                dateTime.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
             }
             catch
             {
@@ -112,6 +119,7 @@ namespace CMNNPM
                 }
                 
             }
+
         }
 
         // sự kiện sửa dữ liệu tại cbYear
@@ -120,14 +128,14 @@ namespace CMNNPM
             cbDate.Items.Clear();
             cbDate.ResetText();
             resetDateComboBox();
-            monthCalendar1.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
+            dateTime.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
         }
         //add năm
         private void setDefault()
         {
-            string date = monthCalendar1.SelectionRange.Start.ToString("dd");
-            string month = monthCalendar1.SelectionRange.Start.ToString("MM");
-            string year = monthCalendar1.SelectionRange.Start.ToString("yyyy");
+            string date = dateTime.SelectionRange.Start.ToString("dd");
+            string month = dateTime.SelectionRange.Start.ToString("MM");
+            string year = dateTime.SelectionRange.Start.ToString("yyyy");
             cbDate.Text = date;
             cbMonth.Text = month;
             cbYear.Text = year;
@@ -135,7 +143,7 @@ namespace CMNNPM
         //add năm
         private void setYearComboBox()
         {
-            string strThisYear = monthCalendar1.SelectionRange.Start.ToString("yyyy");
+            string strThisYear = dateTime.SelectionRange.Start.ToString("yyyy");
             int intThisYear = int.Parse(strThisYear);
             int count = -1; ;
             for (int i = 2000; i <= intThisYear; i++)
@@ -147,7 +155,7 @@ namespace CMNNPM
         //add tháng
         private void setMonthComboBox()
         {
-            string strThisMonth = monthCalendar1.SelectionRange.Start.ToString("MM");
+            string strThisMonth = dateTime.SelectionRange.Start.ToString("MM");
             int intThisMonth = int.Parse(strThisMonth);
             int monthIndex = intThisMonth - 1;
             for (int i = 1; i <= 12; i++)
@@ -158,11 +166,11 @@ namespace CMNNPM
         //add ngày
         private void setDateComboBox()
         {
-            string strThisYear = monthCalendar1.SelectionRange.Start.ToString("yyyy");
+            string strThisYear = dateTime.SelectionRange.Start.ToString("yyyy");
             int intThisYear = int.Parse(strThisYear);
-            string strThisMonth = monthCalendar1.SelectionRange.Start.ToString("MM");
+            string strThisMonth = dateTime.SelectionRange.Start.ToString("MM");
             int intThisMonth = int.Parse(strThisMonth);
-            string strThisDate = monthCalendar1.SelectionRange.Start.ToString("dd");
+            string strThisDate = dateTime.SelectionRange.Start.ToString("dd");
             int intThisDate = int.Parse(strThisDate);
             int numDays = 0;
             int dateIndex;
@@ -200,9 +208,9 @@ namespace CMNNPM
         //reset combobox theo giá trị mới của tháng
         private void resetDateComboBox() 
         {
-            string strThisYear = monthCalendar1.SelectionRange.Start.ToString("yyyy");
+            string strThisYear = dateTime.SelectionRange.Start.ToString("yyyy");
             int intThisYear = int.Parse(strThisYear);
-            string strThisDate = monthCalendar1.SelectionRange.Start.ToString("dd");
+            string strThisDate = dateTime.SelectionRange.Start.ToString("dd");
             int intThisDate = int.Parse(strThisDate);
             int numDays = 0;
             int dateIndex;
@@ -271,7 +279,12 @@ namespace CMNNPM
             cbDate.Items.Clear();
             cbDate.ResetText();
             resetDateComboBox();//reset combobox theo giá trị mới của tháng
-            monthCalendar1.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
+            dateTime.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
+            string date = dateTime.SelectionRange.Start.ToString("dd");
+            string month = dateTime.SelectionRange.Start.ToString("MM");
+            string year = dateTime.SelectionRange.Start.ToString("yyyy");
+            string time = year + "-" + month + "-" + date;
+            DatTiecSQL.locDanhSachTiecCuoi(listViewDanhSachTiecCuoi, time);
         }
 
         private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -279,12 +292,22 @@ namespace CMNNPM
             cbDate.Items.Clear();
             cbDate.ResetText();
             resetDateComboBox();
-            monthCalendar1.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
+            dateTime.SetDate(new DateTime(int.Parse(cbYear.Text), int.Parse(cbMonth.Text), int.Parse(cbDate.Text)));
+            string date = dateTime.SelectionRange.Start.ToString("dd");
+            string month = dateTime.SelectionRange.Start.ToString("MM");
+            string year = dateTime.SelectionRange.Start.ToString("yyyy");
+            string time = year + "-" + month + "-" + date;
+            DatTiecSQL.locDanhSachTiecCuoi(listViewDanhSachTiecCuoi, time);
         }
 
         private void cbDate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            monthCalendar1.SetDate(new DateTime(int.Parse(cbYear.Text),int.Parse(cbMonth.Text),int.Parse(cbDate.Text)));
+            dateTime.SetDate(new DateTime(int.Parse(cbYear.Text),int.Parse(cbMonth.Text),int.Parse(cbDate.Text)));
+            string date = dateTime.SelectionRange.Start.ToString("dd");
+            string month = dateTime.SelectionRange.Start.ToString("MM");
+            string year = dateTime.SelectionRange.Start.ToString("yyyy");
+            string time = year + "-" + month + "-" + date;
+            DatTiecSQL.locDanhSachTiecCuoi(listViewDanhSachTiecCuoi, time);
         }
 
         // sự kiện nhấn nút đăng nhập: mở form đăng nhập

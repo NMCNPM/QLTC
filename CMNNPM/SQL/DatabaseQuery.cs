@@ -11,7 +11,7 @@ namespace CMNNPM.SQL
     class DatabaseQuery
     {
         public static String CONNECTION_STRING =
-            "Data Source=DESKTOP-DM3AGPH\\SQLEXPRESS;Initial Catalog=_QLTC;Integrated Security=True";
+            "Data Source=DESKTOP-KGDRVJL\\SQLEXPRESS;Initial Catalog=_QLTC;Integrated Security=True";
         public static String DichVuName = "DICHVU";
         public static String LoaiSanhName = "LOAISANH";
         public static String KhachHangName = "KHACHHANG";
