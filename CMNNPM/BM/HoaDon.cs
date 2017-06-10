@@ -49,7 +49,6 @@ namespace CMNNPM
             textBoxSLBan.Text = table.Rows[0]["SLBAN"]
                 .ToString()
                 .TrimEnd();
-            //textBoxDonGia
            loadListViewDichVu(listViewDSDichVu);
            textBoxNgayDai.Text = table.Rows[0]["NGAYDATTIEC"]
                 .ToString()
@@ -63,7 +62,7 @@ namespace CMNNPM
         // load danh sách dịch vụ tiệc đã đặt vào ListView lv
         private void loadListViewDichVu(ListView lv)
         {
-            //DatTiecSQL.load
+
         }
     }
 }
