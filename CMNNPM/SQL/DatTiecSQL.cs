@@ -226,7 +226,10 @@ namespace CMNNPM
                 + "WHERE KHACHHANG.TENCODAU = '" + tenCoDau
                 + "' AND KHACHHANG.TENCHURE = '" + tenChuRe
                 + "' ORDER BY KHACHHANG.MAKHACHHANG DESC");
-
+            if(mTable.Rows.Count<0)
+            {
+                return "";
+            }
             ma = mTable.Rows[0][0].ToString();
             return ma;
         }
